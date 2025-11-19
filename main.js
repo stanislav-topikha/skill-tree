@@ -134,17 +134,21 @@ function filterTree(nodes) {
 
     const selfVisible = matchesText && matchesDiff && !completedAndHidden;
 
-    // If this node itself doesn't match and has no visible children -> drop it
-    if (!selfVisible && children.length === 0) {
-      return null;
+    // No empty branches:
+    // - leaf: must be visible itself
+    // - branch: must still have at least one visible child (endpoint somewhere below)
+    if (leaf) {
+      if (!selfVisible) return null;
+    } else {
+      if (children.length === 0) return null;
     }
 
-    // Keep node, with filtered children; openness controlled via expandedNodes.
     return { ...node, children };
   }
 
   return nodes.map(filterNode).filter(Boolean);
 }
+
 
 // ---- Rendering ----
 

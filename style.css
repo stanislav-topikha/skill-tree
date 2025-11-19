@@ -518,3 +518,69 @@ body {
   background: rgba(50, 40, 0, 0.95);
   box-shadow: 0 0 6px rgba(255, 234, 128, 0.8);
 }
+
+/* === Simple bigger font overrides === */
+
+body {
+  font-size: 16px;      /* was ~14px before */
+  line-height: 1.5;
+}
+
+.tree {
+  font-size: 15px;      /* main tree text */
+  line-height: 1.4;
+}
+
+.node-title {
+  font-size: 15px;      /* topic names */
+  white-space: normal;  /* allow wrapping */
+}
+
+.difficulty-badge {
+  font-size: 11px;      /* slightly smaller than titles */
+}
+
+.hint {
+  font-size: 11px;      /* footer hint text */
+}
+
+/* === Full-height terminal layout === */
+
+/* Make the page itself exactly viewport height */
+html,
+body {
+  height: 100%;
+}
+
+/* No outer padding, app stretches to full height */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: stretch;      /* stretch vertically */
+}
+
+/* Terminal window uses full viewport height, no wasted top/bottom */
+.js-map-app {
+  max-width: 1000px;         /* keep your width constraint */
+  width: 100%;
+  min-height: 100vh;         /* full viewport height */
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tree fills all remaining vertical space inside the terminal */
+.tree {
+  flex: 1;
+  max-height: none;          /* override old 70vh cap */
+  min-height: 0;             /* allow proper flexbox scrolling */
+  overflow: auto;
+}
+
+/* Small hint footer, but doesn't steal height from tree */
+.hint {
+  margin-top: 4px;
+}
