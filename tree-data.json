@@ -1,0 +1,1642 @@
+[
+  {
+    "title": "00_mindset-and-setup",
+    "children": [
+      {
+        "title": "environment-and-tools",
+        "children": [
+          { "title": "install-node-and-npm", "difficulty": 1 },
+          { "title": "editor-setup-vscode-vim", "difficulty": 1 },
+          { "title": "browser-devtools-basics", "difficulty": 1 },
+          {
+            "title": "running-js-browser-console-node-cli",
+            "difficulty": 1
+          }
+        ]
+      },
+      {
+        "title": "project-basics",
+        "children": [
+          { "title": "package-json-basics", "difficulty": 1 },
+          {
+            "title": "npm-scripts-start-test-build",
+            "difficulty": 1
+          },
+          { "title": "basic-folder-structure", "difficulty": 1 }
+        ]
+      },
+      {
+        "title": "learning-habits",
+        "children": [
+          { "title": "how-to-read-mdn", "difficulty": 1 },
+          {
+            "title": "debugging-mindset-minimal-repro",
+            "difficulty": 1
+          },
+          {
+            "title": "experiment-log-and-notes",
+            "difficulty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "01_core-syntax-and-basics",
+    "children": [
+      {
+        "title": "values-and-types",
+        "children": [
+          { "title": "primitive-overview", "difficulty": 1 },
+          { "title": "numbers-nan-infinity", "difficulty": 1 },
+          { "title": "strings-basics", "difficulty": 1 },
+          { "title": "booleans-and-truthiness", "difficulty": 1 },
+          { "title": "null-vs-undefined", "difficulty": 1 },
+          { "title": "bigint", "difficulty": 2 },
+          { "title": "symbol", "difficulty": 2 }
+        ]
+      },
+      {
+        "title": "variables-and-basic-scope",
+        "children": [
+          { "title": "var-let-const", "difficulty": 1 },
+          { "title": "block-vs-global-scope", "difficulty": 1 },
+          {
+            "title": "naming-and-style-basics",
+            "difficulty": 1
+          }
+        ]
+      },
+      {
+        "title": "operators",
+        "children": [
+          {
+            "title": "arithmetic",
+            "children": [
+              {
+                "title": "basic-arithmetic-plus-minus-times-divide-mod",
+                "difficulty": 1
+              },
+              { "title": "exponentiation", "difficulty": 1 },
+              { "title": "increment-decrement", "difficulty": 1 }
+            ]
+          },
+          {
+            "title": "assignment",
+            "children": [
+              { "title": "simple-assignment", "difficulty": 1 },
+              { "title": "compound-assignment", "difficulty": 1 },
+              {
+                "title": "chained-assignment-pitfalls",
+                "difficulty": 2
+              }
+            ]
+          },
+          {
+            "title": "comparison",
+            "children": [
+              {
+                "title": "relational-less-greater",
+                "difficulty": 1
+              },
+              {
+                "title": "equality-double-vs-triple-equals",
+                "difficulty": 1
+              },
+              {
+                "title": "weird-comparisons-null-nan",
+                "difficulty": 2
+              }
+            ]
+          },
+          {
+            "title": "logical",
+            "children": [
+              { "title": "logical-and", "difficulty": 1 },
+              { "title": "logical-or", "difficulty": 1 },
+              { "title": "logical-not", "difficulty": 1 },
+              {
+                "title": "short-circuiting-as-control-flow",
+                "difficulty": 2
+              }
+            ]
+          },
+          {
+            "title": "nullish-and-ternary",
+            "children": [
+              { "title": "nullish-coalescing", "difficulty": 2 },
+              { "title": "ternary-operator", "difficulty": 1 },
+              {
+                "title": "common-fallback-patterns",
+                "difficulty": 2
+              }
+            ]
+          },
+          {
+            "title": "bitwise",
+            "children": [
+              { "title": "bitwise-basics", "difficulty": 3 },
+              { "title": "bit-shifts", "difficulty": 3 },
+              {
+                "title": "bitmasks-and-flags",
+                "difficulty": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "control-flow",
+        "children": [
+          { "title": "if-else", "difficulty": 1 },
+          { "title": "switch", "difficulty": 1 },
+          {
+            "title": "try-catch-finally",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "loops-and-iteration",
+        "children": [
+          {
+            "title": "while-and-do-while",
+            "difficulty": 1
+          },
+          {
+            "title": "for-loop-classic",
+            "difficulty": 1
+          },
+          { "title": "for-of", "difficulty": 1 },
+          {
+            "title": "for-in-when-to-avoid",
+            "difficulty": 2
+          },
+          {
+            "title": "break-and-continue",
+            "difficulty": 1
+          }
+        ]
+      },
+      {
+        "title": "basic-io-and-debugging",
+        "children": [
+          {
+            "title": "console-log-warn-error",
+            "difficulty": 1
+          },
+          {
+            "title": "reading-stack-traces",
+            "difficulty": 1
+          },
+          {
+            "title": "alert-prompt-confirm",
+            "difficulty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "02_data-and-collections",
+    "children": [
+      {
+        "title": "objects",
+        "children": [
+          { "title": "object-literals", "difficulty": 1 },
+          {
+            "title": "read-update-delete-properties",
+            "difficulty": 1
+          },
+          {
+            "title": "computed-property-names",
+            "difficulty": 2
+          },
+          { "title": "nested-objects", "difficulty": 2 },
+          {
+            "title": "optional-chaining",
+            "difficulty": 2
+          },
+          {
+            "title": "object-helpers-keys-values-entries",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "arrays",
+        "children": [
+          {
+            "title": "basics",
+            "children": [
+              {
+                "title": "create-and-access-elements",
+                "difficulty": 1
+              },
+              {
+                "title": "length-and-sparse-arrays",
+                "difficulty": 2
+              },
+              {
+                "title": "iterating-for-and-forof",
+                "difficulty": 1
+              }
+            ]
+          },
+          {
+            "title": "mutating-methods",
+            "children": [
+              { "title": "push-pop", "difficulty": 1 },
+              { "title": "shift-unshift", "difficulty": 1 },
+              { "title": "splice", "difficulty": 2 },
+              {
+                "title": "sort-and-custom-compare",
+                "difficulty": 2
+              }
+            ]
+          },
+          {
+            "title": "non-mutating-methods",
+            "children": [
+              { "title": "slice", "difficulty": 1 },
+              { "title": "concat", "difficulty": 1 },
+              {
+                "title": "toSorted-and-toReversed",
+                "difficulty": 2
+              }
+            ]
+          },
+          {
+            "title": "transform-and-search",
+            "children": [
+              { "title": "forEach", "difficulty": 1 },
+              { "title": "map", "difficulty": 2 },
+              { "title": "filter", "difficulty": 2 },
+              {
+                "title": "find-and-findIndex",
+                "difficulty": 2
+              },
+              { "title": "some-and-every", "difficulty": 2 },
+              {
+                "title": "reduce-accumulator-pattern",
+                "difficulty": 2
+              }
+            ]
+          },
+          {
+            "title": "array-recipes",
+            "children": [
+              { "title": "grouping-by-field", "difficulty": 2 },
+              { "title": "frequency-maps", "difficulty": 2 },
+              { "title": "flat-and-flatMap", "difficulty": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "maps-and-sets",
+        "children": [
+          { "title": "map-basics", "difficulty": 2 },
+          {
+            "title": "iterating-over-map",
+            "difficulty": 2
+          },
+          { "title": "set-basics", "difficulty": 2 },
+          { "title": "set-for-uniques", "difficulty": 2 },
+          {
+            "title": "weakmap-and-weakset",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "other-builtins",
+        "children": [
+          { "title": "date-basics", "difficulty": 2 },
+          {
+            "title": "intl-number-and-date-format",
+            "difficulty": 3
+          },
+          {
+            "title": "json-parse-and-stringify",
+            "difficulty": 1
+          },
+          {
+            "title": "math-random-floor-round",
+            "difficulty": 1
+          }
+        ]
+      },
+      {
+        "title": "data-model-concepts",
+        "children": [
+          { "title": "value-vs-reference", "difficulty": 1 },
+          {
+            "title": "shallow-copy-spread-object-assign",
+            "difficulty": 2
+          },
+          {
+            "title": "deep-copy-structuredClone",
+            "difficulty": 2
+          },
+          {
+            "title": "immutability-and-object-freeze",
+            "difficulty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "03_functions-scope-and-closures",
+    "children": [
+      {
+        "title": "function-forms",
+        "children": [
+          {
+            "title": "function-declarations",
+            "difficulty": 1
+          },
+          {
+            "title": "function-expressions",
+            "difficulty": 1
+          },
+          { "title": "arrow-functions", "difficulty": 1 },
+          {
+            "title": "choosing-a-function-form",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "parameters-and-returns",
+        "children": [
+          {
+            "title": "parameters-vs-arguments",
+            "difficulty": 1
+          },
+          {
+            "title": "default-parameters",
+            "difficulty": 1
+          },
+          { "title": "rest-parameters", "difficulty": 2 },
+          {
+            "title": "return-values-and-early-return",
+            "difficulty": 1
+          },
+          {
+            "title": "pure-vs-impure-functions",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "scope",
+        "children": [
+          { "title": "lexical-scope", "difficulty": 2 },
+          {
+            "title": "scope-chain-lookups",
+            "difficulty": 2
+          },
+          {
+            "title": "function-scope-vs-block-scope",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "closures",
+        "children": [
+          {
+            "title": "closure-definition-and-mental-model",
+            "difficulty": 2
+          },
+          {
+            "title": "counters-and-state-via-closure",
+            "difficulty": 2
+          },
+          {
+            "title": "caching-and-memoization-via-closure",
+            "difficulty": 2
+          },
+          {
+            "title": "closures-in-loops-common-bug",
+            "difficulty": 2
+          },
+          {
+            "title": "module-pattern-with-closures",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "functional-patterns",
+        "children": [
+          {
+            "title": "functions-as-arguments",
+            "difficulty": 2
+          },
+          {
+            "title": "functions-returning-functions",
+            "difficulty": 2
+          },
+          {
+            "title": "higher-order-functions",
+            "difficulty": 2
+          },
+          { "title": "currying", "difficulty": 3 },
+          {
+            "title": "function-composition-and-pipe",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "04_objects-prototypes-and-classes",
+    "children": [
+      {
+        "title": "this-and-binding",
+        "children": [
+          {
+            "title": "what-is-this-runtime-binding",
+            "difficulty": 2
+          },
+          {
+            "title": "this-in-methods-vs-plain-functions",
+            "difficulty": 2
+          },
+          {
+            "title": "arrow-functions-and-lexical-this",
+            "difficulty": 2
+          },
+          { "title": "call-apply-bind", "difficulty": 2 }
+        ]
+      },
+      {
+        "title": "prototype-system",
+        "children": [
+          {
+            "title": "prototype-and-__proto__",
+            "difficulty": 2
+          },
+          {
+            "title": "prototype-chain-lookups",
+            "difficulty": 2
+          },
+          {
+            "title": "constructor-functions-and-new",
+            "difficulty": 2
+          },
+          { "title": "object-create", "difficulty": 2 }
+        ]
+      },
+      {
+        "title": "classes",
+        "children": [
+          { "title": "class-syntax", "difficulty": 2 },
+          {
+            "title": "instance-fields-and-methods",
+            "difficulty": 2
+          },
+          { "title": "static-methods", "difficulty": 2 },
+          {
+            "title": "inheritance-and-super",
+            "difficulty": 2
+          },
+          {
+            "title": "composition-vs-inheritance",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "meta-programming",
+        "children": [
+          {
+            "title": "getters-and-setters",
+            "difficulty": 2
+          },
+          { "title": "proxy-basics", "difficulty": 3 },
+          { "title": "reflect-api", "difficulty": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "05_language-features-and-mechanics",
+    "children": [
+      {
+        "title": "modern-syntax",
+        "children": [
+          { "title": "strict-mode", "difficulty": 1 },
+          { "title": "template-literals", "difficulty": 1 },
+          {
+            "title": "destructuring-objects-and-arrays",
+            "difficulty": 2
+          },
+          { "title": "spread-operator", "difficulty": 2 },
+          { "title": "rest-operator", "difficulty": 2 }
+        ]
+      },
+      {
+        "title": "iteration-protocols",
+        "children": [
+          {
+            "title": "iterable-and-iterator-protocols",
+            "difficulty": 3
+          },
+          { "title": "symbol-iterator", "difficulty": 3 },
+          { "title": "custom-iterators", "difficulty": 3 },
+          {
+            "title": "generator-functions",
+            "difficulty": 3
+          },
+          {
+            "title": "async-generators-and-for-await-of",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "errors-and-exceptions",
+        "children": [
+          {
+            "title": "built-in-error-types",
+            "difficulty": 1
+          },
+          {
+            "title": "throw-and-custom-error-messages",
+            "difficulty": 1
+          },
+          {
+            "title": "custom-error-classes",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "type-coercion",
+        "children": [
+          {
+            "title": "implicit-vs-explicit-coercion",
+            "difficulty": 2
+          },
+          {
+            "title": "abstract-operation-ideas",
+            "difficulty": 3
+          },
+          {
+            "title": "coercion-edge-cases",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "06_runtime-and-execution-model",
+    "children": [
+      {
+        "title": "execution-context",
+        "children": [
+          {
+            "title": "global-and-function-contexts",
+            "difficulty": 2
+          },
+          {
+            "title": "call-stack-and-stack-frames",
+            "difficulty": 2
+          },
+          {
+            "title": "hoisting-functions-and-variables",
+            "difficulty": 2
+          },
+          {
+            "title": "temporal-dead-zone-let-const",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "event-loop-and-queues",
+        "children": [
+          { "title": "event-loop-basics", "difficulty": 2 },
+          {
+            "title": "macrotasks-timeout-interval-io",
+            "difficulty": 3
+          },
+          {
+            "title": "microtasks-promises-mutation-observer",
+            "difficulty": 3
+          },
+          {
+            "title": "scheduling-pitfalls-starvation",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "memory",
+        "children": [
+          { "title": "stack-vs-heap", "difficulty": 2 },
+          {
+            "title": "garbage-collection-basics",
+            "difficulty": 3
+          },
+          {
+            "title": "leaks-from-closures-and-dom-references",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "runtime-pitfalls",
+        "children": [
+          {
+            "title": "blocking-main-thread",
+            "difficulty": 2
+          },
+          {
+            "title": "long-synchronous-loops",
+            "difficulty": 2
+          },
+          {
+            "title": "recursion-and-stack-overflow",
+            "difficulty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "07_modules-and-dependency-management",
+    "children": [
+      {
+        "title": "module-systems",
+        "children": [
+          {
+            "title": "script-vs-module-in-browser",
+            "difficulty": 1
+          },
+          {
+            "title": "es-modules-import-export",
+            "difficulty": 2
+          },
+          { "title": "dynamic-import", "difficulty": 3 },
+          {
+            "title": "commonjs-require-module-exports",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "bundlers-and-build-tools",
+        "children": [
+          {
+            "title": "why-bundling-is-needed",
+            "difficulty": 2
+          },
+          {
+            "title": "webpack-rollup-vite-parcel-overview",
+            "difficulty": 2
+          },
+          {
+            "title": "code-splitting-and-lazy-loading",
+            "difficulty": 3
+          },
+          { "title": "tree-shaking", "difficulty": 3 }
+        ]
+      },
+      {
+        "title": "dependency-management",
+        "children": [
+          {
+            "title": "npm-pnpm-yarn-basics",
+            "difficulty": 1
+          },
+          {
+            "title": "semantic-versioning-and-ranges",
+            "difficulty": 2
+          },
+          {
+            "title": "lockfiles-and-reproducible-installs",
+            "difficulty": 2
+          },
+          {
+            "title": "monorepo-tools-turborepo-nx-lerna",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "08_browser-and-dom",
+    "children": [
+      {
+        "title": "dom-basics",
+        "children": [
+          {
+            "title": "dom-tree-and-node-types",
+            "difficulty": 1
+          },
+          {
+            "title": "queryselector-and-queryselectorall",
+            "difficulty": 1
+          },
+          {
+            "title": "reading-and-updating-attributes",
+            "difficulty": 1
+          },
+          {
+            "title": "creating-removing-moving-elements",
+            "difficulty": 1
+          }
+        ]
+      },
+      {
+        "title": "styling-and-layout",
+        "children": [
+          {
+            "title": "classlist-and-inline-styles",
+            "difficulty": 1
+          },
+          {
+            "title": "computed-styles",
+            "difficulty": 2
+          },
+          {
+            "title": "reflow-and-repaint-basics",
+            "difficulty": 2
+          },
+          {
+            "title": "measuring-elements-getboundingclientrect",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "events",
+        "children": [
+          {
+            "title": "event-target-and-currenttarget",
+            "difficulty": 2
+          },
+          {
+            "title": "bubbling-and-capturing",
+            "difficulty": 2
+          },
+          {
+            "title": "event-delegation",
+            "difficulty": 2
+          },
+          {
+            "title": "common-event-types-click-input-keydown",
+            "difficulty": 1
+          }
+        ]
+      },
+      {
+        "title": "forms-and-storage",
+        "children": [
+          {
+            "title": "reading-form-values",
+            "difficulty": 1
+          },
+          {
+            "title": "client-side-validation",
+            "difficulty": 2
+          },
+          {
+            "title": "localstorage-and-sessionstorage",
+            "difficulty": 2
+          },
+          {
+            "title": "cookies-and-basic-samesite-concept",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "advanced-browser-apis",
+        "children": [
+          { "title": "fetch-api", "difficulty": 2 },
+          {
+            "title": "history-and-location-apis",
+            "difficulty": 2
+          },
+          {
+            "title": "canvas-api-basics",
+            "difficulty": 3
+          },
+          {
+            "title": "svg-manipulation",
+            "difficulty": 3
+          },
+          {
+            "title": "web-components-custom-elements-shadow-dom",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "09_async-and-networking",
+    "children": [
+      {
+        "title": "async-foundations",
+        "children": [
+          {
+            "title": "callbacks-and-error-first-style",
+            "difficulty": 1
+          },
+          {
+            "title": "promises-basics-resolve-reject",
+            "difficulty": 2
+          },
+          {
+            "title": "promise-chaining-and-catch",
+            "difficulty": 2
+          },
+          {
+            "title": "async-await-basics",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "async-patterns",
+        "children": [
+          {
+            "title": "sequential-vs-parallel-execution",
+            "difficulty": 2
+          },
+          {
+            "title": "promise-all-race-allsettled-any",
+            "difficulty": 3
+          },
+          { "title": "timeouts-and-retries", "difficulty": 3 },
+          {
+            "title": "abortcontroller-and-abortsignal",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "networking",
+        "children": [
+          {
+            "title": "rest-apis-and-json",
+            "difficulty": 2
+          },
+          {
+            "title": "websockets-basics",
+            "difficulty": 3
+          },
+          {
+            "title": "server-sent-events-and-long-polling",
+            "difficulty": 3
+          },
+          {
+            "title": "handling-network-errors-and-retries",
+            "difficulty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "10_testing-and-quality",
+    "children": [
+      {
+        "title": "testing-basics",
+        "children": [
+          {
+            "title": "what-is-unit-testing",
+            "difficulty": 2
+          },
+          {
+            "title": "jest-vitest-basics",
+            "difficulty": 2
+          },
+          {
+            "title": "testing-async-code",
+            "difficulty": 2
+          },
+          {
+            "title": "mocking-spies-and-stubs",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "integration-and-e2e",
+        "children": [
+          {
+            "title": "api-integration-tests",
+            "difficulty": 3
+          },
+          {
+            "title": "dom-integration-tests",
+            "difficulty": 3
+          },
+          {
+            "title": "e2e-tests-playwright-cypress",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "quality-automation",
+        "children": [
+          {
+            "title": "eslint-setup-and-core-rules",
+            "difficulty": 1
+          },
+          {
+            "title": "prettier-and-formatting",
+            "difficulty": 1
+          },
+          {
+            "title": "lint-staged-and-pre-commit-hooks",
+            "difficulty": 2
+          },
+          {
+            "title": "static-analysis-in-ci",
+            "difficulty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "11_node-and-backend-js",
+    "children": [
+      {
+        "title": "node-core",
+        "children": [
+          {
+            "title": "node-runtime-and-repl",
+            "difficulty": 1
+          },
+          {
+            "title": "commonjs-vs-esm-in-node",
+            "difficulty": 2
+          },
+          {
+            "title": "process-env-and-cli-args",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "filesystem-and-streams",
+        "children": [
+          {
+            "title": "fs-module-read-write-files",
+            "difficulty": 2
+          },
+          {
+            "title": "path-and-os-modules",
+            "difficulty": 2
+          },
+          {
+            "title": "buffers-and-binary-data",
+            "difficulty": 3
+          },
+          {
+            "title": "streams-readable-writable-transform",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "http-servers-and-apis",
+        "children": [
+          {
+            "title": "http-https-modules",
+            "difficulty": 2
+          },
+          {
+            "title": "express-or-fastify-basics",
+            "difficulty": 2
+          },
+          {
+            "title": "routing-and-middleware",
+            "difficulty": 2
+          },
+          {
+            "title": "json-body-parsing-and-validation",
+            "difficulty": 2
+          },
+          {
+            "title": "building-rest-apis",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "auth-and-data",
+        "children": [
+          {
+            "title": "sessions-and-cookies",
+            "difficulty": 3
+          },
+          {
+            "title": "jwt-and-token-based-auth",
+            "difficulty": 3
+          },
+          {
+            "title": "connecting-to-sql-databases",
+            "difficulty": 2
+          },
+          {
+            "title": "connecting-to-nosql-databases",
+            "difficulty": 2
+          },
+          {
+            "title": "orm-and-query-builders-prisma-knex-typeorm",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "cli-and-background-work",
+        "children": [
+          {
+            "title": "building-cli-tools-commander-yargs",
+            "difficulty": 3
+          },
+          {
+            "title": "job-queues-and-workers",
+            "difficulty": 3
+          },
+          {
+            "title": "scheduling-tasks-cron-like",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "12_frontend-frameworks-and-spa-architecture",
+    "children": [
+      {
+        "title": "react-core",
+        "children": [
+          {
+            "title": "jsx-and-components",
+            "difficulty": 2
+          },
+          {
+            "title": "props-and-composition",
+            "difficulty": 2
+          },
+          {
+            "title": "state-and-events",
+            "difficulty": 2
+          },
+          {
+            "title": "hooks-usestate-useeffect-useref",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "react-advanced",
+        "children": [
+          { "title": "context-api", "difficulty": 2 },
+          {
+            "title": "performance-memo-usecallback-usememo",
+            "difficulty": 3
+          },
+          { "title": "custom-hooks", "difficulty": 3 },
+          {
+            "title": "forms-controlled-uncontrolled",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "routing-and-data",
+        "children": [
+          {
+            "title": "client-side-routing-react-router-etc",
+            "difficulty": 2
+          },
+          {
+            "title": "data-fetching-patterns",
+            "difficulty": 2
+          },
+          {
+            "title": "error-boundaries-and-suspense-concepts",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "other-frameworks",
+        "children": [
+          { "title": "vue-basics", "difficulty": 2 },
+          { "title": "svelte-basics", "difficulty": 2 },
+          {
+            "title": "angular-overview",
+            "difficulty": 2
+          },
+          {
+            "title": "meta-frameworks-next-nuxt-sveltekit",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "13_patterns-and-architecture",
+    "children": [
+      {
+        "title": "code-organization",
+        "children": [
+          {
+            "title": "feature-based-folder-structure",
+            "difficulty": 2
+          },
+          {
+            "title": "modules-vs-layers",
+            "difficulty": 2
+          },
+          {
+            "title": "boundaries-between-ui-domain-infra",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "classic-patterns",
+        "children": [
+          {
+            "title": "singleton-and-when-not-to-use",
+            "difficulty": 2
+          },
+          {
+            "title": "factory-and-abstract-factory",
+            "difficulty": 3
+          },
+          {
+            "title": "strategy-and-command",
+            "difficulty": 3
+          },
+          {
+            "title": "observer-and-pub-sub",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "functional-style",
+        "children": [
+          {
+            "title": "map-filter-reduce-chains",
+            "difficulty": 3
+          },
+          {
+            "title": "immutability-and-persistent-data-structures",
+            "difficulty": 3
+          },
+          {
+            "title": "point-free-and-pipe-compose",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "architecture-and-ddd",
+        "children": [
+          {
+            "title": "clean-code-principles-in-js",
+            "difficulty": 2
+          },
+          {
+            "title": "ports-and-adapters-hexagonal-architecture",
+            "difficulty": 3
+          },
+          {
+            "title": "domain-driven-design-overview",
+            "difficulty": 4
+          },
+          {
+            "title": "error-handling-strategies-at-scale",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "14_performance-and-optimisation",
+    "children": [
+      {
+        "title": "measuring-performance",
+        "children": [
+          { "title": "performance-api", "difficulty": 2 },
+          {
+            "title": "browser-devtools-performance-tab",
+            "difficulty": 2
+          },
+          {
+            "title": "node-profiler-basics",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "algorithmic-thinking",
+        "children": [
+          {
+            "title": "big-o-intuition-for-js-code",
+            "difficulty": 2
+          },
+          {
+            "title": "common-data-structures-in-js",
+            "difficulty": 2
+          },
+          {
+            "title": "optimizing-hot-paths",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "runtime-optimisation",
+        "children": [
+          {
+            "title": "avoiding-blocking-main-thread",
+            "difficulty": 2
+          },
+          {
+            "title": "debouncing-and-throttling",
+            "difficulty": 2
+          },
+          {
+            "title": "web-workers-and-worker-threads",
+            "difficulty": 3
+          },
+          {
+            "title": "memory-optimisation-and-leak-hunting",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "delivery-and-bundle-size",
+        "children": [
+          { "title": "bundle-analysis", "difficulty": 3 },
+          {
+            "title": "code-splitting-and-lazy-routes",
+            "difficulty": 3
+          },
+          {
+            "title": "caching-strategies-http-cache-local-cache",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "15_security",
+    "children": [
+      {
+        "title": "web-threat-model",
+        "children": [
+          {
+            "title": "attacker-mindset-basics",
+            "difficulty": 2
+          },
+          {
+            "title": "input-validation-vs-sanitisation",
+            "difficulty": 2
+          },
+          {
+            "title": "secure-defaults-thinking",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "browser-vulnerabilities",
+        "children": [
+          { "title": "xss-reflected-stored-dom", "difficulty": 3 },
+          {
+            "title": "csrf-and-samesite-cookies",
+            "difficulty": 3
+          },
+          {
+            "title": "clickjacking-and-frame-options",
+            "difficulty": 3
+          },
+          {
+            "title": "content-security-policy-overview",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "auth-and-access-control",
+        "children": [
+          {
+            "title": "authentication-best-practices",
+            "difficulty": 3
+          },
+          {
+            "title": "authorization-and-roles",
+            "difficulty": 3
+          },
+          {
+            "title": "securely-handling-tokens-and-secrets",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "dependency-and-supply-chain",
+        "children": [
+          {
+            "title": "npm-audit-and-advisories",
+            "difficulty": 2
+          },
+          {
+            "title": "pinning-versions-and-lockfiles",
+            "difficulty": 2
+          },
+          {
+            "title": "reviewing-third-party-code-risks",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "16_tooling-and-workflow",
+    "children": [
+      {
+        "title": "devtools-master",
+        "children": [
+          {
+            "title": "elements-tab-and-live-editing",
+            "difficulty": 2
+          },
+          {
+            "title": "network-tab-and-api-debugging",
+            "difficulty": 2
+          },
+          {
+            "title": "sources-tab-and-breakpoints",
+            "difficulty": 2
+          },
+          {
+            "title": "performance-and-memory-tabs",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "local-workflow",
+        "children": [
+          {
+            "title": "npm-scripts-as-task-runner",
+            "difficulty": 1
+          },
+          {
+            "title": "nodemon-ts-node-and-reload-tools",
+            "difficulty": 2
+          },
+          {
+            "title": "debugging-in-vscode-node",
+            "difficulty": 1
+          }
+        ]
+      },
+      {
+        "title": "automation-and-ci",
+        "children": [
+          {
+            "title": "basic-ci-pipeline-lint-test-build",
+            "difficulty": 2
+          },
+          {
+            "title": "docker-basics-for-js-apps",
+            "difficulty": 2
+          },
+          {
+            "title": "release-scripts-and-changelogs",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "17_typescript-and-typing-js",
+    "children": [
+      {
+        "title": "ts-basics",
+        "children": [
+          {
+            "title": "tsconfig-and-compiler-options",
+            "difficulty": 2
+          },
+          {
+            "title": "basic-types-string-number-boolean",
+            "difficulty": 2
+          },
+          {
+            "title": "interfaces-and-type-aliases",
+            "difficulty": 2
+          },
+          {
+            "title": "enums-and-const-assertions",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "title": "composing-types",
+        "children": [
+          {
+            "title": "union-and-intersection-types",
+            "difficulty": 2
+          },
+          { "title": "literal-types", "difficulty": 2 },
+          {
+            "title": "narrowing-typeof-instanceof-in-guards",
+            "difficulty": 2
+          },
+          {
+            "title": "discriminated-unions",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "generics-and-advanced-types",
+        "children": [
+          { "title": "generics-basics", "difficulty": 3 },
+          {
+            "title": "generic-functions-and-interfaces",
+            "difficulty": 3
+          },
+          {
+            "title": "mapped-types-and-utility-types",
+            "difficulty": 3
+          },
+          {
+            "title": "conditional-types-and-infer",
+            "difficulty": 4
+          },
+          {
+            "title": "type-level-programming-patterns",
+            "difficulty": 4
+          }
+        ]
+      },
+      {
+        "title": "typing-ecosystem",
+        "children": [
+          {
+            "title": "using-dts-and-definitelytyped",
+            "difficulty": 3
+          },
+          {
+            "title": "writing-declaration-files",
+            "difficulty": 4
+          },
+          {
+            "title": "migrating-js-projects-to-ts",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "18_js-internals-and-spec-level",
+    "children": [
+      {
+        "title": "ecmascript-spec",
+        "children": [
+          {
+            "title": "spec-structure-and-sections",
+            "difficulty": 4
+          },
+          {
+            "title": "algorithm-notation",
+            "difficulty": 4
+          },
+          {
+            "title": "following-a-feature-from-spec-to-engines",
+            "difficulty": 4
+          }
+        ]
+      },
+      {
+        "title": "engine-internals",
+        "children": [
+          { "title": "parsing-and-ast", "difficulty": 4 },
+          {
+            "title": "bytecode-and-jit-optimizations",
+            "difficulty": 4
+          },
+          {
+            "title": "deoptimisation-and-hidden-classes",
+            "difficulty": 4
+          }
+        ]
+      },
+      {
+        "title": "tooling-on-top-of-js",
+        "children": [
+          {
+            "title": "working-with-asts-acorn-babel-parser",
+            "difficulty": 4
+          },
+          {
+            "title": "writing-babel-plugins",
+            "difficulty": 4
+          },
+          {
+            "title": "writing-custom-eslint-rules",
+            "difficulty": 4
+          },
+          {
+            "title": "building-a-mini-bundler-or-transpiler",
+            "difficulty": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "19_specialised-areas",
+    "children": [
+      {
+        "title": "pwa-and-offline",
+        "children": [
+          { "title": "service-workers", "difficulty": 3 },
+          {
+            "title": "app-manifest-and-installability",
+            "difficulty": 3
+          },
+          {
+            "title": "offline-first-and-sync-strategies",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "realtime-and-media",
+        "children": [
+          { "title": "webrtc-basics", "difficulty": 3 },
+          { "title": "web-audio-api", "difficulty": 3 },
+          {
+            "title": "web-notifications-and-push",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "graphics-and-3d",
+        "children": [
+          { "title": "canvas-advanced", "difficulty": 3 },
+          { "title": "webgl-basics", "difficulty": 3 },
+          {
+            "title": "threejs-for-3d-scenes",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "title": "cross-platform-js",
+        "children": [
+          {
+            "title": "electron-desktop-apps",
+            "difficulty": 3
+          },
+          {
+            "title": "react-native-or-expo",
+            "difficulty": 3
+          },
+          {
+            "title": "automation-and-scraping-puppeteer-playwright",
+            "difficulty": 3
+          }
+        ]
+      }
+    ]
+  }
+]
