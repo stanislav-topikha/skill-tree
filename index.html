@@ -9,37 +9,78 @@
     <div class="js-map-app">
   <h1>JS Learning Map</h1>
 
-  <div class="controls">
-    <input
-      id="searchInput"
-      class="search-input"
-      type="text"
-      placeholder="Search topics…"
-    />
+<div class="controls">
+  <!-- Search stays visible -->
+  <input
+    id="searchInput"
+    class="search-input"
+    type="text"
+    placeholder="Search topics…"
+  />
 
-    <div class="diff-filters">
-      <span class="label">Difficulty:</span>
-      <button type="button" class="diff-chip active" data-diff="1">1</button>
-      <button type="button" class="diff-chip active" data-diff="2">2</button>
-      <button type="button" class="diff-chip active" data-diff="3">3</button>
-      <button type="button" class="diff-chip active" data-diff="4">4</button>
-    </div>
+  <!-- Filters button -->
+  <button
+    type="button"
+    id="filtersToggle"
+    class="filters-toggle-btn"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    FILTERS ▾
+  </button>
 
-    <label class="toggle">
-      <input type="checkbox" id="toggleDifficulty" checked />
-      <span>Show difficulty</span>
-    </label>
+  <!-- Theme selector -->
+  <div class="theme-select">
+    <label for="themeSelect">THEME</label>
+<select id="themeSelect">
+  <option value="green">Green</option>
+  <option value="amber">Amber</option>
+  <option value="blue">Blue</option>
+  <option value="red">Red</option>
+</select>
+  </div>
 
-    <label class="toggle">
-      <input type="checkbox" id="toggleHideCompleted" />
-      <span>Hide completed</span>
-    </label>
+  <!-- Filters popup -->
+  <div class="filters-popup" id="filtersPopup">
+    <div class="filters-popup-inner">
+      <!-- Difficulty -->
+      <div class="filters-section">
+        <div class="filters-title">Difficulty</div>
+        <div class="diff-filters">
+          <span class="label">Level:</span>
+          <button class="diff-chip active" data-diff="1">1</button>
+          <button class="diff-chip active" data-diff="2">2</button>
+          <button class="diff-chip active" data-diff="3">3</button>
+          <button class="diff-chip active" data-diff="4">4</button>
+        </div>
+      </div>
 
-    <div class="expand-buttons">
-      <button type="button" id="expandAllBtn">Expand all</button>
-      <button type="button" id="collapseAllBtn">Collapse all</button>
+      <!-- Visibility -->
+      <div class="filters-section">
+        <div class="filters-title">Visibility</div>
+        <label class="toggle">
+          <input type="checkbox" id="toggleDifficulty" />
+          <span>Hide difficulty</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="toggleHideCompleted" />
+          <span>Hide completed</span>
+        </label>
+      </div>
+
+      <!-- Tree controls -->
+      <div class="filters-section">
+        <div class="filters-title">Tree</div>
+        <div class="expand-buttons">
+          <button type="button" id="expandAllBtn">Expand all</button>
+          <button type="button" id="collapseAllBtn">Collapse all</button>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+
 
   <div class="tree" id="tree" data-show-difficulty="on">
     <ul id="tree-root" class="tree-root"></ul>

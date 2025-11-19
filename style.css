@@ -1,21 +1,90 @@
-/* ============================
-   FALLOUT 3 TERMINAL THEME
-   ============================ */
+/* ========================================
+   1. THEME TOKENS (FALLOUT TERMINAL DEFAULT)
+   ======================================== */
 
 :root {
-  --bg: #000000;
-  --screen: #020b02;
-  --border: #1a3b1a;
-  --scanline: rgba(0, 0, 0, 0.35);
-  --glow: #41ff41;
-  --glow-soft: rgba(65, 255, 65, 0.18);
-  --text-main: #8bff8b;
-  --text-soft: #4fb54f;
-  --text-dim: #2b5f2b;
-  --danger: #ff4444;
+  /* Palette */
+  --color-bg: #000000;
+  --color-screen: #020b02;
+  --color-border: #1a3b1a;
+  --color-accent: #55ff55;
+  --color-accent-soft: rgba(85, 255, 85, 0.18);
+  --color-text-main: #c0ffc0;
+  --color-text-soft: #8add8a;
+  --color-text-dim: #3a7f3a;
+  --color-danger: #ff4444;
+
+  /* FX */
+  --scanline-opacity: 0.35;
+
+  /* Typography */
+  --font-family-mono: "Courier New", monospace;
+  --font-size-base: 16px;
+  --font-size-tree: 15px;
+  --font-size-hint: 11px;
+  --font-size-badge: 11px;
+
+  /* Layout */
+  --app-max-width: 1000px;
 }
 
-/* GLOBAL */
+/* Alternate themes override tokens on body */
+
+body[data-theme="amber"] {
+  --color-bg: #050200;
+  --color-screen: #120800;
+  --color-border: #5a3b0a;
+  --color-accent: #ffbf3b;
+  --color-accent-soft: rgba(255, 191, 59, 0.18);
+  --color-text-main: #ffe9b5;
+  --color-text-soft: #f4c56a;
+  --color-text-dim: #7a5a26;
+  --scanline-opacity: 0.3;
+}
+/* Alternate Pip-Boy themes override tokens on body */
+
+/* AMBER – warm terminal */
+body[data-theme="amber"] {
+  --color-bg: #050200;
+  --color-screen: #120800;
+  --color-border: #5a3b0a;
+  --color-accent: #ffbf3b;
+  --color-accent-soft: rgba(255, 191, 59, 0.18);
+  --color-text-main: #ffe9b5;
+  --color-text-soft: #f4c56a;
+  --color-text-dim: #7a5a26;
+  --scanline-opacity: 0.3;
+}
+
+/* BLUE – cool HUD style */
+body[data-theme="blue"] {
+  --color-bg: #000610;
+  --color-screen: #00121f;
+  --color-border: #184060;
+  --color-accent: #27d2ff;
+  --color-accent-soft: rgba(39, 210, 255, 0.2);
+  --color-text-main: #c5f2ff;
+  --color-text-soft: #7cd4f5;
+  --color-text-dim: #29566f;
+  --scanline-opacity: 0.3;
+}
+
+/* RED – danger / alarm mode */
+body[data-theme="red"] {
+  --color-bg: #050000;
+  --color-screen: #190000;
+  --color-border: #5a1010;
+  --color-accent: #ff4a4a;
+  --color-accent-soft: rgba(255, 74, 74, 0.2);
+  --color-text-main: #ffd1d1;
+  --color-text-soft: #ff9b9b;
+  --color-text-dim: #7a3232;
+  --scanline-opacity: 0.3;
+}
+
+/* ========================================
+   2. GLOBAL / LAYOUT
+   ======================================== */
 
 *,
 *::before,
@@ -23,53 +92,71 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  margin: 0;
-  padding: 12px;
-  background-color: var(--bg);
-  color: var(--text-main);
-  font-family: "Courier New", monospace;
-  letter-spacing: 0.06em;
+  height: 100%;
 }
 
-/* faint scanline + glow effect on whole page */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-family-mono);
+  letter-spacing: 0.06em;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* faint scanline overlay */
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.4) 1px,
-      transparent 2px
-    );
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 1px,
+    transparent 2px
+  );
   background-size: 100% 3px;
   mix-blend-mode: multiply;
-  opacity: 0.35;
+  opacity: var(--scanline-opacity);
   z-index: 999;
 }
 
-/* APP FRAME */
+/* ========================================
+   3. APP FRAME
+   ======================================== */
 
 .js-map-app {
-  max-width: 980px;
-  margin: 0 auto;
+  max-width: var(--app-max-width);
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
   padding: 10px 12px;
-  border: 2px solid var(--border);
-  background: radial-gradient(circle at top, #041404, var(--screen) 60%);
+  border: 2px solid var(--color-border);
+  background: radial-gradient(circle at top, #041404, var(--color-screen) 60%);
+  box-sizing: border-box;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
 }
 
-/* subtle corner markers like old terminals */
+/* corner markers */
 .js-map-app::before,
 .js-map-app::after {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
-  border: 2px solid var(--glow);
-  border-radius: 0;
+  border: 2px solid var(--color-accent);
   opacity: 0.4;
 }
 
@@ -87,12 +174,12 @@ body::before {
   border-top: none;
 }
 
-/* HEADER */
+/* header */
 
 .js-map-app h1 {
   margin: 0 0 6px;
   font-size: 15px;
-  color: var(--glow);
+  color: var(--color-accent);
   text-transform: uppercase;
 }
 
@@ -100,34 +187,139 @@ body::before {
   content: "> ";
 }
 
-/* CONTROLS BAR */
+/* ========================================
+   4. CONTROLS
+   ======================================== */
 
 .controls {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   gap: 6px;
   align-items: center;
   margin-bottom: 6px;
   padding: 4px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+/* Filters popup inside controls */
+
+/* Filters button */
+
+.filters-toggle-btn {
+  border: 1px solid var(--color-border);
+  background: #000;
+  color: var(--color-text-soft);
+  font-family: inherit;
+  font-size: 11px;
+  padding: 1px 8px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-/* Inputs & buttons: retro dumb terminals, no rounded glass BS */
+.filters-toggle-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Popup container */
+
+.filters-popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  min-width: 260px;
+  max-width: 320px;
+  background: #000;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  z-index: 50;
+  display: none;
+}
+
+.filters-popup.is-open {
+  display: block;
+}
+
+/* Popup inner layout */
+
+.filters-popup-inner {
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filters-section {
+  border-top: 1px solid var(--color-border);
+  padding-top: 4px;
+}
+
+.filters-section:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.filters-title {
+  font-size: 10px;
+  color: var(--color-text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 2px;
+}
+
+/* Reuse existing .diff-filters, .toggle, .expand-buttons styles */
+/* Theme selector next to filters */
+
+.theme-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--color-text-soft);
+}
+
+.theme-select label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+#themeSelect {
+  border: 1px solid var(--color-border);
+  background: #000;
+  color: var(--color-text-soft);
+  font-family: inherit;
+  font-size: 11px;
+  padding: 1px 6px;
+  cursor: pointer;
+}
+
+body[data-theme="light"] #themeSelect {
+  background: #ffffff;
+}
+
+#themeSelect:focus-visible {
+  outline: 1px dashed var(--color-accent);
+  outline-offset: 1px;
+}
+
+/* search input */
 
 .search-input {
   flex: 1 1 220px;
   padding: 2px 4px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-border);
   background: #000000;
-  color: var(--text-main);
+  color: var(--color-text-main);
   font-family: inherit;
-  font-size: 11px;
 }
 
 .search-input::placeholder {
-  color: var(--text-dim);
+  color: var(--color-text-dim);
 }
+
+/* difficulty chips */
 
 .diff-filters {
   display: flex;
@@ -138,13 +330,13 @@ body::before {
 }
 
 .diff-filters .label {
-  color: var(--text-soft);
+  color: var(--color-text-soft);
 }
 
 .diff-chip {
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-border);
   background: #000;
-  color: var(--text-soft);
+  color: var(--color-text-soft);
   font-family: inherit;
   font-size: 11px;
   padding: 1px 6px;
@@ -152,28 +344,73 @@ body::before {
 }
 
 .diff-chip.active {
-  border-color: var(--glow);
-  color: var(--glow);
-  background: var(--glow-soft);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
 }
 
 .diff-chip:focus-visible {
-  outline: 1px dashed var(--glow);
+  outline: 1px dashed var(--color-accent);
   outline-offset: 1px;
 }
+
+/* generic toggle label */
 
 .toggle {
   display: inline-flex;
   align-items: center;
   gap: 3px;
   font-size: 11px;
-  color: var(--text-soft);
+  color: var(--color-text-soft);
   cursor: pointer;
 }
 
-.toggle input {
-  accent-color: var(--glow);
+/* custom small checkbox for toggles and completion */
+
+.toggle input[type="checkbox"],
+.complete-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-border);
+  background: #000;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
 }
+
+.toggle input[type="checkbox"]::after,
+.complete-checkbox::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #000;
+}
+
+.toggle input[type="checkbox"]:checked,
+.complete-checkbox:checked {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.toggle input[type="checkbox"]:checked::after,
+.complete-checkbox:checked::after {
+  content: "X";
+  font-size: 8px;
+  line-height: 8px;
+  text-align: center;
+  color: var(--color-accent);
+  inset: 0;
+}
+
+.toggle input[type="checkbox"]:focus-visible,
+.complete-checkbox:focus-visible {
+  outline: 1px dashed var(--color-accent);
+  outline-offset: 1px;
+}
+
+/* expand / collapse all buttons */
 
 .expand-buttons {
   display: flex;
@@ -181,9 +418,9 @@ body::before {
 }
 
 .expand-buttons button {
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-border);
   background: #000;
-  color: var(--text-soft);
+  color: var(--color-text-soft);
   font-family: inherit;
   font-size: 11px;
   padding: 1px 7px;
@@ -191,20 +428,26 @@ body::before {
 }
 
 .expand-buttons button:hover {
-  border-color: var(--glow);
-  color: var(--glow);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
-/* TREE CONTAINER */
+/* ========================================
+   5. TREE CONTAINER & STRUCTURE
+   ======================================== */
 
 .tree {
   margin-top: 6px;
   padding: 6px 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-border);
   background: rgba(0, 0, 0, 0.6);
-  max-height: 70vh;
+  font-size: var(--font-size-tree);
+  line-height: 1.4;
+
+  flex: 1;
+  max-height: none;
+  min-height: 0;
   overflow: auto;
-  font-size: 11px;
 }
 
 .tree-root,
@@ -219,36 +462,36 @@ body::before {
 }
 
 .tree-root ul {
-  margin-left: 14px;
-  padding-left: 10px;
-  border-left: 1px dashed var(--text-dim);
+  margin-left: 18px;
+  padding-left: 12px;
+  border-left: 1px dashed var(--color-text-dim);
 }
 
 .tree-root ul.collapsed {
   display: none;
 }
 
-/* NODES */
+/* nodes */
 
 .tree-node {
-  color: var(--text-main);
+  color: var(--color-text-main);
 }
 
 .node-row {
   display: flex;
   align-items: center;
   gap: 3px;
-  padding: 0;
+  padding: 2px 0;
 }
 
-/* Expand / collapse buttons */
+/* expand / collapse toggle button */
 
 .toggle-btn {
   width: 16px;
   height: 14px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--color-border);
   background: #000;
-  color: var(--text-soft);
+  color: var(--color-text-soft);
   font-size: 9px;
   padding: 0;
   display: inline-flex;
@@ -258,18 +501,20 @@ body::before {
 }
 
 .toggle-btn:hover {
-  border-color: var(--glow);
-  color: var(--glow);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
+
+/* bullet for leaves without children */
 
 .bullet {
   width: 16px;
   text-align: center;
   font-size: 9px;
-  color: var(--text-dim);
+  color: var(--color-text-dim);
 }
 
-/* Node label */
+/* node label / title */
 
 .node-label {
   display: inline-flex;
@@ -282,152 +527,102 @@ body::before {
   background: rgba(10, 40, 10, 0.6);
 }
 
-.complete-checkbox {
-  margin: 0;
-  accent-color: var(--glow);
-}
-
 .node-title {
-  white-space: nowrap;
+  font-size: var(--font-size-tree);
+  white-space: normal;
 }
 
-@media (max-width: 800px) {
-  .node-title {
-    white-space: normal;
-  }
+/* hierarchy emphasis */
+
+.tree-root > li > .node-row .node-label .node-title {
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
-/* Difficulty badges */
-
-.difficulty-badge {
-  font-size: 9px;
-  padding: 0 3px;
-  border: 1px solid var(--text-dim);
-  color: var(--text-soft);
+.tree-root > li > ul > li > .node-row .node-label .node-title {
+  color: var(--color-text-soft);
 }
 
-.tree[data-show-difficulty="off"] .difficulty-badge {
-  display: none;
-}
-
-/* Completed look */
+/* completed look */
 
 .node-label.completed .node-title {
   text-decoration: line-through;
-  color: var(--text-dim);
+  color: var(--color-text-dim);
 }
 
 .node-label.completed .difficulty-badge {
-  color: var(--text-dim);
+  color: var(--color-text-dim);
 }
 
-/* Hint */
+/* ========================================
+   6. DIFFICULTY BADGES
+   ======================================== */
 
-.hint {
-  margin-top: 6px;
-  font-size: 10px;
-  color: var(--text-soft);
+.difficulty-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  padding: 0 4px;
+  margin-left: 3px;
+  font-size: var(--font-size-badge);
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  border: 1px solid var(--color-text-dim);
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--color-text-soft);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
 }
 
-/* Tiny blinking cursor effect at end of hint, because Fallout */
+/* per-level styling */
 
-.hint::after {
-  content: " _";
-  animation: blink 1s steps(1, start) infinite;
-  color: var(--glow);
+.difficulty-badge[data-level="1"] {
+  border-color: var(--color-text-dim);
+  color: var(--color-text-soft);
+  background: rgba(0, 0, 0, 0.9);
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-/* COMPLETION CHECKBOXES: tiny CRT-style squares */
-
-.complete-checkbox {
-  appearance: none;
-  -webkit-appearance: none;
-  margin: 0;
-  width: 10px;
-  height: 10px;
-  border: 1px solid var(--border);
-  background: #000;
-  position: relative;
-  cursor: pointer;
+.difficulty-badge[data-level="2"] {
+  border-color: var(--color-text-soft);
+  color: var(--color-accent);
+  background: rgba(10, 40, 10, 0.9);
 }
 
-/* default idle look */
-.complete-checkbox::after {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: #000;
+.difficulty-badge[data-level="3"] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(20, 70, 20, 0.95);
+  box-shadow: 0 0 4px rgba(85, 255, 85, 0.5);
 }
 
-/* checked = bright green block with tiny cross */
-.complete-checkbox:checked {
-  border-color: var(--glow);
-  background: var(--glow-soft);
+.difficulty-badge[data-level="4"] {
+  border-color: #ffea80;
+  color: #ffea80;
+  background: rgba(50, 40, 0, 0.95);
+  box-shadow: 0 0 6px rgba(255, 234, 128, 0.8);
 }
 
-.complete-checkbox:checked::after {
-  content: "X";
-  font-size: 8px;
-  line-height: 8px;
-  text-align: center;
-  color: var(--glow);
-  inset: 0;
+/* hide difficulty globally, reveal on hover */
+
+.tree[data-hide-difficulty="on"] .difficulty-badge {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s linear;
 }
 
-/* keyboard focus */
-.complete-checkbox:focus-visible {
-  outline: 1px dashed var(--glow);
-  outline-offset: 1px;
+.tree[data-hide-difficulty="on"] .node-label:hover .difficulty-badge {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.toggle input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
-  border: 1px solid var(--border);
-  background: #000;
-  position: relative;
-  margin: 0;
-  cursor: pointer;
-}
-
-.toggle input[type="checkbox"]::after {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: #000;
-}
-
-.toggle input[type="checkbox"]:checked {
-  border-color: var(--glow);
-  background: var(--glow-soft);
-}
-
-.toggle input[type="checkbox"]:checked::after {
-  content: "X";
-  font-size: 8px;
-  line-height: 8px;
-  text-align: center;
-  color: var(--glow);
-  inset: 0;
-}
-
-.toggle input[type="checkbox"]:focus-visible {
-  outline: 1px dashed var(--glow);
-  outline-offset: 1px;
-}
-/* SCROLLBARS – retro green, no fancy gradients */
+/* ========================================
+   7. SCROLLBARS
+   ======================================== */
 
 /* Firefox */
 .tree {
   scrollbar-width: thin;
-  scrollbar-color: var(--glow-soft) #000000;
+  scrollbar-color: var(--color-accent-soft) #000000;
 }
 
 /* WebKit (Chrome / Edge / Safari) */
@@ -440,147 +635,99 @@ body::before {
 }
 
 .tree::-webkit-scrollbar-thumb {
-  background: var(--glow-soft);
-  border: 1px solid var(--glow);
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent);
 }
 
 .tree::-webkit-scrollbar-thumb:hover {
-  background: rgba(65, 255, 65, 0.3);
-}
-/* === Readability: font sizes + line heights === */
-
-body {
-  font-size: 14px;
-  line-height: 1.4;
+  background: rgba(85, 255, 85, 0.3);
 }
 
-.tree {
-  font-size: 13px;
-  line-height: 1.35;
-}
+/* ========================================
+   8. HINT / FOOTER
+   ======================================== */
 
-.node-row {
-  padding: 2px 0;
-}
-
-.node-title {
-  font-size: 13px;
-  white-space: normal; /* allow wrapping, no long one-line snakes */
-}
-/* === Difficulty badges: more distinct, still terminal-ish === */
-
-.difficulty-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 20px;
-  padding: 0 4px;
-  margin-left: 3px;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  border-radius: 2px;
-  border: 1px solid var(--text-dim);
-  background: rgba(0, 0, 0, 0.7);
-  color: var(--text-soft);
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
-}
-
-/* Level 1 – “easy”, low-intensity */
-
-.difficulty-badge[data-level="1"] {
-  border-color: var(--text-dim);
-  color: var(--text-soft);
-  background: rgba(0, 0, 0, 0.9);
-}
-
-/* Level 2 – brighter border, light glow */
-
-.difficulty-badge[data-level="2"] {
-  border-color: var(--text-soft);
-  color: var(--glow);
-  background: rgba(10, 40, 10, 0.9);
-}
-
-/* Level 3 – strong green + subtle glow */
-
-.difficulty-badge[data-level="3"] {
-  border-color: var(--glow);
-  color: var(--glow);
-  background: rgba(20, 70, 20, 0.95);
-  box-shadow: 0 0 4px rgba(85, 255, 85, 0.5);
-}
-
-/* Level 4 – “boss” topics, slightly amber but still retro */
-
-.difficulty-badge[data-level="4"] {
-  border-color: #ffea80;
-  color: #ffea80;
-  background: rgba(50, 40, 0, 0.95);
-  box-shadow: 0 0 6px rgba(255, 234, 128, 0.8);
-}
-
-/* === Simple bigger font overrides === */
-
-body {
-  font-size: 16px;      /* was ~14px before */
-  line-height: 1.5;
-}
-
-.tree {
-  font-size: 15px;      /* main tree text */
-  line-height: 1.4;
-}
-
-.node-title {
-  font-size: 15px;      /* topic names */
-  white-space: normal;  /* allow wrapping */
-}
-
-.difficulty-badge {
-  font-size: 11px;      /* slightly smaller than titles */
-}
-
-.hint {
-  font-size: 11px;      /* footer hint text */
-}
-
-/* === Full-height terminal layout === */
-
-/* Make the page itself exactly viewport height */
-html,
-body {
-  height: 100%;
-}
-
-/* No outer padding, app stretches to full height */
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: stretch;      /* stretch vertically */
-}
-
-/* Terminal window uses full viewport height, no wasted top/bottom */
-.js-map-app {
-  max-width: 1000px;         /* keep your width constraint */
-  width: 100%;
-  min-height: 100vh;         /* full viewport height */
-  margin: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Tree fills all remaining vertical space inside the terminal */
-.tree {
-  flex: 1;
-  max-height: none;          /* override old 70vh cap */
-  min-height: 0;             /* allow proper flexbox scrolling */
-  overflow: auto;
-}
-
-/* Small hint footer, but doesn't steal height from tree */
 .hint {
   margin-top: 4px;
+  font-size: var(--font-size-hint);
+  color: var(--color-text-soft);
+}
+
+/* blinking cursor */
+
+.hint::after {
+  content: " _";
+  animation: blink 1s steps(1, start) infinite;
+  color: var(--color-accent);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+/* 1. Hide bullets in the tree */
+
+.bullet {
+  display: none;
+}
+
+/* 2. Checkbox on the right, visible only on hover (tree only) */
+
+.tree .node-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 2px;
+}
+
+.tree .complete-checkbox {
+  margin-left: auto;              /* push checkbox to the far right */
+  opacity: 0;                     /* hidden by default */
+  pointer-events: none;
+  transition: opacity 0.12s linear;
+}
+
+.tree .node-row:hover .complete-checkbox {
+  opacity: 1;                     /* show on hover */
+  pointer-events: auto;
+}
+.bullet { display: none; }
+
+.tree .node-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 2px;
+}
+
+.tree .complete-checkbox {
+  margin-left: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s linear;
+}
+
+.tree .node-row:hover .complete-checkbox {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Horizontal connector lines for leaf endpoints */
+
+.leaf-node > .node-row {
+  position: relative;
+}
+
+/* draw small horizontal line from the vertical spine to the leaf */
+.leaf-node > .node-row::before {
+  content: "";
+  position: absolute;
+  left: -14px;                        /* distance from node-row to vertical line */
+  top: 50%;
+  width: 12px;                        /* length of the horizontal connector */
+  border-top: 1px dashed var(--color-text-dim);
+  transform: translateY(-50%);
+}
+.tree-root ul {
+  border-left: 1px dashed var(--color-text-dim);
 }

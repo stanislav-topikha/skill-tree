@@ -5,6 +5,7 @@
 let treeData = []; // loaded from tree-data.json
 
 const STORAGE_KEY = "jsLearningTree_completed_v1";
+const THEME_KEY = "jsSkillTree_theme";
 
 const state = {
   search: "",
@@ -24,6 +25,11 @@ const toggleDifficulty = document.getElementById("toggleDifficulty");
 const toggleHideCompleted = document.getElementById("toggleHideCompleted");
 const expandAllBtn = document.getElementById("expandAllBtn");
 const collapseAllBtn = document.getElementById("collapseAllBtn");
+const filtersToggle = document.getElementById("filtersToggle");
+const filtersPopup = document.getElementById("filtersPopup");
+const themeSelect = document.getElementById("themeSelect");
+
+
 
 // ---- Helpers ----
 
@@ -159,6 +165,22 @@ function renderTree() {
     treeRootEl.appendChild(renderNode(node));
   });
 }
+// Filters popup toggle
+if (filtersToggle && filtersPopup) {
+  filtersToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = filtersPopup.classList.toggle("is-open");
+    filtersToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!filtersPopup.classList.contains("is-open")) return;
+    if (filtersPopup.contains(e.target) || e.target === filtersToggle) return;
+    filtersPopup.classList.remove("is-open");
+    filtersToggle.setAttribute("aria-expanded", "false");
+  });
+}
 
 function renderNode(node) {
   const li = document.createElement("li");
@@ -171,8 +193,16 @@ function renderNode(node) {
   const leaf = isLeaf(node);
   const hasDiff = typeof node.difficulty === "number";
 
+  // NEW: tag leaves vs branches
+  if (leaf) {
+    li.classList.add("leaf-node");
+  } else {
+    li.classList.add("branch-node");
+  }
+
   let toggleBtn = null;
 
+  // Expand / collapse button OR structural bullet
   if (hasChildren) {
     toggleBtn = document.createElement("button");
     toggleBtn.type = "button";
@@ -197,35 +227,13 @@ function renderNode(node) {
   const label = document.createElement("label");
   label.className = "node-label";
 
-  if (leaf && hasDiff) {
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.className = "complete-checkbox";
-    checkbox.checked = isCompleted(node.id);
-    checkbox.addEventListener("change", () => {
-      toggleCompleted(node.id, checkbox.checked);
-      if (state.hideCompleted) {
-        renderTree();
-      } else {
-        if (checkbox.checked) {
-          label.classList.add("completed");
-        } else {
-          label.classList.remove("completed");
-        }
-      }
-    });
-    label.appendChild(checkbox);
-
-    if (checkbox.checked) {
-      label.classList.add("completed");
-    }
-  }
-
+  // 1) Title
   const titleSpan = document.createElement("span");
   titleSpan.className = "node-title";
   titleSpan.textContent = prettifyTitle(node.title);
   label.appendChild(titleSpan);
 
+  // 2) Difficulty badge (if any)
   if (hasDiff) {
     const badge = document.createElement("span");
     badge.className = "difficulty-badge";
@@ -234,9 +242,40 @@ function renderNode(node) {
     label.appendChild(badge);
   }
 
+  // 3) Completion checkbox on the RIGHT for leaf endpoints
+  if (leaf && hasDiff) {
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "complete-checkbox";
+    checkbox.checked = isCompleted(node.id);
+
+    checkbox.addEventListener("change", () => {
+      toggleCompleted(node.id, checkbox.checked);
+
+      if (state.hideCompleted) {
+        // if hide-completed is active, re-filter + re-render
+        renderTree();
+      } else {
+        // otherwise, just update style
+        if (checkbox.checked) {
+          label.classList.add("completed");
+        } else {
+          label.classList.remove("completed");
+        }
+      }
+    });
+
+    if (checkbox.checked) {
+      label.classList.add("completed");
+    }
+
+    label.appendChild(checkbox);
+  }
+
   row.appendChild(label);
   li.appendChild(row);
 
+  // Children (if any)
   if (hasChildren) {
     const ul = document.createElement("ul");
     ul.className = "children";
@@ -252,11 +291,13 @@ function renderNode(node) {
     node.children.forEach((child) => {
       ul.appendChild(renderNode(child));
     });
+
     li.appendChild(ul);
   }
 
   return li;
 }
+
 
 // ---- Controls wiring ----
 
@@ -280,8 +321,8 @@ document.querySelectorAll(".diff-chip").forEach((btn) => {
 });
 
 toggleDifficulty.addEventListener("change", () => {
-  state.showDifficulties = toggleDifficulty.checked;
-  treeContainerEl.dataset.showDifficulty = state.showDifficulties ? "on" : "off";
+  const hide = toggleDifficulty.checked; // checked = hide
+  treeContainerEl.dataset.hideDifficulty = hide ? "on" : "off";
 });
 
 toggleHideCompleted.addEventListener("change", () => {
@@ -311,6 +352,25 @@ expandAllBtn.addEventListener("click", () => {
 collapseAllBtn.addEventListener("click", () => {
   setAllExpanded(false);
 });
+function applyTheme(themeName) {
+  const t = themeName || "green";
+
+  // "green" = default Pip-Boy, no data-theme attribute
+  if (t === "green") {
+    document.body.removeAttribute("data-theme");
+  } else {
+    document.body.setAttribute("data-theme", t);
+  }
+
+  if (themeSelect) {
+    themeSelect.value = t;
+  }
+
+  try {
+    localStorage.setItem(THEME_KEY, t);
+  } catch (_) {}
+}
+
 
 // ---- Init after JSON load ----
 
@@ -319,9 +379,24 @@ function initApp(loadedData) {
   assignIds(treeData);
   loadCompleted();
   initExpandedDefaults(treeData); // expand branches that have any leaves
-  treeContainerEl.dataset.showDifficulty = "on";
+  treeContainerEl.dataset.hideDifficulty = "off";
   renderTree();
+
+  // Theme init
+  let savedTheme = "fallout";
+  try {
+    const raw = localStorage.getItem(THEME_KEY);
+    if (raw) savedTheme = raw;
+  } catch (_) {}
+  applyTheme(savedTheme);
+
+  if (themeSelect) {
+  themeSelect.addEventListener("change", (e) => {
+    applyTheme(e.target.value);
+  });
 }
+}
+
 
 fetch("tree-data.json")
   .then((res) => {
