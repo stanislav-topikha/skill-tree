@@ -1,11 +1,42 @@
 // difficultyPlugin: difficulty aspect + badges + level filter
 
+const STORAGE_KEY = "js_filter_difficulty_v1";
 const LEVELS = [1, 2, 3, 4];
 let activeLevels = new Set(LEVELS); // all visible by default
+let buttonUpdaters = [];
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const parsed = JSON.parse(raw);
+    if (parsed && Array.isArray(parsed.levels)) {
+      activeLevels = new Set(parsed.levels.filter((l) => LEVELS.includes(l)));
+      if (activeLevels.size === 0) activeLevels = new Set(LEVELS);
+    }
+  } catch (_) {}
+}
+
+function saveState() {
+  try {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ levels: Array.from(activeLevels) })
+    );
+  } catch (_) {}
+}
+
+loadState();
 
 export const difficultyPlugin = {
   id: "difficulty",
   name: "Difficulty",
+  reset(ctx) {
+    activeLevels = new Set(LEVELS);
+    buttonUpdaters.forEach((fn) => fn());
+    saveState();
+    if (typeof ctx?.requestRender === "function") ctx.requestRender();
+  },
 
   onInit(ctx) {},
   onSubjectLoaded(subject, ctx) {},
@@ -18,6 +49,8 @@ export const difficultyPlugin = {
     label.textContent = "Difficulty";
 
     wrapper.appendChild(label);
+
+    buttonUpdaters = [];
 
     LEVELS.forEach((level) => {
       const btn = document.createElement("button");
@@ -47,12 +80,14 @@ export const difficultyPlugin = {
           activeLevels.add(level);
         }
         updateStyle();
+        saveState();
         if (typeof ctx.requestRender === "function") {
           ctx.requestRender();
         }
       });
 
       updateStyle();
+      buttonUpdaters.push(updateStyle);
       wrapper.appendChild(btn);
     });
 

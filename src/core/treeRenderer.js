@@ -42,11 +42,15 @@ function renderNode(ctx, node, pluginHost) {
 
   const row = document.createElement("div");
   row.className = "node-row";
+  row.tabIndex = 0;
+  row.dataset.nodeId = node.id;
+  row.dataset.kind = node.kind;
 
   if (isGroup) {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "toggle-btn";
+    btn.dataset.groupId = node.id;
 
     const expanded = ctx.expandedGroups.has(node.id);
     btn.textContent = expanded ? "▾" : "▸";

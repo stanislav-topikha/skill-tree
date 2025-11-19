@@ -120,13 +120,13 @@ export function createCoreContext(defaultAspects = {}) {
       return this.aspects[endpointId] || {};
     },
 
-    updateAspect(endpointId, patch) {
+    updateAspect(endpointId, patch, options = {}) {
       const prev = this.aspects[endpointId] || {};
       const next = { ...prev, ...patch };
       this.aspects[endpointId] = next;
       saveAspects(this.aspects);
 
-      if (typeof this.onAspectsChanged === "function") {
+      if (!options.skipRender && typeof this.onAspectsChanged === "function") {
         this.onAspectsChanged(endpointId, next);
       }
     }

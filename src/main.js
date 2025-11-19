@@ -8,9 +8,13 @@ import { searchPlugin } from "./plugins/searchPlugin.js";
 import { themePlugin } from "./plugins/themePlugin.js";
 import { difficultyPlugin } from "./plugins/difficultyPlugin.js";
 import { uiScalePlugin } from "./plugins/uiScalePlugin.js";
+import { timerPlugin } from "./plugins/timerPlugin.js";
+import { notesPlugin } from "./plugins/notesPlugin.js";
 
 let ctx = null;
 let pluginHost = null;
+let lastFocusedGroupId = null;
+let lastFocusedNodeId = null;
 
 const treeContainer = document.getElementById("tree-container");
 const coreControls = document.getElementById("core-controls");
@@ -57,9 +61,44 @@ function createPopupMenu(label) {
   };
 }
 
+// Simple toast helper
+const toastStack = document.createElement("div");
+toastStack.id = "toast-stack";
+document.body.appendChild(toastStack);
+
+function showToast(message, duration = 2000) {
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.textContent = message;
+  toastStack.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add("show"));
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 200);
+  }, duration);
+}
+
 const setRenderHooks = () => {
   ctx.requestRender = () => {
     renderTree(ctx, treeContainer, pluginHost);
+
+    if (lastFocusedGroupId) {
+      setTimeout(() => {
+        const btn = treeContainer.querySelector(
+          `.toggle-btn[data-group-id="${lastFocusedGroupId}"]`
+        );
+        if (btn) btn.focus();
+      }, 0);
+    }
+
+    if (lastFocusedNodeId) {
+      setTimeout(() => {
+        const row = treeContainer.querySelector(
+          `.node-row[data-node-id="${lastFocusedNodeId}"]`
+        );
+        if (row) row.focus();
+      }, 0);
+    }
   };
 
   ctx.onAspectsChanged = () => {
@@ -80,6 +119,7 @@ const setRenderHooks = () => {
   ctx = createCoreContext(defaultAspects);
   pluginHost = new PluginHost(ctx);
   setRenderHooks();
+  ctx.toast = showToast;
 
   const res = await fetch("./data/subject_js.json");
   const json = await res.json();
@@ -93,6 +133,8 @@ const setRenderHooks = () => {
   pluginHost.register(viewFilterPlugin);
   pluginHost.register(searchPlugin);
   pluginHost.register(difficultyPlugin);
+  pluginHost.register(timerPlugin);
+  pluginHost.register(notesPlugin);
 
   pluginHost.initAll();
   pluginHost.notifySubjectLoaded();
@@ -101,10 +143,12 @@ const setRenderHooks = () => {
   const uiMenu = createPopupMenu("UI");
   const filterMenu = createPopupMenu("Filter");
   const viewMenu = createPopupMenu("View");
+  const timeMenu = createPopupMenu("Sessions");
 
   pluginControls.appendChild(uiMenu.wrapper);
   pluginControls.appendChild(filterMenu.wrapper);
   pluginControls.appendChild(viewMenu.wrapper);
+  pluginControls.appendChild(timeMenu.wrapper);
 
   // Grouped controls inside menus
   themePlugin.contributeControls(uiMenu.panel, ctx);
@@ -112,6 +156,21 @@ const setRenderHooks = () => {
   searchPlugin.contributeControls(filterMenu.panel, ctx);
   difficultyPlugin.contributeControls(filterMenu.panel, ctx);
   viewFilterPlugin.contributeControls(viewMenu.panel, ctx);
+  timerPlugin.contributeControls(timeMenu.panel, ctx);
+
+  // Clear filters button inside Filter menu
+  const clearWrap = document.createElement("div");
+  clearWrap.className = "control-chip";
+  const clearBtn = document.createElement("button");
+  clearBtn.type = "button";
+  clearBtn.textContent = "Clear filters";
+  clearBtn.addEventListener("click", () => {
+    if (typeof searchPlugin.reset === "function") searchPlugin.reset(ctx);
+    if (typeof difficultyPlugin.reset === "function") difficultyPlugin.reset(ctx);
+    if (typeof viewFilterPlugin.reset === "function") viewFilterPlugin.reset(ctx);
+  });
+  clearWrap.appendChild(clearBtn);
+  filterMenu.panel.appendChild(clearWrap);
 
   // Remaining controls rendered inline
   completionPlugin.contributeControls(pluginControls, ctx);
@@ -135,4 +194,68 @@ const setRenderHooks = () => {
       }
     }
   });
+
+  // Arrow shortcuts on focused group toggle
+  window.addEventListener("keydown", (e) => {
+    const target = document.activeElement;
+    if (
+      !target ||
+      target.tagName === "INPUT" ||
+      target.tagName === "TEXTAREA" ||
+      target.tagName === "SELECT" ||
+      target.isContentEditable
+    ) {
+      return;
+    }
+
+    const isRow = target.classList && target.classList.contains("node-row");
+    const isToggle = target.classList && target.classList.contains("toggle-btn");
+
+    // Left/Right expand collapse on row or toggle
+    if (isRow || isToggle) {
+      const groupId =
+        (isToggle && target.dataset.groupId) ||
+        (isRow &&
+          target.dataset.kind === "group" &&
+          target.querySelector(".toggle-btn")?.dataset.groupId);
+
+      const expandKey = e.key === "ArrowRight";
+      const collapseKey = e.key === "ArrowLeft";
+
+      if (groupId && (expandKey || collapseKey)) {
+        e.preventDefault();
+        lastFocusedGroupId = groupId;
+        lastFocusedNodeId = target.dataset.nodeId || null;
+        ctx.setGroupExpanded(groupId, expandKey);
+        ctx.requestRender();
+        return;
+      }
+    }
+
+    // Up/Down navigation across rows
+    if (isRow && (e.key === "ArrowDown" || e.key === "ArrowUp")) {
+      e.preventDefault();
+      const rows = Array.from(treeContainer.querySelectorAll(".node-row"));
+      const idx = rows.indexOf(target);
+      if (idx === -1) return;
+      const nextIdx = e.key === "ArrowDown" ? idx + 1 : idx - 1;
+      if (nextIdx < 0 || nextIdx >= rows.length) return;
+      const nextRow = rows[nextIdx];
+      lastFocusedNodeId = nextRow.dataset.nodeId || null;
+      nextRow.focus();
+      return;
+    }
+  });
+
+  // Track focused node rows
+  treeContainer.addEventListener(
+    "focusin",
+    (e) => {
+      const row = e.target.closest(".node-row");
+      if (row) {
+        lastFocusedNodeId = row.dataset.nodeId || null;
+      }
+    },
+    true
+  );
 })();

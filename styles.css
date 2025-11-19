@@ -92,10 +92,39 @@ body {
   color: var(--text-main);
   font-family: "Courier New", monospace;
   letter-spacing: 0.06em;
+  overflow-x: hidden;
 
   display: flex;
   justify-content: center;
   align-items: stretch;
+}
+
+#toast-stack {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1000;
+}
+
+.toast {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: #000;
+  color: var(--text-main);
+  border: 1px solid var(--glow);
+  padding: 6px 10px;
+  font-size: var(--font-small);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Scanlines / overlay */
@@ -206,6 +235,8 @@ header h1::before {
   color: var(--text-soft);
   background: #000000;
   position: relative;
+  flex-wrap: wrap;
+  row-gap: calc(2px * var(--ui-scale));
 }
 
 .control-chip input[type="text"] {
@@ -247,6 +278,192 @@ header h1::before {
 .control-chip button:hover {
   border-color: var(--glow);
   color: var(--glow);
+}
+
+/* Unified focus style */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.node-row:focus-visible {
+  outline: 1px dashed var(--glow);
+  outline-offset: 2px;
+  box-shadow: none;
+  background: rgba(10, 40, 10, 0.5);
+}
+
+.note-btn {
+  border: 1px solid var(--border);
+  background: #000;
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: var(--font-mini);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.note-btn:hover {
+  border-color: var(--glow);
+  color: var(--glow);
+}
+
+.note-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.note-popover {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(calc(520px * var(--ui-scale)), 90vw);
+  min-width: calc(220px * var(--ui-scale));
+  max-height: 70vh;
+  padding: calc(10px * var(--ui-scale));
+  background: #000;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  gap: calc(6px * var(--ui-scale));
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.note-wrapper.open .note-popover {
+  display: flex;
+}
+
+.note-input {
+  width: 100%;
+  min-height: calc(60px * var(--ui-scale));
+  background: #020b02;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  font-family: "Courier New", monospace;
+  font-size: var(--font-small);
+  padding: calc(4px * var(--ui-scale));
+  resize: vertical;
+}
+
+.note-input::placeholder {
+  color: var(--text-dim);
+}
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(6px * var(--ui-scale));
+  max-height: calc(180px * var(--ui-scale));
+  overflow-y: auto;
+  padding: calc(2px * var(--ui-scale));
+  border: 1px solid var(--border);
+  background: #000;
+}
+
+.note-empty {
+  color: var(--text-dim);
+  font-size: var(--font-small);
+}
+
+.note-item {
+  display: flex;
+  align-items: center;
+  gap: calc(6px * var(--ui-scale));
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: calc(4px * var(--ui-scale));
+}
+
+.note-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.note-text {
+  white-space: pre-wrap;
+  color: var(--text-main);
+  font-size: var(--font-small);
+  flex: 1;
+}
+
+.note-meta {
+  color: var(--text-dim);
+  font-size: var(--font-mini);
+  min-width: calc(120px * var(--ui-scale));
+  text-align: right;
+}
+
+.note-delete {
+  border: 1px solid var(--border);
+  background: #000;
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: var(--font-small);
+  padding: 0 calc(6px * var(--ui-scale));
+  cursor: pointer;
+  height: calc(24px * var(--ui-scale));
+}
+
+.note-delete:hover {
+  border-color: var(--glow);
+  color: var(--glow);
+}
+
+.note-actions {
+  display: flex;
+  gap: calc(6px * var(--ui-scale));
+}
+
+.note-actions button {
+  border: 1px solid var(--border);
+  background: #000;
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: var(--font-small);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  cursor: pointer;
+}
+
+.note-actions button:hover {
+  border-color: var(--glow);
+  color: var(--glow);
+}
+
+.session-history-title {
+  width: 100%;
+  font-size: var(--font-small);
+  color: var(--text-soft);
+  margin-top: calc(6px * var(--ui-scale));
+}
+
+.session-history {
+  width: 100%;
+  border: 1px solid var(--border);
+  padding: calc(4px * var(--ui-scale));
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  gap: calc(4px * var(--ui-scale));
+  max-height: calc(200px * var(--ui-scale));
+  overflow-y: auto;
+}
+
+.session-history-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: calc(8px * var(--ui-scale));
+  font-size: var(--font-small);
+  color: var(--text-main);
+}
+
+.session-history-empty {
+  font-size: var(--font-small);
+  color: var(--text-dim);
 }
 
 /* Popup menus for grouped controls */
@@ -375,6 +592,13 @@ main {
   gap: 3px;
   padding: 2px 0;
   font-size: var(--font-main);
+  outline: none;
+}
+
+.node-row:focus {
+  outline: 1px dashed var(--glow);
+  outline-offset: 2px;
+  background: rgba(10, 40, 10, 0.6);
 }
 
 /* Expand / collapse buttons */
@@ -499,6 +723,52 @@ main {
 .control-chip input[type="checkbox"]:focus-visible {
   outline: 1px dashed var(--glow);
   outline-offset: 1px;
+}
+
+/* ============================
+   STATUS PILLS
+   ============================ */
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.75);
+  color: var(--text-soft);
+  font-size: var(--font-mini);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.status-pill[data-status="todo"] {
+  border-color: var(--border);
+  color: var(--text-soft);
+}
+
+.status-pill[data-status="in-progress"] {
+  border-color: #ffea80;
+  color: #ffea80;
+  box-shadow: 0 0 6px rgba(255, 234, 128, 0.35);
+}
+
+.status-pill[data-status="done"] {
+  border-color: var(--glow);
+  color: var(--glow);
+  background: var(--glow-soft);
+  box-shadow: 0 0 6px rgba(65, 255, 65, 0.35);
+}
+
+.node-row[data-status="in-progress"] .node-label {
+  color: #ffea80;
+}
+
+.node-row[data-status="done"] .node-label {
+  color: var(--text-soft);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
 }
 
 /* ============================
