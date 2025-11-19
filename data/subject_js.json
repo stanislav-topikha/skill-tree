@@ -1,0 +1,2906 @@
+{
+  "subject": {
+    "id": "js",
+    "title": "JavaScript",
+    "root": [
+      {
+        "id": "js_mindset_and_setup",
+        "kind": "group",
+        "title": "00_mindset-and-setup",
+        "label": "Mindset And Setup",
+        "children": [
+          {
+            "id": "js_mindset_and_setup_environment_and_tools",
+            "kind": "group",
+            "title": "environment-and-tools",
+            "label": "Environment And Tools",
+            "children": [
+              {
+                "id": "js_mindset_and_setup_environment_and_tools_install_node_and_npm",
+                "kind": "endpoint",
+                "title": "install-node-and-npm",
+                "label": "Install Node And Npm"
+              },
+              {
+                "id": "js_mindset_and_setup_environment_and_tools_editor_setup_vscode_vim",
+                "kind": "endpoint",
+                "title": "editor-setup-vscode-vim",
+                "label": "Editor Setup Vscode Vim"
+              },
+              {
+                "id": "js_mindset_and_setup_environment_and_tools_browser_devtools_basics",
+                "kind": "endpoint",
+                "title": "browser-devtools-basics",
+                "label": "Browser Devtools Basics"
+              },
+              {
+                "id": "js_mindset_and_setup_environment_and_tools_running_js_browser_console_node_cli",
+                "kind": "endpoint",
+                "title": "running-js-browser-console-node-cli",
+                "label": "Running Js Browser Console Node Cli"
+              }
+            ]
+          },
+          {
+            "id": "js_mindset_and_setup_project_basics",
+            "kind": "group",
+            "title": "project-basics",
+            "label": "Project Basics",
+            "children": [
+              {
+                "id": "js_mindset_and_setup_project_basics_package_json_basics",
+                "kind": "endpoint",
+                "title": "package-json-basics",
+                "label": "Package Json Basics"
+              },
+              {
+                "id": "js_mindset_and_setup_project_basics_npm_scripts_start_test_build",
+                "kind": "endpoint",
+                "title": "npm-scripts-start-test-build",
+                "label": "Npm Scripts Start Test Build"
+              },
+              {
+                "id": "js_mindset_and_setup_project_basics_basic_folder_structure",
+                "kind": "endpoint",
+                "title": "basic-folder-structure",
+                "label": "Basic Folder Structure"
+              }
+            ]
+          },
+          {
+            "id": "js_mindset_and_setup_learning_habits",
+            "kind": "group",
+            "title": "learning-habits",
+            "label": "Learning Habits",
+            "children": [
+              {
+                "id": "js_mindset_and_setup_learning_habits_how_to_read_mdn",
+                "kind": "endpoint",
+                "title": "how-to-read-mdn",
+                "label": "How To Read Mdn"
+              },
+              {
+                "id": "js_mindset_and_setup_learning_habits_debugging_mindset_minimal_repro",
+                "kind": "endpoint",
+                "title": "debugging-mindset-minimal-repro",
+                "label": "Debugging Mindset Minimal Repro"
+              },
+              {
+                "id": "js_mindset_and_setup_learning_habits_experiment_log_and_notes",
+                "kind": "endpoint",
+                "title": "experiment-log-and-notes",
+                "label": "Experiment Log And Notes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_core_syntax_and_basics",
+        "kind": "group",
+        "title": "01_core-syntax-and-basics",
+        "label": "Core Syntax And Basics",
+        "children": [
+          {
+            "id": "js_core_syntax_and_basics_values_and_types",
+            "kind": "group",
+            "title": "values-and-types",
+            "label": "Values And Types",
+            "children": [
+              {
+                "id": "js_core_syntax_and_basics_values_and_types_primitive_overview",
+                "kind": "endpoint",
+                "title": "primitive-overview",
+                "label": "Primitive Overview"
+              },
+              {
+                "id": "js_core_syntax_and_basics_values_and_types_numbers_nan_infinity",
+                "kind": "endpoint",
+                "title": "numbers-nan-infinity",
+                "label": "Numbers Nan Infinity"
+              },
+              {
+                "id": "js_core_syntax_and_basics_values_and_types_strings_basics",
+                "kind": "endpoint",
+                "title": "strings-basics",
+                "label": "Strings Basics"
+              },
+              {
+                "id": "js_core_syntax_and_basics_values_and_types_booleans_and_truthiness",
+                "kind": "endpoint",
+                "title": "booleans-and-truthiness",
+                "label": "Booleans And Truthiness"
+              },
+              {
+                "id": "js_core_syntax_and_basics_values_and_types_null_vs_undefined",
+                "kind": "endpoint",
+                "title": "null-vs-undefined",
+                "label": "Null Vs Undefined"
+              },
+              {
+                "id": "js_core_syntax_and_basics_values_and_types_bigint",
+                "kind": "endpoint",
+                "title": "bigint",
+                "label": "Bigint"
+              },
+              {
+                "id": "js_core_syntax_and_basics_values_and_types_symbol",
+                "kind": "endpoint",
+                "title": "symbol",
+                "label": "Symbol"
+              }
+            ]
+          },
+          {
+            "id": "js_core_syntax_and_basics_variables_and_basic_scope",
+            "kind": "group",
+            "title": "variables-and-basic-scope",
+            "label": "Variables And Basic Scope",
+            "children": [
+              {
+                "id": "js_core_syntax_and_basics_variables_and_basic_scope_var_let_const",
+                "kind": "endpoint",
+                "title": "var-let-const",
+                "label": "Var Let Const"
+              },
+              {
+                "id": "js_core_syntax_and_basics_variables_and_basic_scope_block_vs_global_scope",
+                "kind": "endpoint",
+                "title": "block-vs-global-scope",
+                "label": "Block Vs Global Scope"
+              },
+              {
+                "id": "js_core_syntax_and_basics_variables_and_basic_scope_naming_and_style_basics",
+                "kind": "endpoint",
+                "title": "naming-and-style-basics",
+                "label": "Naming And Style Basics"
+              }
+            ]
+          },
+          {
+            "id": "js_core_syntax_and_basics_operators",
+            "kind": "group",
+            "title": "operators",
+            "label": "Operators",
+            "children": [
+              {
+                "id": "js_core_syntax_and_basics_operators_arithmetic",
+                "kind": "group",
+                "title": "arithmetic",
+                "label": "Arithmetic",
+                "children": [
+                  {
+                    "id": "js_core_syntax_and_basics_operators_arithmetic_basic_arithmetic_plus_minus_times_divide_mod",
+                    "kind": "endpoint",
+                    "title": "basic-arithmetic-plus-minus-times-divide-mod",
+                    "label": "Basic Arithmetic Plus Minus Times Divide Mod"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_arithmetic_exponentiation",
+                    "kind": "endpoint",
+                    "title": "exponentiation",
+                    "label": "Exponentiation"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_arithmetic_increment_decrement",
+                    "kind": "endpoint",
+                    "title": "increment-decrement",
+                    "label": "Increment Decrement"
+                  }
+                ]
+              },
+              {
+                "id": "js_core_syntax_and_basics_operators_assignment",
+                "kind": "group",
+                "title": "assignment",
+                "label": "Assignment",
+                "children": [
+                  {
+                    "id": "js_core_syntax_and_basics_operators_assignment_simple_assignment",
+                    "kind": "endpoint",
+                    "title": "simple-assignment",
+                    "label": "Simple Assignment"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_assignment_compound_assignment",
+                    "kind": "endpoint",
+                    "title": "compound-assignment",
+                    "label": "Compound Assignment"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_assignment_chained_assignment_pitfalls",
+                    "kind": "endpoint",
+                    "title": "chained-assignment-pitfalls",
+                    "label": "Chained Assignment Pitfalls"
+                  }
+                ]
+              },
+              {
+                "id": "js_core_syntax_and_basics_operators_comparison",
+                "kind": "group",
+                "title": "comparison",
+                "label": "Comparison",
+                "children": [
+                  {
+                    "id": "js_core_syntax_and_basics_operators_comparison_relational_less_greater",
+                    "kind": "endpoint",
+                    "title": "relational-less-greater",
+                    "label": "Relational Less Greater"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_comparison_equality_double_vs_triple_equals",
+                    "kind": "endpoint",
+                    "title": "equality-double-vs-triple-equals",
+                    "label": "Equality Double Vs Triple Equals"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_comparison_weird_comparisons_null_nan",
+                    "kind": "endpoint",
+                    "title": "weird-comparisons-null-nan",
+                    "label": "Weird Comparisons Null Nan"
+                  }
+                ]
+              },
+              {
+                "id": "js_core_syntax_and_basics_operators_logical",
+                "kind": "group",
+                "title": "logical",
+                "label": "Logical",
+                "children": [
+                  {
+                    "id": "js_core_syntax_and_basics_operators_logical_logical_and",
+                    "kind": "endpoint",
+                    "title": "logical-and",
+                    "label": "Logical And"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_logical_logical_or",
+                    "kind": "endpoint",
+                    "title": "logical-or",
+                    "label": "Logical Or"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_logical_logical_not",
+                    "kind": "endpoint",
+                    "title": "logical-not",
+                    "label": "Logical Not"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_logical_short_circuiting_as_control_flow",
+                    "kind": "endpoint",
+                    "title": "short-circuiting-as-control-flow",
+                    "label": "Short Circuiting As Control Flow"
+                  }
+                ]
+              },
+              {
+                "id": "js_core_syntax_and_basics_operators_nullish_and_ternary",
+                "kind": "group",
+                "title": "nullish-and-ternary",
+                "label": "Nullish And Ternary",
+                "children": [
+                  {
+                    "id": "js_core_syntax_and_basics_operators_nullish_and_ternary_nullish_coalescing",
+                    "kind": "endpoint",
+                    "title": "nullish-coalescing",
+                    "label": "Nullish Coalescing"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_nullish_and_ternary_ternary_operator",
+                    "kind": "endpoint",
+                    "title": "ternary-operator",
+                    "label": "Ternary Operator"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_nullish_and_ternary_common_fallback_patterns",
+                    "kind": "endpoint",
+                    "title": "common-fallback-patterns",
+                    "label": "Common Fallback Patterns"
+                  }
+                ]
+              },
+              {
+                "id": "js_core_syntax_and_basics_operators_bitwise",
+                "kind": "group",
+                "title": "bitwise",
+                "label": "Bitwise",
+                "children": [
+                  {
+                    "id": "js_core_syntax_and_basics_operators_bitwise_bitwise_basics",
+                    "kind": "endpoint",
+                    "title": "bitwise-basics",
+                    "label": "Bitwise Basics"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_bitwise_bit_shifts",
+                    "kind": "endpoint",
+                    "title": "bit-shifts",
+                    "label": "Bit Shifts"
+                  },
+                  {
+                    "id": "js_core_syntax_and_basics_operators_bitwise_bitmasks_and_flags",
+                    "kind": "endpoint",
+                    "title": "bitmasks-and-flags",
+                    "label": "Bitmasks And Flags"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "js_core_syntax_and_basics_control_flow",
+            "kind": "group",
+            "title": "control-flow",
+            "label": "Control Flow",
+            "children": [
+              {
+                "id": "js_core_syntax_and_basics_control_flow_if_else",
+                "kind": "endpoint",
+                "title": "if-else",
+                "label": "If Else"
+              },
+              {
+                "id": "js_core_syntax_and_basics_control_flow_switch",
+                "kind": "endpoint",
+                "title": "switch",
+                "label": "Switch"
+              },
+              {
+                "id": "js_core_syntax_and_basics_control_flow_try_catch_finally",
+                "kind": "endpoint",
+                "title": "try-catch-finally",
+                "label": "Try Catch Finally"
+              }
+            ]
+          },
+          {
+            "id": "js_core_syntax_and_basics_loops_and_iteration",
+            "kind": "group",
+            "title": "loops-and-iteration",
+            "label": "Loops And Iteration",
+            "children": [
+              {
+                "id": "js_core_syntax_and_basics_loops_and_iteration_while_and_do_while",
+                "kind": "endpoint",
+                "title": "while-and-do-while",
+                "label": "While And Do While"
+              },
+              {
+                "id": "js_core_syntax_and_basics_loops_and_iteration_for_loop_classic",
+                "kind": "endpoint",
+                "title": "for-loop-classic",
+                "label": "For Loop Classic"
+              },
+              {
+                "id": "js_core_syntax_and_basics_loops_and_iteration_for_of",
+                "kind": "endpoint",
+                "title": "for-of",
+                "label": "For Of"
+              },
+              {
+                "id": "js_core_syntax_and_basics_loops_and_iteration_for_in_when_to_avoid",
+                "kind": "endpoint",
+                "title": "for-in-when-to-avoid",
+                "label": "For In When To Avoid"
+              },
+              {
+                "id": "js_core_syntax_and_basics_loops_and_iteration_break_and_continue",
+                "kind": "endpoint",
+                "title": "break-and-continue",
+                "label": "Break And Continue"
+              }
+            ]
+          },
+          {
+            "id": "js_core_syntax_and_basics_basic_io_and_debugging",
+            "kind": "group",
+            "title": "basic-io-and-debugging",
+            "label": "Basic Io And Debugging",
+            "children": [
+              {
+                "id": "js_core_syntax_and_basics_basic_io_and_debugging_console_log_warn_error",
+                "kind": "endpoint",
+                "title": "console-log-warn-error",
+                "label": "Console Log Warn Error"
+              },
+              {
+                "id": "js_core_syntax_and_basics_basic_io_and_debugging_reading_stack_traces",
+                "kind": "endpoint",
+                "title": "reading-stack-traces",
+                "label": "Reading Stack Traces"
+              },
+              {
+                "id": "js_core_syntax_and_basics_basic_io_and_debugging_alert_prompt_confirm",
+                "kind": "endpoint",
+                "title": "alert-prompt-confirm",
+                "label": "Alert Prompt Confirm"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_data_and_collections",
+        "kind": "group",
+        "title": "02_data-and-collections",
+        "label": "Data And Collections",
+        "children": [
+          {
+            "id": "js_data_and_collections_objects",
+            "kind": "group",
+            "title": "objects",
+            "label": "Objects",
+            "children": [
+              {
+                "id": "js_data_and_collections_objects_object_literals",
+                "kind": "endpoint",
+                "title": "object-literals",
+                "label": "Object Literals"
+              },
+              {
+                "id": "js_data_and_collections_objects_read_update_delete_properties",
+                "kind": "endpoint",
+                "title": "read-update-delete-properties",
+                "label": "Read Update Delete Properties"
+              },
+              {
+                "id": "js_data_and_collections_objects_computed_property_names",
+                "kind": "endpoint",
+                "title": "computed-property-names",
+                "label": "Computed Property Names"
+              },
+              {
+                "id": "js_data_and_collections_objects_nested_objects",
+                "kind": "endpoint",
+                "title": "nested-objects",
+                "label": "Nested Objects"
+              },
+              {
+                "id": "js_data_and_collections_objects_optional_chaining",
+                "kind": "endpoint",
+                "title": "optional-chaining",
+                "label": "Optional Chaining"
+              },
+              {
+                "id": "js_data_and_collections_objects_object_helpers_keys_values_entries",
+                "kind": "endpoint",
+                "title": "object-helpers-keys-values-entries",
+                "label": "Object Helpers Keys Values Entries"
+              }
+            ]
+          },
+          {
+            "id": "js_data_and_collections_arrays",
+            "kind": "group",
+            "title": "arrays",
+            "label": "Arrays",
+            "children": [
+              {
+                "id": "js_data_and_collections_arrays_basics",
+                "kind": "group",
+                "title": "basics",
+                "label": "Basics",
+                "children": [
+                  {
+                    "id": "js_data_and_collections_arrays_basics_create_and_access_elements",
+                    "kind": "endpoint",
+                    "title": "create-and-access-elements",
+                    "label": "Create And Access Elements"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_basics_length_and_sparse_arrays",
+                    "kind": "endpoint",
+                    "title": "length-and-sparse-arrays",
+                    "label": "Length And Sparse Arrays"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_basics_iterating_for_and_forof",
+                    "kind": "endpoint",
+                    "title": "iterating-for-and-forof",
+                    "label": "Iterating For And Forof"
+                  }
+                ]
+              },
+              {
+                "id": "js_data_and_collections_arrays_mutating_methods",
+                "kind": "group",
+                "title": "mutating-methods",
+                "label": "Mutating Methods",
+                "children": [
+                  {
+                    "id": "js_data_and_collections_arrays_mutating_methods_push_pop",
+                    "kind": "endpoint",
+                    "title": "push-pop",
+                    "label": "Push Pop"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_mutating_methods_shift_unshift",
+                    "kind": "endpoint",
+                    "title": "shift-unshift",
+                    "label": "Shift Unshift"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_mutating_methods_splice",
+                    "kind": "endpoint",
+                    "title": "splice",
+                    "label": "Splice"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_mutating_methods_sort_and_custom_compare",
+                    "kind": "endpoint",
+                    "title": "sort-and-custom-compare",
+                    "label": "Sort And Custom Compare"
+                  }
+                ]
+              },
+              {
+                "id": "js_data_and_collections_arrays_non_mutating_methods",
+                "kind": "group",
+                "title": "non-mutating-methods",
+                "label": "Non Mutating Methods",
+                "children": [
+                  {
+                    "id": "js_data_and_collections_arrays_non_mutating_methods_slice",
+                    "kind": "endpoint",
+                    "title": "slice",
+                    "label": "Slice"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_non_mutating_methods_concat",
+                    "kind": "endpoint",
+                    "title": "concat",
+                    "label": "Concat"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_non_mutating_methods_toSorted_and_toReversed",
+                    "kind": "endpoint",
+                    "title": "toSorted-and-toReversed",
+                    "label": "ToSorted And ToReversed"
+                  }
+                ]
+              },
+              {
+                "id": "js_data_and_collections_arrays_transform_and_search",
+                "kind": "group",
+                "title": "transform-and-search",
+                "label": "Transform And Search",
+                "children": [
+                  {
+                    "id": "js_data_and_collections_arrays_transform_and_search_forEach",
+                    "kind": "endpoint",
+                    "title": "forEach",
+                    "label": "ForEach"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_transform_and_search_map",
+                    "kind": "endpoint",
+                    "title": "map",
+                    "label": "Map"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_transform_and_search_filter",
+                    "kind": "endpoint",
+                    "title": "filter",
+                    "label": "Filter"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_transform_and_search_find_and_findIndex",
+                    "kind": "endpoint",
+                    "title": "find-and-findIndex",
+                    "label": "Find And FindIndex"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_transform_and_search_some_and_every",
+                    "kind": "endpoint",
+                    "title": "some-and-every",
+                    "label": "Some And Every"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_transform_and_search_reduce_accumulator_pattern",
+                    "kind": "endpoint",
+                    "title": "reduce-accumulator-pattern",
+                    "label": "Reduce Accumulator Pattern"
+                  }
+                ]
+              },
+              {
+                "id": "js_data_and_collections_arrays_array_recipes",
+                "kind": "group",
+                "title": "array-recipes",
+                "label": "Array Recipes",
+                "children": [
+                  {
+                    "id": "js_data_and_collections_arrays_array_recipes_grouping_by_field",
+                    "kind": "endpoint",
+                    "title": "grouping-by-field",
+                    "label": "Grouping By Field"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_array_recipes_frequency_maps",
+                    "kind": "endpoint",
+                    "title": "frequency-maps",
+                    "label": "Frequency Maps"
+                  },
+                  {
+                    "id": "js_data_and_collections_arrays_array_recipes_flat_and_flatMap",
+                    "kind": "endpoint",
+                    "title": "flat-and-flatMap",
+                    "label": "Flat And FlatMap"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "js_data_and_collections_maps_and_sets",
+            "kind": "group",
+            "title": "maps-and-sets",
+            "label": "Maps And Sets",
+            "children": [
+              {
+                "id": "js_data_and_collections_maps_and_sets_map_basics",
+                "kind": "endpoint",
+                "title": "map-basics",
+                "label": "Map Basics"
+              },
+              {
+                "id": "js_data_and_collections_maps_and_sets_iterating_over_map",
+                "kind": "endpoint",
+                "title": "iterating-over-map",
+                "label": "Iterating Over Map"
+              },
+              {
+                "id": "js_data_and_collections_maps_and_sets_set_basics",
+                "kind": "endpoint",
+                "title": "set-basics",
+                "label": "Set Basics"
+              },
+              {
+                "id": "js_data_and_collections_maps_and_sets_set_for_uniques",
+                "kind": "endpoint",
+                "title": "set-for-uniques",
+                "label": "Set For Uniques"
+              },
+              {
+                "id": "js_data_and_collections_maps_and_sets_weakmap_and_weakset",
+                "kind": "endpoint",
+                "title": "weakmap-and-weakset",
+                "label": "Weakmap And Weakset"
+              }
+            ]
+          },
+          {
+            "id": "js_data_and_collections_other_builtins",
+            "kind": "group",
+            "title": "other-builtins",
+            "label": "Other Builtins",
+            "children": [
+              {
+                "id": "js_data_and_collections_other_builtins_date_basics",
+                "kind": "endpoint",
+                "title": "date-basics",
+                "label": "Date Basics"
+              },
+              {
+                "id": "js_data_and_collections_other_builtins_intl_number_and_date_format",
+                "kind": "endpoint",
+                "title": "intl-number-and-date-format",
+                "label": "Intl Number And Date Format"
+              },
+              {
+                "id": "js_data_and_collections_other_builtins_json_parse_and_stringify",
+                "kind": "endpoint",
+                "title": "json-parse-and-stringify",
+                "label": "Json Parse And Stringify"
+              },
+              {
+                "id": "js_data_and_collections_other_builtins_math_random_floor_round",
+                "kind": "endpoint",
+                "title": "math-random-floor-round",
+                "label": "Math Random Floor Round"
+              }
+            ]
+          },
+          {
+            "id": "js_data_and_collections_data_model_concepts",
+            "kind": "group",
+            "title": "data-model-concepts",
+            "label": "Data Model Concepts",
+            "children": [
+              {
+                "id": "js_data_and_collections_data_model_concepts_value_vs_reference",
+                "kind": "endpoint",
+                "title": "value-vs-reference",
+                "label": "Value Vs Reference"
+              },
+              {
+                "id": "js_data_and_collections_data_model_concepts_shallow_copy_spread_object_assign",
+                "kind": "endpoint",
+                "title": "shallow-copy-spread-object-assign",
+                "label": "Shallow Copy Spread Object Assign"
+              },
+              {
+                "id": "js_data_and_collections_data_model_concepts_deep_copy_structuredClone",
+                "kind": "endpoint",
+                "title": "deep-copy-structuredClone",
+                "label": "Deep Copy StructuredClone"
+              },
+              {
+                "id": "js_data_and_collections_data_model_concepts_immutability_and_object_freeze",
+                "kind": "endpoint",
+                "title": "immutability-and-object-freeze",
+                "label": "Immutability And Object Freeze"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_functions_scope_and_closures",
+        "kind": "group",
+        "title": "03_functions-scope-and-closures",
+        "label": "Functions Scope And Closures",
+        "children": [
+          {
+            "id": "js_functions_scope_and_closures_function_forms",
+            "kind": "group",
+            "title": "function-forms",
+            "label": "Function Forms",
+            "children": [
+              {
+                "id": "js_functions_scope_and_closures_function_forms_function_declarations",
+                "kind": "endpoint",
+                "title": "function-declarations",
+                "label": "Function Declarations"
+              },
+              {
+                "id": "js_functions_scope_and_closures_function_forms_function_expressions",
+                "kind": "endpoint",
+                "title": "function-expressions",
+                "label": "Function Expressions"
+              },
+              {
+                "id": "js_functions_scope_and_closures_function_forms_arrow_functions",
+                "kind": "endpoint",
+                "title": "arrow-functions",
+                "label": "Arrow Functions"
+              },
+              {
+                "id": "js_functions_scope_and_closures_function_forms_choosing_a_function_form",
+                "kind": "endpoint",
+                "title": "choosing-a-function-form",
+                "label": "Choosing A Function Form"
+              }
+            ]
+          },
+          {
+            "id": "js_functions_scope_and_closures_parameters_and_returns",
+            "kind": "group",
+            "title": "parameters-and-returns",
+            "label": "Parameters And Returns",
+            "children": [
+              {
+                "id": "js_functions_scope_and_closures_parameters_and_returns_parameters_vs_arguments",
+                "kind": "endpoint",
+                "title": "parameters-vs-arguments",
+                "label": "Parameters Vs Arguments"
+              },
+              {
+                "id": "js_functions_scope_and_closures_parameters_and_returns_default_parameters",
+                "kind": "endpoint",
+                "title": "default-parameters",
+                "label": "Default Parameters"
+              },
+              {
+                "id": "js_functions_scope_and_closures_parameters_and_returns_rest_parameters",
+                "kind": "endpoint",
+                "title": "rest-parameters",
+                "label": "Rest Parameters"
+              },
+              {
+                "id": "js_functions_scope_and_closures_parameters_and_returns_return_values_and_early_return",
+                "kind": "endpoint",
+                "title": "return-values-and-early-return",
+                "label": "Return Values And Early Return"
+              },
+              {
+                "id": "js_functions_scope_and_closures_parameters_and_returns_pure_vs_impure_functions",
+                "kind": "endpoint",
+                "title": "pure-vs-impure-functions",
+                "label": "Pure Vs Impure Functions"
+              }
+            ]
+          },
+          {
+            "id": "js_functions_scope_and_closures_scope",
+            "kind": "group",
+            "title": "scope",
+            "label": "Scope",
+            "children": [
+              {
+                "id": "js_functions_scope_and_closures_scope_lexical_scope",
+                "kind": "endpoint",
+                "title": "lexical-scope",
+                "label": "Lexical Scope"
+              },
+              {
+                "id": "js_functions_scope_and_closures_scope_scope_chain_lookups",
+                "kind": "endpoint",
+                "title": "scope-chain-lookups",
+                "label": "Scope Chain Lookups"
+              },
+              {
+                "id": "js_functions_scope_and_closures_scope_function_scope_vs_block_scope",
+                "kind": "endpoint",
+                "title": "function-scope-vs-block-scope",
+                "label": "Function Scope Vs Block Scope"
+              }
+            ]
+          },
+          {
+            "id": "js_functions_scope_and_closures_closures",
+            "kind": "group",
+            "title": "closures",
+            "label": "Closures",
+            "children": [
+              {
+                "id": "js_functions_scope_and_closures_closures_closure_definition_and_mental_model",
+                "kind": "endpoint",
+                "title": "closure-definition-and-mental-model",
+                "label": "Closure Definition And Mental Model"
+              },
+              {
+                "id": "js_functions_scope_and_closures_closures_counters_and_state_via_closure",
+                "kind": "endpoint",
+                "title": "counters-and-state-via-closure",
+                "label": "Counters And State Via Closure"
+              },
+              {
+                "id": "js_functions_scope_and_closures_closures_caching_and_memoization_via_closure",
+                "kind": "endpoint",
+                "title": "caching-and-memoization-via-closure",
+                "label": "Caching And Memoization Via Closure"
+              },
+              {
+                "id": "js_functions_scope_and_closures_closures_closures_in_loops_common_bug",
+                "kind": "endpoint",
+                "title": "closures-in-loops-common-bug",
+                "label": "Closures In Loops Common Bug"
+              },
+              {
+                "id": "js_functions_scope_and_closures_closures_module_pattern_with_closures",
+                "kind": "endpoint",
+                "title": "module-pattern-with-closures",
+                "label": "Module Pattern With Closures"
+              }
+            ]
+          },
+          {
+            "id": "js_functions_scope_and_closures_functional_patterns",
+            "kind": "group",
+            "title": "functional-patterns",
+            "label": "Functional Patterns",
+            "children": [
+              {
+                "id": "js_functions_scope_and_closures_functional_patterns_functions_as_arguments",
+                "kind": "endpoint",
+                "title": "functions-as-arguments",
+                "label": "Functions As Arguments"
+              },
+              {
+                "id": "js_functions_scope_and_closures_functional_patterns_functions_returning_functions",
+                "kind": "endpoint",
+                "title": "functions-returning-functions",
+                "label": "Functions Returning Functions"
+              },
+              {
+                "id": "js_functions_scope_and_closures_functional_patterns_higher_order_functions",
+                "kind": "endpoint",
+                "title": "higher-order-functions",
+                "label": "Higher Order Functions"
+              },
+              {
+                "id": "js_functions_scope_and_closures_functional_patterns_currying",
+                "kind": "endpoint",
+                "title": "currying",
+                "label": "Currying"
+              },
+              {
+                "id": "js_functions_scope_and_closures_functional_patterns_function_composition_and_pipe",
+                "kind": "endpoint",
+                "title": "function-composition-and-pipe",
+                "label": "Function Composition And Pipe"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_objects_prototypes_and_classes",
+        "kind": "group",
+        "title": "04_objects-prototypes-and-classes",
+        "label": "Objects Prototypes And Classes",
+        "children": [
+          {
+            "id": "js_objects_prototypes_and_classes_this_and_binding",
+            "kind": "group",
+            "title": "this-and-binding",
+            "label": "This And Binding",
+            "children": [
+              {
+                "id": "js_objects_prototypes_and_classes_this_and_binding_what_is_this_runtime_binding",
+                "kind": "endpoint",
+                "title": "what-is-this-runtime-binding",
+                "label": "What Is This Runtime Binding"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_this_and_binding_this_in_methods_vs_plain_functions",
+                "kind": "endpoint",
+                "title": "this-in-methods-vs-plain-functions",
+                "label": "This In Methods Vs Plain Functions"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_this_and_binding_arrow_functions_and_lexical_this",
+                "kind": "endpoint",
+                "title": "arrow-functions-and-lexical-this",
+                "label": "Arrow Functions And Lexical This"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_this_and_binding_call_apply_bind",
+                "kind": "endpoint",
+                "title": "call-apply-bind",
+                "label": "Call Apply Bind"
+              }
+            ]
+          },
+          {
+            "id": "js_objects_prototypes_and_classes_prototype_system",
+            "kind": "group",
+            "title": "prototype-system",
+            "label": "Prototype System",
+            "children": [
+              {
+                "id": "js_objects_prototypes_and_classes_prototype_system_prototype_and___proto__",
+                "kind": "endpoint",
+                "title": "prototype-and-__proto__",
+                "label": "Prototype And __proto__"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_prototype_system_prototype_chain_lookups",
+                "kind": "endpoint",
+                "title": "prototype-chain-lookups",
+                "label": "Prototype Chain Lookups"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_prototype_system_constructor_functions_and_new",
+                "kind": "endpoint",
+                "title": "constructor-functions-and-new",
+                "label": "Constructor Functions And New"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_prototype_system_object_create",
+                "kind": "endpoint",
+                "title": "object-create",
+                "label": "Object Create"
+              }
+            ]
+          },
+          {
+            "id": "js_objects_prototypes_and_classes_classes",
+            "kind": "group",
+            "title": "classes",
+            "label": "Classes",
+            "children": [
+              {
+                "id": "js_objects_prototypes_and_classes_classes_class_syntax",
+                "kind": "endpoint",
+                "title": "class-syntax",
+                "label": "Class Syntax"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_classes_instance_fields_and_methods",
+                "kind": "endpoint",
+                "title": "instance-fields-and-methods",
+                "label": "Instance Fields And Methods"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_classes_static_methods",
+                "kind": "endpoint",
+                "title": "static-methods",
+                "label": "Static Methods"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_classes_inheritance_and_super",
+                "kind": "endpoint",
+                "title": "inheritance-and-super",
+                "label": "Inheritance And Super"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_classes_composition_vs_inheritance",
+                "kind": "endpoint",
+                "title": "composition-vs-inheritance",
+                "label": "Composition Vs Inheritance"
+              }
+            ]
+          },
+          {
+            "id": "js_objects_prototypes_and_classes_meta_programming",
+            "kind": "group",
+            "title": "meta-programming",
+            "label": "Meta Programming",
+            "children": [
+              {
+                "id": "js_objects_prototypes_and_classes_meta_programming_getters_and_setters",
+                "kind": "endpoint",
+                "title": "getters-and-setters",
+                "label": "Getters And Setters"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_meta_programming_proxy_basics",
+                "kind": "endpoint",
+                "title": "proxy-basics",
+                "label": "Proxy Basics"
+              },
+              {
+                "id": "js_objects_prototypes_and_classes_meta_programming_reflect_api",
+                "kind": "endpoint",
+                "title": "reflect-api",
+                "label": "Reflect Api"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_language_features_and_mechanics",
+        "kind": "group",
+        "title": "05_language-features-and-mechanics",
+        "label": "Language Features And Mechanics",
+        "children": [
+          {
+            "id": "js_language_features_and_mechanics_modern_syntax",
+            "kind": "group",
+            "title": "modern-syntax",
+            "label": "Modern Syntax",
+            "children": [
+              {
+                "id": "js_language_features_and_mechanics_modern_syntax_strict_mode",
+                "kind": "endpoint",
+                "title": "strict-mode",
+                "label": "Strict Mode"
+              },
+              {
+                "id": "js_language_features_and_mechanics_modern_syntax_template_literals",
+                "kind": "endpoint",
+                "title": "template-literals",
+                "label": "Template Literals"
+              },
+              {
+                "id": "js_language_features_and_mechanics_modern_syntax_destructuring_objects_and_arrays",
+                "kind": "endpoint",
+                "title": "destructuring-objects-and-arrays",
+                "label": "Destructuring Objects And Arrays"
+              },
+              {
+                "id": "js_language_features_and_mechanics_modern_syntax_spread_operator",
+                "kind": "endpoint",
+                "title": "spread-operator",
+                "label": "Spread Operator"
+              },
+              {
+                "id": "js_language_features_and_mechanics_modern_syntax_rest_operator",
+                "kind": "endpoint",
+                "title": "rest-operator",
+                "label": "Rest Operator"
+              }
+            ]
+          },
+          {
+            "id": "js_language_features_and_mechanics_iteration_protocols",
+            "kind": "group",
+            "title": "iteration-protocols",
+            "label": "Iteration Protocols",
+            "children": [
+              {
+                "id": "js_language_features_and_mechanics_iteration_protocols_iterable_and_iterator_protocols",
+                "kind": "endpoint",
+                "title": "iterable-and-iterator-protocols",
+                "label": "Iterable And Iterator Protocols"
+              },
+              {
+                "id": "js_language_features_and_mechanics_iteration_protocols_symbol_iterator",
+                "kind": "endpoint",
+                "title": "symbol-iterator",
+                "label": "Symbol Iterator"
+              },
+              {
+                "id": "js_language_features_and_mechanics_iteration_protocols_custom_iterators",
+                "kind": "endpoint",
+                "title": "custom-iterators",
+                "label": "Custom Iterators"
+              },
+              {
+                "id": "js_language_features_and_mechanics_iteration_protocols_generator_functions",
+                "kind": "endpoint",
+                "title": "generator-functions",
+                "label": "Generator Functions"
+              },
+              {
+                "id": "js_language_features_and_mechanics_iteration_protocols_async_generators_and_for_await_of",
+                "kind": "endpoint",
+                "title": "async-generators-and-for-await-of",
+                "label": "Async Generators And For Await Of"
+              }
+            ]
+          },
+          {
+            "id": "js_language_features_and_mechanics_errors_and_exceptions",
+            "kind": "group",
+            "title": "errors-and-exceptions",
+            "label": "Errors And Exceptions",
+            "children": [
+              {
+                "id": "js_language_features_and_mechanics_errors_and_exceptions_built_in_error_types",
+                "kind": "endpoint",
+                "title": "built-in-error-types",
+                "label": "Built In Error Types"
+              },
+              {
+                "id": "js_language_features_and_mechanics_errors_and_exceptions_throw_and_custom_error_messages",
+                "kind": "endpoint",
+                "title": "throw-and-custom-error-messages",
+                "label": "Throw And Custom Error Messages"
+              },
+              {
+                "id": "js_language_features_and_mechanics_errors_and_exceptions_custom_error_classes",
+                "kind": "endpoint",
+                "title": "custom-error-classes",
+                "label": "Custom Error Classes"
+              }
+            ]
+          },
+          {
+            "id": "js_language_features_and_mechanics_type_coercion",
+            "kind": "group",
+            "title": "type-coercion",
+            "label": "Type Coercion",
+            "children": [
+              {
+                "id": "js_language_features_and_mechanics_type_coercion_implicit_vs_explicit_coercion",
+                "kind": "endpoint",
+                "title": "implicit-vs-explicit-coercion",
+                "label": "Implicit Vs Explicit Coercion"
+              },
+              {
+                "id": "js_language_features_and_mechanics_type_coercion_abstract_operation_ideas",
+                "kind": "endpoint",
+                "title": "abstract-operation-ideas",
+                "label": "Abstract Operation Ideas"
+              },
+              {
+                "id": "js_language_features_and_mechanics_type_coercion_coercion_edge_cases",
+                "kind": "endpoint",
+                "title": "coercion-edge-cases",
+                "label": "Coercion Edge Cases"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_runtime_and_execution_model",
+        "kind": "group",
+        "title": "06_runtime-and-execution-model",
+        "label": "Runtime And Execution Model",
+        "children": [
+          {
+            "id": "js_runtime_and_execution_model_execution_context",
+            "kind": "group",
+            "title": "execution-context",
+            "label": "Execution Context",
+            "children": [
+              {
+                "id": "js_runtime_and_execution_model_execution_context_global_and_function_contexts",
+                "kind": "endpoint",
+                "title": "global-and-function-contexts",
+                "label": "Global And Function Contexts"
+              },
+              {
+                "id": "js_runtime_and_execution_model_execution_context_call_stack_and_stack_frames",
+                "kind": "endpoint",
+                "title": "call-stack-and-stack-frames",
+                "label": "Call Stack And Stack Frames"
+              },
+              {
+                "id": "js_runtime_and_execution_model_execution_context_hoisting_functions_and_variables",
+                "kind": "endpoint",
+                "title": "hoisting-functions-and-variables",
+                "label": "Hoisting Functions And Variables"
+              },
+              {
+                "id": "js_runtime_and_execution_model_execution_context_temporal_dead_zone_let_const",
+                "kind": "endpoint",
+                "title": "temporal-dead-zone-let-const",
+                "label": "Temporal Dead Zone Let Const"
+              }
+            ]
+          },
+          {
+            "id": "js_runtime_and_execution_model_event_loop_and_queues",
+            "kind": "group",
+            "title": "event-loop-and-queues",
+            "label": "Event Loop And Queues",
+            "children": [
+              {
+                "id": "js_runtime_and_execution_model_event_loop_and_queues_event_loop_basics",
+                "kind": "endpoint",
+                "title": "event-loop-basics",
+                "label": "Event Loop Basics"
+              },
+              {
+                "id": "js_runtime_and_execution_model_event_loop_and_queues_macrotasks_timeout_interval_io",
+                "kind": "endpoint",
+                "title": "macrotasks-timeout-interval-io",
+                "label": "Macrotasks Timeout Interval Io"
+              },
+              {
+                "id": "js_runtime_and_execution_model_event_loop_and_queues_microtasks_promises_mutation_observer",
+                "kind": "endpoint",
+                "title": "microtasks-promises-mutation-observer",
+                "label": "Microtasks Promises Mutation Observer"
+              },
+              {
+                "id": "js_runtime_and_execution_model_event_loop_and_queues_scheduling_pitfalls_starvation",
+                "kind": "endpoint",
+                "title": "scheduling-pitfalls-starvation",
+                "label": "Scheduling Pitfalls Starvation"
+              }
+            ]
+          },
+          {
+            "id": "js_runtime_and_execution_model_memory",
+            "kind": "group",
+            "title": "memory",
+            "label": "Memory",
+            "children": [
+              {
+                "id": "js_runtime_and_execution_model_memory_stack_vs_heap",
+                "kind": "endpoint",
+                "title": "stack-vs-heap",
+                "label": "Stack Vs Heap"
+              },
+              {
+                "id": "js_runtime_and_execution_model_memory_garbage_collection_basics",
+                "kind": "endpoint",
+                "title": "garbage-collection-basics",
+                "label": "Garbage Collection Basics"
+              },
+              {
+                "id": "js_runtime_and_execution_model_memory_leaks_from_closures_and_dom_references",
+                "kind": "endpoint",
+                "title": "leaks-from-closures-and-dom-references",
+                "label": "Leaks From Closures And Dom References"
+              }
+            ]
+          },
+          {
+            "id": "js_runtime_and_execution_model_runtime_pitfalls",
+            "kind": "group",
+            "title": "runtime-pitfalls",
+            "label": "Runtime Pitfalls",
+            "children": [
+              {
+                "id": "js_runtime_and_execution_model_runtime_pitfalls_blocking_main_thread",
+                "kind": "endpoint",
+                "title": "blocking-main-thread",
+                "label": "Blocking Main Thread"
+              },
+              {
+                "id": "js_runtime_and_execution_model_runtime_pitfalls_long_synchronous_loops",
+                "kind": "endpoint",
+                "title": "long-synchronous-loops",
+                "label": "Long Synchronous Loops"
+              },
+              {
+                "id": "js_runtime_and_execution_model_runtime_pitfalls_recursion_and_stack_overflow",
+                "kind": "endpoint",
+                "title": "recursion-and-stack-overflow",
+                "label": "Recursion And Stack Overflow"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_modules_and_dependency_management",
+        "kind": "group",
+        "title": "07_modules-and-dependency-management",
+        "label": "Modules And Dependency Management",
+        "children": [
+          {
+            "id": "js_modules_and_dependency_management_module_systems",
+            "kind": "group",
+            "title": "module-systems",
+            "label": "Module Systems",
+            "children": [
+              {
+                "id": "js_modules_and_dependency_management_module_systems_script_vs_module_in_browser",
+                "kind": "endpoint",
+                "title": "script-vs-module-in-browser",
+                "label": "Script Vs Module In Browser"
+              },
+              {
+                "id": "js_modules_and_dependency_management_module_systems_es_modules_import_export",
+                "kind": "endpoint",
+                "title": "es-modules-import-export",
+                "label": "Es Modules Import Export"
+              },
+              {
+                "id": "js_modules_and_dependency_management_module_systems_dynamic_import",
+                "kind": "endpoint",
+                "title": "dynamic-import",
+                "label": "Dynamic Import"
+              },
+              {
+                "id": "js_modules_and_dependency_management_module_systems_commonjs_require_module_exports",
+                "kind": "endpoint",
+                "title": "commonjs-require-module-exports",
+                "label": "Commonjs Require Module Exports"
+              }
+            ]
+          },
+          {
+            "id": "js_modules_and_dependency_management_bundlers_and_build_tools",
+            "kind": "group",
+            "title": "bundlers-and-build-tools",
+            "label": "Bundlers And Build Tools",
+            "children": [
+              {
+                "id": "js_modules_and_dependency_management_bundlers_and_build_tools_why_bundling_is_needed",
+                "kind": "endpoint",
+                "title": "why-bundling-is-needed",
+                "label": "Why Bundling Is Needed"
+              },
+              {
+                "id": "js_modules_and_dependency_management_bundlers_and_build_tools_webpack_rollup_vite_parcel_overview",
+                "kind": "endpoint",
+                "title": "webpack-rollup-vite-parcel-overview",
+                "label": "Webpack Rollup Vite Parcel Overview"
+              },
+              {
+                "id": "js_modules_and_dependency_management_bundlers_and_build_tools_code_splitting_and_lazy_loading",
+                "kind": "endpoint",
+                "title": "code-splitting-and-lazy-loading",
+                "label": "Code Splitting And Lazy Loading"
+              },
+              {
+                "id": "js_modules_and_dependency_management_bundlers_and_build_tools_tree_shaking",
+                "kind": "endpoint",
+                "title": "tree-shaking",
+                "label": "Tree Shaking"
+              }
+            ]
+          },
+          {
+            "id": "js_modules_and_dependency_management_dependency_management",
+            "kind": "group",
+            "title": "dependency-management",
+            "label": "Dependency Management",
+            "children": [
+              {
+                "id": "js_modules_and_dependency_management_dependency_management_npm_pnpm_yarn_basics",
+                "kind": "endpoint",
+                "title": "npm-pnpm-yarn-basics",
+                "label": "Npm Pnpm Yarn Basics"
+              },
+              {
+                "id": "js_modules_and_dependency_management_dependency_management_semantic_versioning_and_ranges",
+                "kind": "endpoint",
+                "title": "semantic-versioning-and-ranges",
+                "label": "Semantic Versioning And Ranges"
+              },
+              {
+                "id": "js_modules_and_dependency_management_dependency_management_lockfiles_and_reproducible_installs",
+                "kind": "endpoint",
+                "title": "lockfiles-and-reproducible-installs",
+                "label": "Lockfiles And Reproducible Installs"
+              },
+              {
+                "id": "js_modules_and_dependency_management_dependency_management_monorepo_tools_turborepo_nx_lerna",
+                "kind": "endpoint",
+                "title": "monorepo-tools-turborepo-nx-lerna",
+                "label": "Monorepo Tools Turborepo Nx Lerna"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_browser_and_dom",
+        "kind": "group",
+        "title": "08_browser-and-dom",
+        "label": "Browser And Dom",
+        "children": [
+          {
+            "id": "js_browser_and_dom_dom_basics",
+            "kind": "group",
+            "title": "dom-basics",
+            "label": "Dom Basics",
+            "children": [
+              {
+                "id": "js_browser_and_dom_dom_basics_dom_tree_and_node_types",
+                "kind": "endpoint",
+                "title": "dom-tree-and-node-types",
+                "label": "Dom Tree And Node Types"
+              },
+              {
+                "id": "js_browser_and_dom_dom_basics_queryselector_and_queryselectorall",
+                "kind": "endpoint",
+                "title": "queryselector-and-queryselectorall",
+                "label": "Queryselector And Queryselectorall"
+              },
+              {
+                "id": "js_browser_and_dom_dom_basics_reading_and_updating_attributes",
+                "kind": "endpoint",
+                "title": "reading-and-updating-attributes",
+                "label": "Reading And Updating Attributes"
+              },
+              {
+                "id": "js_browser_and_dom_dom_basics_creating_removing_moving_elements",
+                "kind": "endpoint",
+                "title": "creating-removing-moving-elements",
+                "label": "Creating Removing Moving Elements"
+              }
+            ]
+          },
+          {
+            "id": "js_browser_and_dom_styling_and_layout",
+            "kind": "group",
+            "title": "styling-and-layout",
+            "label": "Styling And Layout",
+            "children": [
+              {
+                "id": "js_browser_and_dom_styling_and_layout_classlist_and_inline_styles",
+                "kind": "endpoint",
+                "title": "classlist-and-inline-styles",
+                "label": "Classlist And Inline Styles"
+              },
+              {
+                "id": "js_browser_and_dom_styling_and_layout_computed_styles",
+                "kind": "endpoint",
+                "title": "computed-styles",
+                "label": "Computed Styles"
+              },
+              {
+                "id": "js_browser_and_dom_styling_and_layout_reflow_and_repaint_basics",
+                "kind": "endpoint",
+                "title": "reflow-and-repaint-basics",
+                "label": "Reflow And Repaint Basics"
+              },
+              {
+                "id": "js_browser_and_dom_styling_and_layout_measuring_elements_getboundingclientrect",
+                "kind": "endpoint",
+                "title": "measuring-elements-getboundingclientrect",
+                "label": "Measuring Elements Getboundingclientrect"
+              }
+            ]
+          },
+          {
+            "id": "js_browser_and_dom_events",
+            "kind": "group",
+            "title": "events",
+            "label": "Events",
+            "children": [
+              {
+                "id": "js_browser_and_dom_events_event_target_and_currenttarget",
+                "kind": "endpoint",
+                "title": "event-target-and-currenttarget",
+                "label": "Event Target And Currenttarget"
+              },
+              {
+                "id": "js_browser_and_dom_events_bubbling_and_capturing",
+                "kind": "endpoint",
+                "title": "bubbling-and-capturing",
+                "label": "Bubbling And Capturing"
+              },
+              {
+                "id": "js_browser_and_dom_events_event_delegation",
+                "kind": "endpoint",
+                "title": "event-delegation",
+                "label": "Event Delegation"
+              },
+              {
+                "id": "js_browser_and_dom_events_common_event_types_click_input_keydown",
+                "kind": "endpoint",
+                "title": "common-event-types-click-input-keydown",
+                "label": "Common Event Types Click Input Keydown"
+              }
+            ]
+          },
+          {
+            "id": "js_browser_and_dom_forms_and_storage",
+            "kind": "group",
+            "title": "forms-and-storage",
+            "label": "Forms And Storage",
+            "children": [
+              {
+                "id": "js_browser_and_dom_forms_and_storage_reading_form_values",
+                "kind": "endpoint",
+                "title": "reading-form-values",
+                "label": "Reading Form Values"
+              },
+              {
+                "id": "js_browser_and_dom_forms_and_storage_client_side_validation",
+                "kind": "endpoint",
+                "title": "client-side-validation",
+                "label": "Client Side Validation"
+              },
+              {
+                "id": "js_browser_and_dom_forms_and_storage_localstorage_and_sessionstorage",
+                "kind": "endpoint",
+                "title": "localstorage-and-sessionstorage",
+                "label": "Localstorage And Sessionstorage"
+              },
+              {
+                "id": "js_browser_and_dom_forms_and_storage_cookies_and_basic_samesite_concept",
+                "kind": "endpoint",
+                "title": "cookies-and-basic-samesite-concept",
+                "label": "Cookies And Basic Samesite Concept"
+              }
+            ]
+          },
+          {
+            "id": "js_browser_and_dom_advanced_browser_apis",
+            "kind": "group",
+            "title": "advanced-browser-apis",
+            "label": "Advanced Browser Apis",
+            "children": [
+              {
+                "id": "js_browser_and_dom_advanced_browser_apis_fetch_api",
+                "kind": "endpoint",
+                "title": "fetch-api",
+                "label": "Fetch Api"
+              },
+              {
+                "id": "js_browser_and_dom_advanced_browser_apis_history_and_location_apis",
+                "kind": "endpoint",
+                "title": "history-and-location-apis",
+                "label": "History And Location Apis"
+              },
+              {
+                "id": "js_browser_and_dom_advanced_browser_apis_canvas_api_basics",
+                "kind": "endpoint",
+                "title": "canvas-api-basics",
+                "label": "Canvas Api Basics"
+              },
+              {
+                "id": "js_browser_and_dom_advanced_browser_apis_svg_manipulation",
+                "kind": "endpoint",
+                "title": "svg-manipulation",
+                "label": "Svg Manipulation"
+              },
+              {
+                "id": "js_browser_and_dom_advanced_browser_apis_web_components_custom_elements_shadow_dom",
+                "kind": "endpoint",
+                "title": "web-components-custom-elements-shadow-dom",
+                "label": "Web Components Custom Elements Shadow Dom"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_async_and_networking",
+        "kind": "group",
+        "title": "09_async-and-networking",
+        "label": "Async And Networking",
+        "children": [
+          {
+            "id": "js_async_and_networking_async_foundations",
+            "kind": "group",
+            "title": "async-foundations",
+            "label": "Async Foundations",
+            "children": [
+              {
+                "id": "js_async_and_networking_async_foundations_callbacks_and_error_first_style",
+                "kind": "endpoint",
+                "title": "callbacks-and-error-first-style",
+                "label": "Callbacks And Error First Style"
+              },
+              {
+                "id": "js_async_and_networking_async_foundations_promises_basics_resolve_reject",
+                "kind": "endpoint",
+                "title": "promises-basics-resolve-reject",
+                "label": "Promises Basics Resolve Reject"
+              },
+              {
+                "id": "js_async_and_networking_async_foundations_promise_chaining_and_catch",
+                "kind": "endpoint",
+                "title": "promise-chaining-and-catch",
+                "label": "Promise Chaining And Catch"
+              },
+              {
+                "id": "js_async_and_networking_async_foundations_async_await_basics",
+                "kind": "endpoint",
+                "title": "async-await-basics",
+                "label": "Async Await Basics"
+              }
+            ]
+          },
+          {
+            "id": "js_async_and_networking_async_patterns",
+            "kind": "group",
+            "title": "async-patterns",
+            "label": "Async Patterns",
+            "children": [
+              {
+                "id": "js_async_and_networking_async_patterns_sequential_vs_parallel_execution",
+                "kind": "endpoint",
+                "title": "sequential-vs-parallel-execution",
+                "label": "Sequential Vs Parallel Execution"
+              },
+              {
+                "id": "js_async_and_networking_async_patterns_promise_all_race_allsettled_any",
+                "kind": "endpoint",
+                "title": "promise-all-race-allsettled-any",
+                "label": "Promise All Race Allsettled Any"
+              },
+              {
+                "id": "js_async_and_networking_async_patterns_timeouts_and_retries",
+                "kind": "endpoint",
+                "title": "timeouts-and-retries",
+                "label": "Timeouts And Retries"
+              },
+              {
+                "id": "js_async_and_networking_async_patterns_abortcontroller_and_abortsignal",
+                "kind": "endpoint",
+                "title": "abortcontroller-and-abortsignal",
+                "label": "Abortcontroller And Abortsignal"
+              }
+            ]
+          },
+          {
+            "id": "js_async_and_networking_networking",
+            "kind": "group",
+            "title": "networking",
+            "label": "Networking",
+            "children": [
+              {
+                "id": "js_async_and_networking_networking_rest_apis_and_json",
+                "kind": "endpoint",
+                "title": "rest-apis-and-json",
+                "label": "Rest Apis And Json"
+              },
+              {
+                "id": "js_async_and_networking_networking_websockets_basics",
+                "kind": "endpoint",
+                "title": "websockets-basics",
+                "label": "Websockets Basics"
+              },
+              {
+                "id": "js_async_and_networking_networking_server_sent_events_and_long_polling",
+                "kind": "endpoint",
+                "title": "server-sent-events-and-long-polling",
+                "label": "Server Sent Events And Long Polling"
+              },
+              {
+                "id": "js_async_and_networking_networking_handling_network_errors_and_retries",
+                "kind": "endpoint",
+                "title": "handling-network-errors-and-retries",
+                "label": "Handling Network Errors And Retries"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_testing_and_quality",
+        "kind": "group",
+        "title": "10_testing-and-quality",
+        "label": "Testing And Quality",
+        "children": [
+          {
+            "id": "js_testing_and_quality_testing_basics",
+            "kind": "group",
+            "title": "testing-basics",
+            "label": "Testing Basics",
+            "children": [
+              {
+                "id": "js_testing_and_quality_testing_basics_what_is_unit_testing",
+                "kind": "endpoint",
+                "title": "what-is-unit-testing",
+                "label": "What Is Unit Testing"
+              },
+              {
+                "id": "js_testing_and_quality_testing_basics_jest_vitest_basics",
+                "kind": "endpoint",
+                "title": "jest-vitest-basics",
+                "label": "Jest Vitest Basics"
+              },
+              {
+                "id": "js_testing_and_quality_testing_basics_testing_async_code",
+                "kind": "endpoint",
+                "title": "testing-async-code",
+                "label": "Testing Async Code"
+              },
+              {
+                "id": "js_testing_and_quality_testing_basics_mocking_spies_and_stubs",
+                "kind": "endpoint",
+                "title": "mocking-spies-and-stubs",
+                "label": "Mocking Spies And Stubs"
+              }
+            ]
+          },
+          {
+            "id": "js_testing_and_quality_integration_and_e2e",
+            "kind": "group",
+            "title": "integration-and-e2e",
+            "label": "Integration And E2e",
+            "children": [
+              {
+                "id": "js_testing_and_quality_integration_and_e2e_api_integration_tests",
+                "kind": "endpoint",
+                "title": "api-integration-tests",
+                "label": "Api Integration Tests"
+              },
+              {
+                "id": "js_testing_and_quality_integration_and_e2e_dom_integration_tests",
+                "kind": "endpoint",
+                "title": "dom-integration-tests",
+                "label": "Dom Integration Tests"
+              },
+              {
+                "id": "js_testing_and_quality_integration_and_e2e_e2e_tests_playwright_cypress",
+                "kind": "endpoint",
+                "title": "e2e-tests-playwright-cypress",
+                "label": "E2e Tests Playwright Cypress"
+              }
+            ]
+          },
+          {
+            "id": "js_testing_and_quality_quality_automation",
+            "kind": "group",
+            "title": "quality-automation",
+            "label": "Quality Automation",
+            "children": [
+              {
+                "id": "js_testing_and_quality_quality_automation_eslint_setup_and_core_rules",
+                "kind": "endpoint",
+                "title": "eslint-setup-and-core-rules",
+                "label": "Eslint Setup And Core Rules"
+              },
+              {
+                "id": "js_testing_and_quality_quality_automation_prettier_and_formatting",
+                "kind": "endpoint",
+                "title": "prettier-and-formatting",
+                "label": "Prettier And Formatting"
+              },
+              {
+                "id": "js_testing_and_quality_quality_automation_lint_staged_and_pre_commit_hooks",
+                "kind": "endpoint",
+                "title": "lint-staged-and-pre-commit-hooks",
+                "label": "Lint Staged And Pre Commit Hooks"
+              },
+              {
+                "id": "js_testing_and_quality_quality_automation_static_analysis_in_ci",
+                "kind": "endpoint",
+                "title": "static-analysis-in-ci",
+                "label": "Static Analysis In Ci"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_node_and_backend_js",
+        "kind": "group",
+        "title": "11_node-and-backend-js",
+        "label": "Node And Backend Js",
+        "children": [
+          {
+            "id": "js_node_and_backend_js_node_core",
+            "kind": "group",
+            "title": "node-core",
+            "label": "Node Core",
+            "children": [
+              {
+                "id": "js_node_and_backend_js_node_core_node_runtime_and_repl",
+                "kind": "endpoint",
+                "title": "node-runtime-and-repl",
+                "label": "Node Runtime And Repl"
+              },
+              {
+                "id": "js_node_and_backend_js_node_core_commonjs_vs_esm_in_node",
+                "kind": "endpoint",
+                "title": "commonjs-vs-esm-in-node",
+                "label": "Commonjs Vs Esm In Node"
+              },
+              {
+                "id": "js_node_and_backend_js_node_core_process_env_and_cli_args",
+                "kind": "endpoint",
+                "title": "process-env-and-cli-args",
+                "label": "Process Env And Cli Args"
+              }
+            ]
+          },
+          {
+            "id": "js_node_and_backend_js_filesystem_and_streams",
+            "kind": "group",
+            "title": "filesystem-and-streams",
+            "label": "Filesystem And Streams",
+            "children": [
+              {
+                "id": "js_node_and_backend_js_filesystem_and_streams_fs_module_read_write_files",
+                "kind": "endpoint",
+                "title": "fs-module-read-write-files",
+                "label": "Fs Module Read Write Files"
+              },
+              {
+                "id": "js_node_and_backend_js_filesystem_and_streams_path_and_os_modules",
+                "kind": "endpoint",
+                "title": "path-and-os-modules",
+                "label": "Path And Os Modules"
+              },
+              {
+                "id": "js_node_and_backend_js_filesystem_and_streams_buffers_and_binary_data",
+                "kind": "endpoint",
+                "title": "buffers-and-binary-data",
+                "label": "Buffers And Binary Data"
+              },
+              {
+                "id": "js_node_and_backend_js_filesystem_and_streams_streams_readable_writable_transform",
+                "kind": "endpoint",
+                "title": "streams-readable-writable-transform",
+                "label": "Streams Readable Writable Transform"
+              }
+            ]
+          },
+          {
+            "id": "js_node_and_backend_js_http_servers_and_apis",
+            "kind": "group",
+            "title": "http-servers-and-apis",
+            "label": "Http Servers And Apis",
+            "children": [
+              {
+                "id": "js_node_and_backend_js_http_servers_and_apis_http_https_modules",
+                "kind": "endpoint",
+                "title": "http-https-modules",
+                "label": "Http Https Modules"
+              },
+              {
+                "id": "js_node_and_backend_js_http_servers_and_apis_express_or_fastify_basics",
+                "kind": "endpoint",
+                "title": "express-or-fastify-basics",
+                "label": "Express Or Fastify Basics"
+              },
+              {
+                "id": "js_node_and_backend_js_http_servers_and_apis_routing_and_middleware",
+                "kind": "endpoint",
+                "title": "routing-and-middleware",
+                "label": "Routing And Middleware"
+              },
+              {
+                "id": "js_node_and_backend_js_http_servers_and_apis_json_body_parsing_and_validation",
+                "kind": "endpoint",
+                "title": "json-body-parsing-and-validation",
+                "label": "Json Body Parsing And Validation"
+              },
+              {
+                "id": "js_node_and_backend_js_http_servers_and_apis_building_rest_apis",
+                "kind": "endpoint",
+                "title": "building-rest-apis",
+                "label": "Building Rest Apis"
+              }
+            ]
+          },
+          {
+            "id": "js_node_and_backend_js_auth_and_data",
+            "kind": "group",
+            "title": "auth-and-data",
+            "label": "Auth And Data",
+            "children": [
+              {
+                "id": "js_node_and_backend_js_auth_and_data_sessions_and_cookies",
+                "kind": "endpoint",
+                "title": "sessions-and-cookies",
+                "label": "Sessions And Cookies"
+              },
+              {
+                "id": "js_node_and_backend_js_auth_and_data_jwt_and_token_based_auth",
+                "kind": "endpoint",
+                "title": "jwt-and-token-based-auth",
+                "label": "Jwt And Token Based Auth"
+              },
+              {
+                "id": "js_node_and_backend_js_auth_and_data_connecting_to_sql_databases",
+                "kind": "endpoint",
+                "title": "connecting-to-sql-databases",
+                "label": "Connecting To Sql Databases"
+              },
+              {
+                "id": "js_node_and_backend_js_auth_and_data_connecting_to_nosql_databases",
+                "kind": "endpoint",
+                "title": "connecting-to-nosql-databases",
+                "label": "Connecting To Nosql Databases"
+              },
+              {
+                "id": "js_node_and_backend_js_auth_and_data_orm_and_query_builders_prisma_knex_typeorm",
+                "kind": "endpoint",
+                "title": "orm-and-query-builders-prisma-knex-typeorm",
+                "label": "Orm And Query Builders Prisma Knex Typeorm"
+              }
+            ]
+          },
+          {
+            "id": "js_node_and_backend_js_cli_and_background_work",
+            "kind": "group",
+            "title": "cli-and-background-work",
+            "label": "Cli And Background Work",
+            "children": [
+              {
+                "id": "js_node_and_backend_js_cli_and_background_work_building_cli_tools_commander_yargs",
+                "kind": "endpoint",
+                "title": "building-cli-tools-commander-yargs",
+                "label": "Building Cli Tools Commander Yargs"
+              },
+              {
+                "id": "js_node_and_backend_js_cli_and_background_work_job_queues_and_workers",
+                "kind": "endpoint",
+                "title": "job-queues-and-workers",
+                "label": "Job Queues And Workers"
+              },
+              {
+                "id": "js_node_and_backend_js_cli_and_background_work_scheduling_tasks_cron_like",
+                "kind": "endpoint",
+                "title": "scheduling-tasks-cron-like",
+                "label": "Scheduling Tasks Cron Like"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_frontend_frameworks_and_spa_architecture",
+        "kind": "group",
+        "title": "12_frontend-frameworks-and-spa-architecture",
+        "label": "Frontend Frameworks And Spa Architecture",
+        "children": [
+          {
+            "id": "js_frontend_frameworks_and_spa_architecture_react_core",
+            "kind": "group",
+            "title": "react-core",
+            "label": "React Core",
+            "children": [
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_react_core_jsx_and_components",
+                "kind": "endpoint",
+                "title": "jsx-and-components",
+                "label": "Jsx And Components"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_react_core_props_and_composition",
+                "kind": "endpoint",
+                "title": "props-and-composition",
+                "label": "Props And Composition"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_react_core_state_and_events",
+                "kind": "endpoint",
+                "title": "state-and-events",
+                "label": "State And Events"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_react_core_hooks_usestate_useeffect_useref",
+                "kind": "endpoint",
+                "title": "hooks-usestate-useeffect-useref",
+                "label": "Hooks Usestate Useeffect Useref"
+              }
+            ]
+          },
+          {
+            "id": "js_frontend_frameworks_and_spa_architecture_react_advanced",
+            "kind": "group",
+            "title": "react-advanced",
+            "label": "React Advanced",
+            "children": [
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_react_advanced_context_api",
+                "kind": "endpoint",
+                "title": "context-api",
+                "label": "Context Api"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_react_advanced_performance_memo_usecallback_usememo",
+                "kind": "endpoint",
+                "title": "performance-memo-usecallback-usememo",
+                "label": "Performance Memo Usecallback Usememo"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_react_advanced_custom_hooks",
+                "kind": "endpoint",
+                "title": "custom-hooks",
+                "label": "Custom Hooks"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_react_advanced_forms_controlled_uncontrolled",
+                "kind": "endpoint",
+                "title": "forms-controlled-uncontrolled",
+                "label": "Forms Controlled Uncontrolled"
+              }
+            ]
+          },
+          {
+            "id": "js_frontend_frameworks_and_spa_architecture_routing_and_data",
+            "kind": "group",
+            "title": "routing-and-data",
+            "label": "Routing And Data",
+            "children": [
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_routing_and_data_client_side_routing_react_router_etc",
+                "kind": "endpoint",
+                "title": "client-side-routing-react-router-etc",
+                "label": "Client Side Routing React Router Etc"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_routing_and_data_data_fetching_patterns",
+                "kind": "endpoint",
+                "title": "data-fetching-patterns",
+                "label": "Data Fetching Patterns"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_routing_and_data_error_boundaries_and_suspense_concepts",
+                "kind": "endpoint",
+                "title": "error-boundaries-and-suspense-concepts",
+                "label": "Error Boundaries And Suspense Concepts"
+              }
+            ]
+          },
+          {
+            "id": "js_frontend_frameworks_and_spa_architecture_other_frameworks",
+            "kind": "group",
+            "title": "other-frameworks",
+            "label": "Other Frameworks",
+            "children": [
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_other_frameworks_vue_basics",
+                "kind": "endpoint",
+                "title": "vue-basics",
+                "label": "Vue Basics"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_other_frameworks_svelte_basics",
+                "kind": "endpoint",
+                "title": "svelte-basics",
+                "label": "Svelte Basics"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_other_frameworks_angular_overview",
+                "kind": "endpoint",
+                "title": "angular-overview",
+                "label": "Angular Overview"
+              },
+              {
+                "id": "js_frontend_frameworks_and_spa_architecture_other_frameworks_meta_frameworks_next_nuxt_sveltekit",
+                "kind": "endpoint",
+                "title": "meta-frameworks-next-nuxt-sveltekit",
+                "label": "Meta Frameworks Next Nuxt Sveltekit"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_patterns_and_architecture",
+        "kind": "group",
+        "title": "13_patterns-and-architecture",
+        "label": "Patterns And Architecture",
+        "children": [
+          {
+            "id": "js_patterns_and_architecture_code_organization",
+            "kind": "group",
+            "title": "code-organization",
+            "label": "Code Organization",
+            "children": [
+              {
+                "id": "js_patterns_and_architecture_code_organization_feature_based_folder_structure",
+                "kind": "endpoint",
+                "title": "feature-based-folder-structure",
+                "label": "Feature Based Folder Structure"
+              },
+              {
+                "id": "js_patterns_and_architecture_code_organization_modules_vs_layers",
+                "kind": "endpoint",
+                "title": "modules-vs-layers",
+                "label": "Modules Vs Layers"
+              },
+              {
+                "id": "js_patterns_and_architecture_code_organization_boundaries_between_ui_domain_infra",
+                "kind": "endpoint",
+                "title": "boundaries-between-ui-domain-infra",
+                "label": "Boundaries Between Ui Domain Infra"
+              }
+            ]
+          },
+          {
+            "id": "js_patterns_and_architecture_classic_patterns",
+            "kind": "group",
+            "title": "classic-patterns",
+            "label": "Classic Patterns",
+            "children": [
+              {
+                "id": "js_patterns_and_architecture_classic_patterns_singleton_and_when_not_to_use",
+                "kind": "endpoint",
+                "title": "singleton-and-when-not-to-use",
+                "label": "Singleton And When Not To Use"
+              },
+              {
+                "id": "js_patterns_and_architecture_classic_patterns_factory_and_abstract_factory",
+                "kind": "endpoint",
+                "title": "factory-and-abstract-factory",
+                "label": "Factory And Abstract Factory"
+              },
+              {
+                "id": "js_patterns_and_architecture_classic_patterns_strategy_and_command",
+                "kind": "endpoint",
+                "title": "strategy-and-command",
+                "label": "Strategy And Command"
+              },
+              {
+                "id": "js_patterns_and_architecture_classic_patterns_observer_and_pub_sub",
+                "kind": "endpoint",
+                "title": "observer-and-pub-sub",
+                "label": "Observer And Pub Sub"
+              }
+            ]
+          },
+          {
+            "id": "js_patterns_and_architecture_functional_style",
+            "kind": "group",
+            "title": "functional-style",
+            "label": "Functional Style",
+            "children": [
+              {
+                "id": "js_patterns_and_architecture_functional_style_map_filter_reduce_chains",
+                "kind": "endpoint",
+                "title": "map-filter-reduce-chains",
+                "label": "Map Filter Reduce Chains"
+              },
+              {
+                "id": "js_patterns_and_architecture_functional_style_immutability_and_persistent_data_structures",
+                "kind": "endpoint",
+                "title": "immutability-and-persistent-data-structures",
+                "label": "Immutability And Persistent Data Structures"
+              },
+              {
+                "id": "js_patterns_and_architecture_functional_style_point_free_and_pipe_compose",
+                "kind": "endpoint",
+                "title": "point-free-and-pipe-compose",
+                "label": "Point Free And Pipe Compose"
+              }
+            ]
+          },
+          {
+            "id": "js_patterns_and_architecture_architecture_and_ddd",
+            "kind": "group",
+            "title": "architecture-and-ddd",
+            "label": "Architecture And Ddd",
+            "children": [
+              {
+                "id": "js_patterns_and_architecture_architecture_and_ddd_clean_code_principles_in_js",
+                "kind": "endpoint",
+                "title": "clean-code-principles-in-js",
+                "label": "Clean Code Principles In Js"
+              },
+              {
+                "id": "js_patterns_and_architecture_architecture_and_ddd_ports_and_adapters_hexagonal_architecture",
+                "kind": "endpoint",
+                "title": "ports-and-adapters-hexagonal-architecture",
+                "label": "Ports And Adapters Hexagonal Architecture"
+              },
+              {
+                "id": "js_patterns_and_architecture_architecture_and_ddd_domain_driven_design_overview",
+                "kind": "endpoint",
+                "title": "domain-driven-design-overview",
+                "label": "Domain Driven Design Overview"
+              },
+              {
+                "id": "js_patterns_and_architecture_architecture_and_ddd_error_handling_strategies_at_scale",
+                "kind": "endpoint",
+                "title": "error-handling-strategies-at-scale",
+                "label": "Error Handling Strategies At Scale"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_performance_and_optimisation",
+        "kind": "group",
+        "title": "14_performance-and-optimisation",
+        "label": "Performance And Optimisation",
+        "children": [
+          {
+            "id": "js_performance_and_optimisation_measuring_performance",
+            "kind": "group",
+            "title": "measuring-performance",
+            "label": "Measuring Performance",
+            "children": [
+              {
+                "id": "js_performance_and_optimisation_measuring_performance_performance_api",
+                "kind": "endpoint",
+                "title": "performance-api",
+                "label": "Performance Api"
+              },
+              {
+                "id": "js_performance_and_optimisation_measuring_performance_browser_devtools_performance_tab",
+                "kind": "endpoint",
+                "title": "browser-devtools-performance-tab",
+                "label": "Browser Devtools Performance Tab"
+              },
+              {
+                "id": "js_performance_and_optimisation_measuring_performance_node_profiler_basics",
+                "kind": "endpoint",
+                "title": "node-profiler-basics",
+                "label": "Node Profiler Basics"
+              }
+            ]
+          },
+          {
+            "id": "js_performance_and_optimisation_algorithmic_thinking",
+            "kind": "group",
+            "title": "algorithmic-thinking",
+            "label": "Algorithmic Thinking",
+            "children": [
+              {
+                "id": "js_performance_and_optimisation_algorithmic_thinking_big_o_intuition_for_js_code",
+                "kind": "endpoint",
+                "title": "big-o-intuition-for-js-code",
+                "label": "Big O Intuition For Js Code"
+              },
+              {
+                "id": "js_performance_and_optimisation_algorithmic_thinking_common_data_structures_in_js",
+                "kind": "endpoint",
+                "title": "common-data-structures-in-js",
+                "label": "Common Data Structures In Js"
+              },
+              {
+                "id": "js_performance_and_optimisation_algorithmic_thinking_optimizing_hot_paths",
+                "kind": "endpoint",
+                "title": "optimizing-hot-paths",
+                "label": "Optimizing Hot Paths"
+              }
+            ]
+          },
+          {
+            "id": "js_performance_and_optimisation_runtime_optimisation",
+            "kind": "group",
+            "title": "runtime-optimisation",
+            "label": "Runtime Optimisation",
+            "children": [
+              {
+                "id": "js_performance_and_optimisation_runtime_optimisation_avoiding_blocking_main_thread",
+                "kind": "endpoint",
+                "title": "avoiding-blocking-main-thread",
+                "label": "Avoiding Blocking Main Thread"
+              },
+              {
+                "id": "js_performance_and_optimisation_runtime_optimisation_debouncing_and_throttling",
+                "kind": "endpoint",
+                "title": "debouncing-and-throttling",
+                "label": "Debouncing And Throttling"
+              },
+              {
+                "id": "js_performance_and_optimisation_runtime_optimisation_web_workers_and_worker_threads",
+                "kind": "endpoint",
+                "title": "web-workers-and-worker-threads",
+                "label": "Web Workers And Worker Threads"
+              },
+              {
+                "id": "js_performance_and_optimisation_runtime_optimisation_memory_optimisation_and_leak_hunting",
+                "kind": "endpoint",
+                "title": "memory-optimisation-and-leak-hunting",
+                "label": "Memory Optimisation And Leak Hunting"
+              }
+            ]
+          },
+          {
+            "id": "js_performance_and_optimisation_delivery_and_bundle_size",
+            "kind": "group",
+            "title": "delivery-and-bundle-size",
+            "label": "Delivery And Bundle Size",
+            "children": [
+              {
+                "id": "js_performance_and_optimisation_delivery_and_bundle_size_bundle_analysis",
+                "kind": "endpoint",
+                "title": "bundle-analysis",
+                "label": "Bundle Analysis"
+              },
+              {
+                "id": "js_performance_and_optimisation_delivery_and_bundle_size_code_splitting_and_lazy_routes",
+                "kind": "endpoint",
+                "title": "code-splitting-and-lazy-routes",
+                "label": "Code Splitting And Lazy Routes"
+              },
+              {
+                "id": "js_performance_and_optimisation_delivery_and_bundle_size_caching_strategies_http_cache_local_cache",
+                "kind": "endpoint",
+                "title": "caching-strategies-http-cache-local-cache",
+                "label": "Caching Strategies Http Cache Local Cache"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_security",
+        "kind": "group",
+        "title": "15_security",
+        "label": "Security",
+        "children": [
+          {
+            "id": "js_security_web_threat_model",
+            "kind": "group",
+            "title": "web-threat-model",
+            "label": "Web Threat Model",
+            "children": [
+              {
+                "id": "js_security_web_threat_model_attacker_mindset_basics",
+                "kind": "endpoint",
+                "title": "attacker-mindset-basics",
+                "label": "Attacker Mindset Basics"
+              },
+              {
+                "id": "js_security_web_threat_model_input_validation_vs_sanitisation",
+                "kind": "endpoint",
+                "title": "input-validation-vs-sanitisation",
+                "label": "Input Validation Vs Sanitisation"
+              },
+              {
+                "id": "js_security_web_threat_model_secure_defaults_thinking",
+                "kind": "endpoint",
+                "title": "secure-defaults-thinking",
+                "label": "Secure Defaults Thinking"
+              }
+            ]
+          },
+          {
+            "id": "js_security_browser_vulnerabilities",
+            "kind": "group",
+            "title": "browser-vulnerabilities",
+            "label": "Browser Vulnerabilities",
+            "children": [
+              {
+                "id": "js_security_browser_vulnerabilities_xss_reflected_stored_dom",
+                "kind": "endpoint",
+                "title": "xss-reflected-stored-dom",
+                "label": "Xss Reflected Stored Dom"
+              },
+              {
+                "id": "js_security_browser_vulnerabilities_csrf_and_samesite_cookies",
+                "kind": "endpoint",
+                "title": "csrf-and-samesite-cookies",
+                "label": "Csrf And Samesite Cookies"
+              },
+              {
+                "id": "js_security_browser_vulnerabilities_clickjacking_and_frame_options",
+                "kind": "endpoint",
+                "title": "clickjacking-and-frame-options",
+                "label": "Clickjacking And Frame Options"
+              },
+              {
+                "id": "js_security_browser_vulnerabilities_content_security_policy_overview",
+                "kind": "endpoint",
+                "title": "content-security-policy-overview",
+                "label": "Content Security Policy Overview"
+              }
+            ]
+          },
+          {
+            "id": "js_security_auth_and_access_control",
+            "kind": "group",
+            "title": "auth-and-access-control",
+            "label": "Auth And Access Control",
+            "children": [
+              {
+                "id": "js_security_auth_and_access_control_authentication_best_practices",
+                "kind": "endpoint",
+                "title": "authentication-best-practices",
+                "label": "Authentication Best Practices"
+              },
+              {
+                "id": "js_security_auth_and_access_control_authorization_and_roles",
+                "kind": "endpoint",
+                "title": "authorization-and-roles",
+                "label": "Authorization And Roles"
+              },
+              {
+                "id": "js_security_auth_and_access_control_securely_handling_tokens_and_secrets",
+                "kind": "endpoint",
+                "title": "securely-handling-tokens-and-secrets",
+                "label": "Securely Handling Tokens And Secrets"
+              }
+            ]
+          },
+          {
+            "id": "js_security_dependency_and_supply_chain",
+            "kind": "group",
+            "title": "dependency-and-supply-chain",
+            "label": "Dependency And Supply Chain",
+            "children": [
+              {
+                "id": "js_security_dependency_and_supply_chain_npm_audit_and_advisories",
+                "kind": "endpoint",
+                "title": "npm-audit-and-advisories",
+                "label": "Npm Audit And Advisories"
+              },
+              {
+                "id": "js_security_dependency_and_supply_chain_pinning_versions_and_lockfiles",
+                "kind": "endpoint",
+                "title": "pinning-versions-and-lockfiles",
+                "label": "Pinning Versions And Lockfiles"
+              },
+              {
+                "id": "js_security_dependency_and_supply_chain_reviewing_third_party_code_risks",
+                "kind": "endpoint",
+                "title": "reviewing-third-party-code-risks",
+                "label": "Reviewing Third Party Code Risks"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_tooling_and_workflow",
+        "kind": "group",
+        "title": "16_tooling-and-workflow",
+        "label": "Tooling And Workflow",
+        "children": [
+          {
+            "id": "js_tooling_and_workflow_devtools_master",
+            "kind": "group",
+            "title": "devtools-master",
+            "label": "Devtools Master",
+            "children": [
+              {
+                "id": "js_tooling_and_workflow_devtools_master_elements_tab_and_live_editing",
+                "kind": "endpoint",
+                "title": "elements-tab-and-live-editing",
+                "label": "Elements Tab And Live Editing"
+              },
+              {
+                "id": "js_tooling_and_workflow_devtools_master_network_tab_and_api_debugging",
+                "kind": "endpoint",
+                "title": "network-tab-and-api-debugging",
+                "label": "Network Tab And Api Debugging"
+              },
+              {
+                "id": "js_tooling_and_workflow_devtools_master_sources_tab_and_breakpoints",
+                "kind": "endpoint",
+                "title": "sources-tab-and-breakpoints",
+                "label": "Sources Tab And Breakpoints"
+              },
+              {
+                "id": "js_tooling_and_workflow_devtools_master_performance_and_memory_tabs",
+                "kind": "endpoint",
+                "title": "performance-and-memory-tabs",
+                "label": "Performance And Memory Tabs"
+              }
+            ]
+          },
+          {
+            "id": "js_tooling_and_workflow_local_workflow",
+            "kind": "group",
+            "title": "local-workflow",
+            "label": "Local Workflow",
+            "children": [
+              {
+                "id": "js_tooling_and_workflow_local_workflow_npm_scripts_as_task_runner",
+                "kind": "endpoint",
+                "title": "npm-scripts-as-task-runner",
+                "label": "Npm Scripts As Task Runner"
+              },
+              {
+                "id": "js_tooling_and_workflow_local_workflow_nodemon_ts_node_and_reload_tools",
+                "kind": "endpoint",
+                "title": "nodemon-ts-node-and-reload-tools",
+                "label": "Nodemon Ts Node And Reload Tools"
+              },
+              {
+                "id": "js_tooling_and_workflow_local_workflow_debugging_in_vscode_node",
+                "kind": "endpoint",
+                "title": "debugging-in-vscode-node",
+                "label": "Debugging In Vscode Node"
+              }
+            ]
+          },
+          {
+            "id": "js_tooling_and_workflow_automation_and_ci",
+            "kind": "group",
+            "title": "automation-and-ci",
+            "label": "Automation And Ci",
+            "children": [
+              {
+                "id": "js_tooling_and_workflow_automation_and_ci_basic_ci_pipeline_lint_test_build",
+                "kind": "endpoint",
+                "title": "basic-ci-pipeline-lint-test-build",
+                "label": "Basic Ci Pipeline Lint Test Build"
+              },
+              {
+                "id": "js_tooling_and_workflow_automation_and_ci_docker_basics_for_js_apps",
+                "kind": "endpoint",
+                "title": "docker-basics-for-js-apps",
+                "label": "Docker Basics For Js Apps"
+              },
+              {
+                "id": "js_tooling_and_workflow_automation_and_ci_release_scripts_and_changelogs",
+                "kind": "endpoint",
+                "title": "release-scripts-and-changelogs",
+                "label": "Release Scripts And Changelogs"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_typescript_and_typing_js",
+        "kind": "group",
+        "title": "17_typescript-and-typing-js",
+        "label": "Typescript And Typing Js",
+        "children": [
+          {
+            "id": "js_typescript_and_typing_js_ts_basics",
+            "kind": "group",
+            "title": "ts-basics",
+            "label": "Ts Basics",
+            "children": [
+              {
+                "id": "js_typescript_and_typing_js_ts_basics_tsconfig_and_compiler_options",
+                "kind": "endpoint",
+                "title": "tsconfig-and-compiler-options",
+                "label": "Tsconfig And Compiler Options"
+              },
+              {
+                "id": "js_typescript_and_typing_js_ts_basics_basic_types_string_number_boolean",
+                "kind": "endpoint",
+                "title": "basic-types-string-number-boolean",
+                "label": "Basic Types String Number Boolean"
+              },
+              {
+                "id": "js_typescript_and_typing_js_ts_basics_interfaces_and_type_aliases",
+                "kind": "endpoint",
+                "title": "interfaces-and-type-aliases",
+                "label": "Interfaces And Type Aliases"
+              },
+              {
+                "id": "js_typescript_and_typing_js_ts_basics_enums_and_const_assertions",
+                "kind": "endpoint",
+                "title": "enums-and-const-assertions",
+                "label": "Enums And Const Assertions"
+              }
+            ]
+          },
+          {
+            "id": "js_typescript_and_typing_js_composing_types",
+            "kind": "group",
+            "title": "composing-types",
+            "label": "Composing Types",
+            "children": [
+              {
+                "id": "js_typescript_and_typing_js_composing_types_union_and_intersection_types",
+                "kind": "endpoint",
+                "title": "union-and-intersection-types",
+                "label": "Union And Intersection Types"
+              },
+              {
+                "id": "js_typescript_and_typing_js_composing_types_literal_types",
+                "kind": "endpoint",
+                "title": "literal-types",
+                "label": "Literal Types"
+              },
+              {
+                "id": "js_typescript_and_typing_js_composing_types_narrowing_typeof_instanceof_in_guards",
+                "kind": "endpoint",
+                "title": "narrowing-typeof-instanceof-in-guards",
+                "label": "Narrowing Typeof Instanceof In Guards"
+              },
+              {
+                "id": "js_typescript_and_typing_js_composing_types_discriminated_unions",
+                "kind": "endpoint",
+                "title": "discriminated-unions",
+                "label": "Discriminated Unions"
+              }
+            ]
+          },
+          {
+            "id": "js_typescript_and_typing_js_generics_and_advanced_types",
+            "kind": "group",
+            "title": "generics-and-advanced-types",
+            "label": "Generics And Advanced Types",
+            "children": [
+              {
+                "id": "js_typescript_and_typing_js_generics_and_advanced_types_generics_basics",
+                "kind": "endpoint",
+                "title": "generics-basics",
+                "label": "Generics Basics"
+              },
+              {
+                "id": "js_typescript_and_typing_js_generics_and_advanced_types_generic_functions_and_interfaces",
+                "kind": "endpoint",
+                "title": "generic-functions-and-interfaces",
+                "label": "Generic Functions And Interfaces"
+              },
+              {
+                "id": "js_typescript_and_typing_js_generics_and_advanced_types_mapped_types_and_utility_types",
+                "kind": "endpoint",
+                "title": "mapped-types-and-utility-types",
+                "label": "Mapped Types And Utility Types"
+              },
+              {
+                "id": "js_typescript_and_typing_js_generics_and_advanced_types_conditional_types_and_infer",
+                "kind": "endpoint",
+                "title": "conditional-types-and-infer",
+                "label": "Conditional Types And Infer"
+              },
+              {
+                "id": "js_typescript_and_typing_js_generics_and_advanced_types_type_level_programming_patterns",
+                "kind": "endpoint",
+                "title": "type-level-programming-patterns",
+                "label": "Type Level Programming Patterns"
+              }
+            ]
+          },
+          {
+            "id": "js_typescript_and_typing_js_typing_ecosystem",
+            "kind": "group",
+            "title": "typing-ecosystem",
+            "label": "Typing Ecosystem",
+            "children": [
+              {
+                "id": "js_typescript_and_typing_js_typing_ecosystem_using_dts_and_definitelytyped",
+                "kind": "endpoint",
+                "title": "using-dts-and-definitelytyped",
+                "label": "Using Dts And Definitelytyped"
+              },
+              {
+                "id": "js_typescript_and_typing_js_typing_ecosystem_writing_declaration_files",
+                "kind": "endpoint",
+                "title": "writing-declaration-files",
+                "label": "Writing Declaration Files"
+              },
+              {
+                "id": "js_typescript_and_typing_js_typing_ecosystem_migrating_js_projects_to_ts",
+                "kind": "endpoint",
+                "title": "migrating-js-projects-to-ts",
+                "label": "Migrating Js Projects To Ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_js_internals_and_spec_level",
+        "kind": "group",
+        "title": "18_js-internals-and-spec-level",
+        "label": "Js Internals And Spec Level",
+        "children": [
+          {
+            "id": "js_js_internals_and_spec_level_ecmascript_spec",
+            "kind": "group",
+            "title": "ecmascript-spec",
+            "label": "Ecmascript Spec",
+            "children": [
+              {
+                "id": "js_js_internals_and_spec_level_ecmascript_spec_spec_structure_and_sections",
+                "kind": "endpoint",
+                "title": "spec-structure-and-sections",
+                "label": "Spec Structure And Sections"
+              },
+              {
+                "id": "js_js_internals_and_spec_level_ecmascript_spec_algorithm_notation",
+                "kind": "endpoint",
+                "title": "algorithm-notation",
+                "label": "Algorithm Notation"
+              },
+              {
+                "id": "js_js_internals_and_spec_level_ecmascript_spec_following_a_feature_from_spec_to_engines",
+                "kind": "endpoint",
+                "title": "following-a-feature-from-spec-to-engines",
+                "label": "Following A Feature From Spec To Engines"
+              }
+            ]
+          },
+          {
+            "id": "js_js_internals_and_spec_level_engine_internals",
+            "kind": "group",
+            "title": "engine-internals",
+            "label": "Engine Internals",
+            "children": [
+              {
+                "id": "js_js_internals_and_spec_level_engine_internals_parsing_and_ast",
+                "kind": "endpoint",
+                "title": "parsing-and-ast",
+                "label": "Parsing And Ast"
+              },
+              {
+                "id": "js_js_internals_and_spec_level_engine_internals_bytecode_and_jit_optimizations",
+                "kind": "endpoint",
+                "title": "bytecode-and-jit-optimizations",
+                "label": "Bytecode And Jit Optimizations"
+              },
+              {
+                "id": "js_js_internals_and_spec_level_engine_internals_deoptimisation_and_hidden_classes",
+                "kind": "endpoint",
+                "title": "deoptimisation-and-hidden-classes",
+                "label": "Deoptimisation And Hidden Classes"
+              }
+            ]
+          },
+          {
+            "id": "js_js_internals_and_spec_level_tooling_on_top_of_js",
+            "kind": "group",
+            "title": "tooling-on-top-of-js",
+            "label": "Tooling On Top Of Js",
+            "children": [
+              {
+                "id": "js_js_internals_and_spec_level_tooling_on_top_of_js_working_with_asts_acorn_babel_parser",
+                "kind": "endpoint",
+                "title": "working-with-asts-acorn-babel-parser",
+                "label": "Working With Asts Acorn Babel Parser"
+              },
+              {
+                "id": "js_js_internals_and_spec_level_tooling_on_top_of_js_writing_babel_plugins",
+                "kind": "endpoint",
+                "title": "writing-babel-plugins",
+                "label": "Writing Babel Plugins"
+              },
+              {
+                "id": "js_js_internals_and_spec_level_tooling_on_top_of_js_writing_custom_eslint_rules",
+                "kind": "endpoint",
+                "title": "writing-custom-eslint-rules",
+                "label": "Writing Custom Eslint Rules"
+              },
+              {
+                "id": "js_js_internals_and_spec_level_tooling_on_top_of_js_building_a_mini_bundler_or_transpiler",
+                "kind": "endpoint",
+                "title": "building-a-mini-bundler-or-transpiler",
+                "label": "Building A Mini Bundler Or Transpiler"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "js_specialised_areas",
+        "kind": "group",
+        "title": "19_specialised-areas",
+        "label": "Specialised Areas",
+        "children": [
+          {
+            "id": "js_specialised_areas_pwa_and_offline",
+            "kind": "group",
+            "title": "pwa-and-offline",
+            "label": "Pwa And Offline",
+            "children": [
+              {
+                "id": "js_specialised_areas_pwa_and_offline_service_workers",
+                "kind": "endpoint",
+                "title": "service-workers",
+                "label": "Service Workers"
+              },
+              {
+                "id": "js_specialised_areas_pwa_and_offline_app_manifest_and_installability",
+                "kind": "endpoint",
+                "title": "app-manifest-and-installability",
+                "label": "App Manifest And Installability"
+              },
+              {
+                "id": "js_specialised_areas_pwa_and_offline_offline_first_and_sync_strategies",
+                "kind": "endpoint",
+                "title": "offline-first-and-sync-strategies",
+                "label": "Offline First And Sync Strategies"
+              }
+            ]
+          },
+          {
+            "id": "js_specialised_areas_realtime_and_media",
+            "kind": "group",
+            "title": "realtime-and-media",
+            "label": "Realtime And Media",
+            "children": [
+              {
+                "id": "js_specialised_areas_realtime_and_media_webrtc_basics",
+                "kind": "endpoint",
+                "title": "webrtc-basics",
+                "label": "Webrtc Basics"
+              },
+              {
+                "id": "js_specialised_areas_realtime_and_media_web_audio_api",
+                "kind": "endpoint",
+                "title": "web-audio-api",
+                "label": "Web Audio Api"
+              },
+              {
+                "id": "js_specialised_areas_realtime_and_media_web_notifications_and_push",
+                "kind": "endpoint",
+                "title": "web-notifications-and-push",
+                "label": "Web Notifications And Push"
+              }
+            ]
+          },
+          {
+            "id": "js_specialised_areas_graphics_and_3d",
+            "kind": "group",
+            "title": "graphics-and-3d",
+            "label": "Graphics And 3d",
+            "children": [
+              {
+                "id": "js_specialised_areas_graphics_and_3d_canvas_advanced",
+                "kind": "endpoint",
+                "title": "canvas-advanced",
+                "label": "Canvas Advanced"
+              },
+              {
+                "id": "js_specialised_areas_graphics_and_3d_webgl_basics",
+                "kind": "endpoint",
+                "title": "webgl-basics",
+                "label": "Webgl Basics"
+              },
+              {
+                "id": "js_specialised_areas_graphics_and_3d_threejs_for_3d_scenes",
+                "kind": "endpoint",
+                "title": "threejs-for-3d-scenes",
+                "label": "Threejs For 3d Scenes"
+              }
+            ]
+          },
+          {
+            "id": "js_specialised_areas_cross_platform_js",
+            "kind": "group",
+            "title": "cross-platform-js",
+            "label": "Cross Platform Js",
+            "children": [
+              {
+                "id": "js_specialised_areas_cross_platform_js_electron_desktop_apps",
+                "kind": "endpoint",
+                "title": "electron-desktop-apps",
+                "label": "Electron Desktop Apps"
+              },
+              {
+                "id": "js_specialised_areas_cross_platform_js_react_native_or_expo",
+                "kind": "endpoint",
+                "title": "react-native-or-expo",
+                "label": "React Native Or Expo"
+              },
+              {
+                "id": "js_specialised_areas_cross_platform_js_automation_and_scraping_puppeteer_playwright",
+                "kind": "endpoint",
+                "title": "automation-and-scraping-puppeteer-playwright",
+                "label": "Automation And Scraping Puppeteer Playwright"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

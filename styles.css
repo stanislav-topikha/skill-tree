@@ -1,0 +1,475 @@
+/* ============================
+   FALLOUT-STYLE TERMINAL BASE
+   ============================ */
+
+:root {
+  /* Default = Pip-Boy green */
+  --bg: #000000;
+  --screen: #020b02;
+  --border: #1a3b1a;
+  --scanline: rgba(0, 0, 0, 0.35);
+  --glow: #41ff41;
+  --glow-soft: rgba(65, 255, 65, 0.18);
+  --text-main: #8bff8b;
+  --text-soft: #4fb54f;
+  --text-dim: #2b5f2b;
+  --danger: #ff4444;
+}
+
+/* === THEMES (Pip-Boy variants) === */
+
+/* Green (default) */
+body[data-theme="pipboy_green"] {
+  --bg: #000000;
+  --screen: #020b02;
+  --border: #1a3b1a;
+  --scanline: rgba(0, 0, 0, 0.35);
+  --glow: #41ff41;
+  --glow-soft: rgba(65, 255, 65, 0.18);
+  --text-main: #8bff8b;
+  --text-soft: #4fb54f;
+  --text-dim: #2b5f2b;
+}
+
+/* Amber */
+body[data-theme="pipboy_amber"] {
+  --bg: #050200;
+  --screen: #120a02;
+  --border: #5a3b10;
+  --scanline: rgba(0, 0, 0, 0.4);
+  --glow: #ffdd99;
+  --glow-soft: rgba(255, 221, 153, 0.2);
+  --text-main: #ffd58a;
+  --text-soft: #c7a564;
+  --text-dim: #6b4a1f;
+}
+
+/* Blue */
+body[data-theme="pipboy_blue"] {
+  --bg: #00040a;
+  --screen: #02101f;
+  --border: #184061;
+  --scanline: rgba(0, 0, 0, 0.45);
+  --glow: #7fd2ff;
+  --glow-soft: rgba(127, 210, 255, 0.22);
+  --text-main: #89d0ff;
+  --text-soft: #5ba2d0;
+  --text-dim: #27435a;
+}
+
+/* ============================
+   GLOBAL LAYOUT + CRT EFFECTS
+   ============================ */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.06em;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Scanlines / overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 1px,
+    transparent 2px
+  );
+  background-size: 100% 3px;
+  mix-blend-mode: multiply;
+  opacity: 0.35;
+  z-index: 999;
+}
+
+/* ============================
+   TERMINAL WINDOW (.app-shell)
+   ============================ */
+
+.app-shell {
+  max-width: 1000px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px 12px;
+  box-sizing: border-box;
+
+  border: 2px solid var(--border);
+  background: radial-gradient(circle at top, #041404, var(--screen) 60%);
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Corner markers */
+.app-shell::before,
+.app-shell::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--glow);
+  opacity: 0.4;
+}
+
+.app-shell::before {
+  top: -3px;
+  left: -3px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.app-shell::after {
+  bottom: -3px;
+  right: -3px;
+  border-left: none;
+  border-top: none;
+}
+
+/* ============================
+   HEADER + CONTROLS
+   ============================ */
+
+header {
+  margin-bottom: 6px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: var(--glow);
+  text-transform: uppercase;
+}
+
+header h1::before {
+  content: "> ";
+}
+
+#core-controls {
+  margin-bottom: 4px;
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+#plugin-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* Controls look: retro chips, no glassy BS */
+
+.control-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 0;
+  border: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-soft);
+  background: #000000;
+}
+
+.control-chip input[type="text"] {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-main);
+  font-size: 11px;
+  padding: 0;
+  min-width: 120px;
+}
+
+.control-chip select {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-main);
+  font-size: 11px;
+}
+
+.control-chip label {
+  cursor: pointer;
+}
+
+/* ============================
+   TREE CONTAINER
+   ============================ */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* for proper flexbox scrolling */
+}
+
+#tree-container {
+  flex: 1;
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+/* Scrollbars – retro green */
+
+#tree-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--glow-soft) #000000;
+}
+
+#tree-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#tree-container::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+#tree-container::-webkit-scrollbar-thumb {
+  background: var(--glow-soft);
+  border: 1px solid var(--glow);
+}
+
+#tree-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(65, 255, 65, 0.3);
+}
+
+/* ============================
+   TREE STRUCTURE
+   ============================ */
+
+.tree-root,
+.tree-root ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.tree-root > li + li {
+  margin-top: 2px;
+}
+
+.tree-root ul {
+  margin-left: 14px;
+  padding-left: 10px;
+  border-left: 1px dashed var(--text-dim);
+}
+
+/* ============================
+   NODES
+   ============================ */
+
+.tree-node {
+  color: var(--text-main);
+}
+
+.node-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 0;
+  font-size: 13px;
+}
+
+/* Expand / collapse buttons */
+
+.toggle-btn {
+  width: 16px;
+  height: 14px;
+  border: 1px solid var(--border);
+  background: #000;
+  color: var(--text-soft);
+  font-size: 9px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  border-color: var(--glow);
+  color: var(--glow);
+}
+
+.node-label {
+  padding: 1px 2px;
+  color: var(--text-main);
+}
+
+/* Groups vs endpoints */
+
+.node-label.group {
+  font-weight: 400; /* no bold inside tree per your request */
+  color: var(--text-main);
+}
+
+.node-label.endpoint {
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+.node-label:hover {
+  background: rgba(10, 40, 10, 0.6);
+}
+
+/* Checkboxes – CRT style, used both in tree + controls */
+
+.node-row input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--border);
+  background: #000;
+  position: relative;
+  cursor: pointer;
+}
+
+.node-row input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #000;
+}
+
+.node-row input[type="checkbox"]:checked {
+  border-color: var(--glow);
+  background: var(--glow-soft);
+}
+
+.node-row input[type="checkbox"]:checked::after {
+  content: "X";
+  font-size: 8px;
+  line-height: 8px;
+  text-align: center;
+  color: var(--glow);
+  inset: 0;
+}
+
+.node-row input[type="checkbox"]:focus-visible {
+  outline: 1px dashed var(--glow);
+  outline-offset: 1px;
+}
+
+/* Checkboxes inside control chips (reuse same style) */
+
+.control-chip input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--border);
+  background: #000;
+  position: relative;
+  cursor: pointer;
+}
+
+.control-chip input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #000;
+}
+
+.control-chip input[type="checkbox"]:checked {
+  border-color: var(--glow);
+  background: var(--glow-soft);
+}
+
+.control-chip input[type="checkbox"]:checked::after {
+  content: "X";
+  font-size: 8px;
+  line-height: 8px;
+  text-align: center;
+  color: var(--glow);
+  inset: 0;
+}
+
+.control-chip input[type="checkbox"]:focus-visible {
+  outline: 1px dashed var(--glow);
+  outline-offset: 1px;
+}
+
+.control-chip button {
+  border: 1px solid var(--border);
+  background: #000;
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: 11px;
+  padding: 1px 6px;
+  cursor: pointer;
+}
+
+.control-chip button:hover {
+  border-color: var(--glow);
+  color: var(--glow);
+}
+
+/* ============================
+   DIFFICULTY BADGES
+   ============================ */
+
+.difficulty-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  padding: 0 3px;
+  margin-left: 4px;
+  border-radius: 0;
+  border: 1px solid var(--text-dim);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--text-soft);
+  cursor: pointer;
+}
+
+/* Slight variation per level – still on-theme */
+
+.difficulty-badge[data-level="1"] {
+  border-color: var(--text-dim);
+  color: var(--text-soft);
+}
+
+.difficulty-badge[data-level="2"] {
+  border-color: var(--text-soft);
+  color: var(--glow);
+}
+
+.difficulty-badge[data-level="3"] {
+  border-color: var(--glow);
+  color: var(--glow);
+  box-shadow: 0 0 4px var(--glow-soft);
+}
+
+.difficulty-badge[data-level="4"] {
+  border-color: #ffea80;
+  color: #ffea80;
+  box-shadow: 0 0 6px rgba(255, 234, 128, 0.7);
+}

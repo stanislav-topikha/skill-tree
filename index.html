@@ -1,97 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>JS Learning Map Terminal</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <title>Knowledge Tree – Core</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="js-map-app">
-  <h1>JS Learning Map</h1>
+    <div class="app-shell">
+      <header>
+        <h1>Knowledge Tree</h1>
+        <div id="core-controls"></div>
+        <div id="plugin-controls"></div>
+      </header>
 
-<div class="controls">
-  <!-- Search stays visible -->
-  <input
-    id="searchInput"
-    class="search-input"
-    type="text"
-    placeholder="Search topics…"
-  />
-
-  <!-- Filters button -->
-  <button
-    type="button"
-    id="filtersToggle"
-    class="filters-toggle-btn"
-    aria-haspopup="true"
-    aria-expanded="false"
-  >
-    FILTERS ▾
-  </button>
-
-  <!-- Theme selector -->
-  <div class="theme-select">
-    <label for="themeSelect">THEME</label>
-<select id="themeSelect">
-  <option value="green">Green</option>
-  <option value="amber">Amber</option>
-  <option value="blue">Blue</option>
-  <option value="red">Red</option>
-</select>
-  </div>
-
-  <!-- Filters popup -->
-  <div class="filters-popup" id="filtersPopup">
-    <div class="filters-popup-inner">
-      <!-- Difficulty -->
-      <div class="filters-section">
-        <div class="filters-title">Difficulty</div>
-        <div class="diff-filters">
-          <span class="label">Level:</span>
-          <button class="diff-chip active" data-diff="1">1</button>
-          <button class="diff-chip active" data-diff="2">2</button>
-          <button class="diff-chip active" data-diff="3">3</button>
-          <button class="diff-chip active" data-diff="4">4</button>
-        </div>
-      </div>
-
-      <!-- Visibility -->
-      <div class="filters-section">
-        <div class="filters-title">Visibility</div>
-        <label class="toggle">
-          <input type="checkbox" id="toggleDifficulty" />
-          <span>Hide difficulty</span>
-        </label>
-        <label class="toggle">
-          <input type="checkbox" id="toggleHideCompleted" />
-          <span>Hide completed</span>
-        </label>
-      </div>
-
-      <!-- Tree controls -->
-      <div class="filters-section">
-        <div class="filters-title">Tree</div>
-        <div class="expand-buttons">
-          <button type="button" id="expandAllBtn">Expand all</button>
-          <button type="button" id="collapseAllBtn">Collapse all</button>
-        </div>
-      </div>
+      <main>
+        <div id="tree-container"></div>
+      </main>
     </div>
-  </div>
-</div>
 
-
-
-  <div class="tree" id="tree" data-show-difficulty="on">
-    <ul id="tree-root" class="tree-root"></ul>
-  </div>
-
-  <p class="hint">
-    Tip: click the checkboxes to mark items done. Filters + search turn this
-    into a navigable skill map.
-  </p>
-</div>
-
-    <script src="main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
