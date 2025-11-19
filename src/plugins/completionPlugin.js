@@ -1,24 +1,15 @@
-// src/plugins/completionPlugin.js
+// completionPlugin: manages "completed" aspect + checkbox per endpoint
 
 export const completionPlugin = {
   id: "completion",
   name: "Completion",
 
-  onInit(ctx) {
-    // could do migration or stats later
-  },
+  onInit(ctx) {},
 
-  onSubjectLoaded(subject, ctx) {
-    // no-op for now
-  },
+  onSubjectLoaded(subject, ctx) {},
 
   contributeControls(containerEl, ctx) {
-    // Simple status text for now
-    const span = document.createElement("span");
-    span.textContent = "Completion: check endpoints as done";
-    span.style.fontSize = "12px";
-    span.style.opacity = "0.6";
-    containerEl.appendChild(span);
+    // No header control needed for completion; checkboxes live on each endpoint row.
   },
 
   decorateNode(rowEl, node, ctx) {
@@ -38,6 +29,4 @@ export const completionPlugin = {
 
     rowEl.appendChild(checkbox);
   }
-
-  // NOTE: no filterEndpoint here – that belongs to view/filter plugin
 };

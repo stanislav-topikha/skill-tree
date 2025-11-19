@@ -1,36 +1,19 @@
-// src/plugins/viewFilterPlugin.js
+// viewFilterPlugin: hide completed, expand all, collapse all
 
-let hideCompleted = false; // local plugin state
-
-function walkGroups(nodes, fn) {
-  if (!Array.isArray(nodes)) return;
-  for (const node of nodes) {
-    if (node.kind === "group") {
-      fn(node);
-      if (node.children && node.children.length > 0) {
-        walkGroups(node.children, fn);
-      }
-    }
-  }
-}
+let hideCompleted = false;
 
 export const viewFilterPlugin = {
   id: "view_filter",
   name: "View & Filters",
 
-  onInit(ctx) {
-    // nothing yet
-  },
-
-  onSubjectLoaded(subject, ctx) {
-    // nothing yet
-  },
+  onInit(ctx) {},
+  onSubjectLoaded(subject, ctx) {},
 
   contributeControls(containerEl, ctx) {
     const wrapper = document.createElement("div");
     wrapper.className = "control-chip";
 
-    // --- Hide completed toggle ---
+    // Hide completed
     const hideCheckbox = document.createElement("input");
     hideCheckbox.type = "checkbox";
     hideCheckbox.checked = hideCompleted;
@@ -48,37 +31,36 @@ export const viewFilterPlugin = {
     wrapper.appendChild(hideCheckbox);
     wrapper.appendChild(hideLabel);
 
-    // small separator
+    // separator
     const sep = document.createElement("span");
     sep.textContent = "|";
     sep.style.opacity = "0.6";
     sep.style.padding = "0 3px";
     wrapper.appendChild(sep);
 
-    // --- Expand all button ---
+    // Expand all
     const expandBtn = document.createElement("button");
     expandBtn.type = "button";
     expandBtn.textContent = "Expand all";
 
     expandBtn.addEventListener("click", () => {
-      if (!ctx.subject || !ctx.subject.root) return;
-      ctx.expandedGroups.clear();
-      walkGroups(ctx.subject.root, (group) => {
-        ctx.expandedGroups.add(group.id);
-      });
+      if (typeof ctx.setAllGroupsExpanded === "function") {
+        ctx.setAllGroupsExpanded(true);
+      }
       if (typeof ctx.requestRender === "function") {
         ctx.requestRender();
       }
     });
 
-    // --- Collapse all button ---
+    // Collapse all
     const collapseBtn = document.createElement("button");
     collapseBtn.type = "button";
     collapseBtn.textContent = "Collapse all";
 
     collapseBtn.addEventListener("click", () => {
-      // collapse everything: no group ids in the set
-      ctx.expandedGroups.clear();
+      if (typeof ctx.setAllGroupsExpanded === "function") {
+        ctx.setAllGroupsExpanded(false);
+      }
       if (typeof ctx.requestRender === "function") {
         ctx.requestRender();
       }
@@ -91,10 +73,9 @@ export const viewFilterPlugin = {
   },
 
   decorateNode(rowEl, node, ctx) {
-    // this plugin doesn't decorate nodes (yet)
+    // no per-node decoration for now
   },
 
-  // visibility logic for endpoints
   filterEndpoint(node, ctx) {
     if (!hideCompleted) return true;
 

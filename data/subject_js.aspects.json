@@ -1,0 +1,1007 @@
+{
+  "js_mindset_and_setup_environment_and_tools_install_node_and_npm": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_environment_and_tools_editor_setup_vscode_vim": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_environment_and_tools_browser_devtools_basics": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_environment_and_tools_running_js_browser_console_node_cli": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_project_basics_package_json_basics": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_project_basics_npm_scripts_start_test_build": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_project_basics_basic_folder_structure": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_learning_habits_how_to_read_mdn": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_learning_habits_debugging_mindset_minimal_repro": {
+    "difficulty": 1
+  },
+  "js_mindset_and_setup_learning_habits_experiment_log_and_notes": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_values_and_types_primitive_overview": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_values_and_types_numbers_nan_infinity": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_values_and_types_strings_basics": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_values_and_types_booleans_and_truthiness": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_values_and_types_null_vs_undefined": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_values_and_types_bigint": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_values_and_types_symbol": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_variables_and_basic_scope_var_let_const": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_variables_and_basic_scope_block_vs_global_scope": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_variables_and_basic_scope_naming_and_style_basics": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_arithmetic_basic_arithmetic_plus_minus_times_divide_mod": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_arithmetic_exponentiation": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_arithmetic_increment_decrement": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_assignment_simple_assignment": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_assignment_compound_assignment": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_assignment_chained_assignment_pitfalls": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_operators_comparison_relational_less_greater": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_comparison_equality_double_vs_triple_equals": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_comparison_weird_comparisons_null_nan": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_operators_logical_logical_and": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_logical_logical_or": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_logical_logical_not": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_logical_short_circuiting_as_control_flow": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_operators_nullish_and_ternary_nullish_coalescing": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_operators_nullish_and_ternary_ternary_operator": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_operators_nullish_and_ternary_common_fallback_patterns": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_operators_bitwise_bitwise_basics": {
+    "difficulty": 3
+  },
+  "js_core_syntax_and_basics_operators_bitwise_bit_shifts": {
+    "difficulty": 3
+  },
+  "js_core_syntax_and_basics_operators_bitwise_bitmasks_and_flags": {
+    "difficulty": 3
+  },
+  "js_core_syntax_and_basics_control_flow_if_else": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_control_flow_switch": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_control_flow_try_catch_finally": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_loops_and_iteration_while_and_do_while": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_loops_and_iteration_for_loop_classic": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_loops_and_iteration_for_of": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_loops_and_iteration_for_in_when_to_avoid": {
+    "difficulty": 2
+  },
+  "js_core_syntax_and_basics_loops_and_iteration_break_and_continue": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_basic_io_and_debugging_console_log_warn_error": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_basic_io_and_debugging_reading_stack_traces": {
+    "difficulty": 1
+  },
+  "js_core_syntax_and_basics_basic_io_and_debugging_alert_prompt_confirm": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_objects_object_literals": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_objects_read_update_delete_properties": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_objects_computed_property_names": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_objects_nested_objects": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_objects_optional_chaining": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_objects_object_helpers_keys_values_entries": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_basics_create_and_access_elements": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_arrays_basics_length_and_sparse_arrays": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_basics_iterating_for_and_forof": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_arrays_mutating_methods_push_pop": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_arrays_mutating_methods_shift_unshift": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_arrays_mutating_methods_splice": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_mutating_methods_sort_and_custom_compare": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_non_mutating_methods_slice": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_arrays_non_mutating_methods_concat": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_arrays_non_mutating_methods_toSorted_and_toReversed": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_transform_and_search_forEach": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_arrays_transform_and_search_map": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_transform_and_search_filter": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_transform_and_search_find_and_findIndex": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_transform_and_search_some_and_every": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_transform_and_search_reduce_accumulator_pattern": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_array_recipes_grouping_by_field": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_array_recipes_frequency_maps": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_arrays_array_recipes_flat_and_flatMap": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_maps_and_sets_map_basics": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_maps_and_sets_iterating_over_map": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_maps_and_sets_set_basics": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_maps_and_sets_set_for_uniques": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_maps_and_sets_weakmap_and_weakset": {
+    "difficulty": 3
+  },
+  "js_data_and_collections_other_builtins_date_basics": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_other_builtins_intl_number_and_date_format": {
+    "difficulty": 3
+  },
+  "js_data_and_collections_other_builtins_json_parse_and_stringify": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_other_builtins_math_random_floor_round": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_data_model_concepts_value_vs_reference": {
+    "difficulty": 1
+  },
+  "js_data_and_collections_data_model_concepts_shallow_copy_spread_object_assign": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_data_model_concepts_deep_copy_structuredClone": {
+    "difficulty": 2
+  },
+  "js_data_and_collections_data_model_concepts_immutability_and_object_freeze": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_function_forms_function_declarations": {
+    "difficulty": 1
+  },
+  "js_functions_scope_and_closures_function_forms_function_expressions": {
+    "difficulty": 1
+  },
+  "js_functions_scope_and_closures_function_forms_arrow_functions": {
+    "difficulty": 1
+  },
+  "js_functions_scope_and_closures_function_forms_choosing_a_function_form": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_parameters_and_returns_parameters_vs_arguments": {
+    "difficulty": 1
+  },
+  "js_functions_scope_and_closures_parameters_and_returns_default_parameters": {
+    "difficulty": 1
+  },
+  "js_functions_scope_and_closures_parameters_and_returns_rest_parameters": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_parameters_and_returns_return_values_and_early_return": {
+    "difficulty": 1
+  },
+  "js_functions_scope_and_closures_parameters_and_returns_pure_vs_impure_functions": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_scope_lexical_scope": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_scope_scope_chain_lookups": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_scope_function_scope_vs_block_scope": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_closures_closure_definition_and_mental_model": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_closures_counters_and_state_via_closure": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_closures_caching_and_memoization_via_closure": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_closures_closures_in_loops_common_bug": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_closures_module_pattern_with_closures": {
+    "difficulty": 3
+  },
+  "js_functions_scope_and_closures_functional_patterns_functions_as_arguments": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_functional_patterns_functions_returning_functions": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_functional_patterns_higher_order_functions": {
+    "difficulty": 2
+  },
+  "js_functions_scope_and_closures_functional_patterns_currying": {
+    "difficulty": 3
+  },
+  "js_functions_scope_and_closures_functional_patterns_function_composition_and_pipe": {
+    "difficulty": 3
+  },
+  "js_objects_prototypes_and_classes_this_and_binding_what_is_this_runtime_binding": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_this_and_binding_this_in_methods_vs_plain_functions": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_this_and_binding_arrow_functions_and_lexical_this": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_this_and_binding_call_apply_bind": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_prototype_system_prototype_and___proto__": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_prototype_system_prototype_chain_lookups": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_prototype_system_constructor_functions_and_new": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_prototype_system_object_create": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_classes_class_syntax": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_classes_instance_fields_and_methods": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_classes_static_methods": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_classes_inheritance_and_super": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_classes_composition_vs_inheritance": {
+    "difficulty": 3
+  },
+  "js_objects_prototypes_and_classes_meta_programming_getters_and_setters": {
+    "difficulty": 2
+  },
+  "js_objects_prototypes_and_classes_meta_programming_proxy_basics": {
+    "difficulty": 3
+  },
+  "js_objects_prototypes_and_classes_meta_programming_reflect_api": {
+    "difficulty": 3
+  },
+  "js_language_features_and_mechanics_modern_syntax_strict_mode": {
+    "difficulty": 1
+  },
+  "js_language_features_and_mechanics_modern_syntax_template_literals": {
+    "difficulty": 1
+  },
+  "js_language_features_and_mechanics_modern_syntax_destructuring_objects_and_arrays": {
+    "difficulty": 2
+  },
+  "js_language_features_and_mechanics_modern_syntax_spread_operator": {
+    "difficulty": 2
+  },
+  "js_language_features_and_mechanics_modern_syntax_rest_operator": {
+    "difficulty": 2
+  },
+  "js_language_features_and_mechanics_iteration_protocols_iterable_and_iterator_protocols": {
+    "difficulty": 3
+  },
+  "js_language_features_and_mechanics_iteration_protocols_symbol_iterator": {
+    "difficulty": 3
+  },
+  "js_language_features_and_mechanics_iteration_protocols_custom_iterators": {
+    "difficulty": 3
+  },
+  "js_language_features_and_mechanics_iteration_protocols_generator_functions": {
+    "difficulty": 3
+  },
+  "js_language_features_and_mechanics_iteration_protocols_async_generators_and_for_await_of": {
+    "difficulty": 3
+  },
+  "js_language_features_and_mechanics_errors_and_exceptions_built_in_error_types": {
+    "difficulty": 1
+  },
+  "js_language_features_and_mechanics_errors_and_exceptions_throw_and_custom_error_messages": {
+    "difficulty": 1
+  },
+  "js_language_features_and_mechanics_errors_and_exceptions_custom_error_classes": {
+    "difficulty": 2
+  },
+  "js_language_features_and_mechanics_type_coercion_implicit_vs_explicit_coercion": {
+    "difficulty": 2
+  },
+  "js_language_features_and_mechanics_type_coercion_abstract_operation_ideas": {
+    "difficulty": 3
+  },
+  "js_language_features_and_mechanics_type_coercion_coercion_edge_cases": {
+    "difficulty": 3
+  },
+  "js_runtime_and_execution_model_execution_context_global_and_function_contexts": {
+    "difficulty": 2
+  },
+  "js_runtime_and_execution_model_execution_context_call_stack_and_stack_frames": {
+    "difficulty": 2
+  },
+  "js_runtime_and_execution_model_execution_context_hoisting_functions_and_variables": {
+    "difficulty": 2
+  },
+  "js_runtime_and_execution_model_execution_context_temporal_dead_zone_let_const": {
+    "difficulty": 2
+  },
+  "js_runtime_and_execution_model_event_loop_and_queues_event_loop_basics": {
+    "difficulty": 2
+  },
+  "js_runtime_and_execution_model_event_loop_and_queues_macrotasks_timeout_interval_io": {
+    "difficulty": 3
+  },
+  "js_runtime_and_execution_model_event_loop_and_queues_microtasks_promises_mutation_observer": {
+    "difficulty": 3
+  },
+  "js_runtime_and_execution_model_event_loop_and_queues_scheduling_pitfalls_starvation": {
+    "difficulty": 3
+  },
+  "js_runtime_and_execution_model_memory_stack_vs_heap": {
+    "difficulty": 2
+  },
+  "js_runtime_and_execution_model_memory_garbage_collection_basics": {
+    "difficulty": 3
+  },
+  "js_runtime_and_execution_model_memory_leaks_from_closures_and_dom_references": {
+    "difficulty": 3
+  },
+  "js_runtime_and_execution_model_runtime_pitfalls_blocking_main_thread": {
+    "difficulty": 2
+  },
+  "js_runtime_and_execution_model_runtime_pitfalls_long_synchronous_loops": {
+    "difficulty": 2
+  },
+  "js_runtime_and_execution_model_runtime_pitfalls_recursion_and_stack_overflow": {
+    "difficulty": 2
+  },
+  "js_modules_and_dependency_management_module_systems_script_vs_module_in_browser": {
+    "difficulty": 1
+  },
+  "js_modules_and_dependency_management_module_systems_es_modules_import_export": {
+    "difficulty": 2
+  },
+  "js_modules_and_dependency_management_module_systems_dynamic_import": {
+    "difficulty": 3
+  },
+  "js_modules_and_dependency_management_module_systems_commonjs_require_module_exports": {
+    "difficulty": 2
+  },
+  "js_modules_and_dependency_management_bundlers_and_build_tools_why_bundling_is_needed": {
+    "difficulty": 2
+  },
+  "js_modules_and_dependency_management_bundlers_and_build_tools_webpack_rollup_vite_parcel_overview": {
+    "difficulty": 2
+  },
+  "js_modules_and_dependency_management_bundlers_and_build_tools_code_splitting_and_lazy_loading": {
+    "difficulty": 3
+  },
+  "js_modules_and_dependency_management_bundlers_and_build_tools_tree_shaking": {
+    "difficulty": 3
+  },
+  "js_modules_and_dependency_management_dependency_management_npm_pnpm_yarn_basics": {
+    "difficulty": 1
+  },
+  "js_modules_and_dependency_management_dependency_management_semantic_versioning_and_ranges": {
+    "difficulty": 2
+  },
+  "js_modules_and_dependency_management_dependency_management_lockfiles_and_reproducible_installs": {
+    "difficulty": 2
+  },
+  "js_modules_and_dependency_management_dependency_management_monorepo_tools_turborepo_nx_lerna": {
+    "difficulty": 3
+  },
+  "js_browser_and_dom_dom_basics_dom_tree_and_node_types": {
+    "difficulty": 1
+  },
+  "js_browser_and_dom_dom_basics_queryselector_and_queryselectorall": {
+    "difficulty": 1
+  },
+  "js_browser_and_dom_dom_basics_reading_and_updating_attributes": {
+    "difficulty": 1
+  },
+  "js_browser_and_dom_dom_basics_creating_removing_moving_elements": {
+    "difficulty": 1
+  },
+  "js_browser_and_dom_styling_and_layout_classlist_and_inline_styles": {
+    "difficulty": 1
+  },
+  "js_browser_and_dom_styling_and_layout_computed_styles": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_styling_and_layout_reflow_and_repaint_basics": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_styling_and_layout_measuring_elements_getboundingclientrect": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_events_event_target_and_currenttarget": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_events_bubbling_and_capturing": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_events_event_delegation": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_events_common_event_types_click_input_keydown": {
+    "difficulty": 1
+  },
+  "js_browser_and_dom_forms_and_storage_reading_form_values": {
+    "difficulty": 1
+  },
+  "js_browser_and_dom_forms_and_storage_client_side_validation": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_forms_and_storage_localstorage_and_sessionstorage": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_forms_and_storage_cookies_and_basic_samesite_concept": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_advanced_browser_apis_fetch_api": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_advanced_browser_apis_history_and_location_apis": {
+    "difficulty": 2
+  },
+  "js_browser_and_dom_advanced_browser_apis_canvas_api_basics": {
+    "difficulty": 3
+  },
+  "js_browser_and_dom_advanced_browser_apis_svg_manipulation": {
+    "difficulty": 3
+  },
+  "js_browser_and_dom_advanced_browser_apis_web_components_custom_elements_shadow_dom": {
+    "difficulty": 3
+  },
+  "js_async_and_networking_async_foundations_callbacks_and_error_first_style": {
+    "difficulty": 1
+  },
+  "js_async_and_networking_async_foundations_promises_basics_resolve_reject": {
+    "difficulty": 2
+  },
+  "js_async_and_networking_async_foundations_promise_chaining_and_catch": {
+    "difficulty": 2
+  },
+  "js_async_and_networking_async_foundations_async_await_basics": {
+    "difficulty": 2
+  },
+  "js_async_and_networking_async_patterns_sequential_vs_parallel_execution": {
+    "difficulty": 2
+  },
+  "js_async_and_networking_async_patterns_promise_all_race_allsettled_any": {
+    "difficulty": 3
+  },
+  "js_async_and_networking_async_patterns_timeouts_and_retries": {
+    "difficulty": 3
+  },
+  "js_async_and_networking_async_patterns_abortcontroller_and_abortsignal": {
+    "difficulty": 3
+  },
+  "js_async_and_networking_networking_rest_apis_and_json": {
+    "difficulty": 2
+  },
+  "js_async_and_networking_networking_websockets_basics": {
+    "difficulty": 3
+  },
+  "js_async_and_networking_networking_server_sent_events_and_long_polling": {
+    "difficulty": 3
+  },
+  "js_async_and_networking_networking_handling_network_errors_and_retries": {
+    "difficulty": 2
+  },
+  "js_testing_and_quality_testing_basics_what_is_unit_testing": {
+    "difficulty": 2
+  },
+  "js_testing_and_quality_testing_basics_jest_vitest_basics": {
+    "difficulty": 2
+  },
+  "js_testing_and_quality_testing_basics_testing_async_code": {
+    "difficulty": 2
+  },
+  "js_testing_and_quality_testing_basics_mocking_spies_and_stubs": {
+    "difficulty": 3
+  },
+  "js_testing_and_quality_integration_and_e2e_api_integration_tests": {
+    "difficulty": 3
+  },
+  "js_testing_and_quality_integration_and_e2e_dom_integration_tests": {
+    "difficulty": 3
+  },
+  "js_testing_and_quality_integration_and_e2e_e2e_tests_playwright_cypress": {
+    "difficulty": 3
+  },
+  "js_testing_and_quality_quality_automation_eslint_setup_and_core_rules": {
+    "difficulty": 1
+  },
+  "js_testing_and_quality_quality_automation_prettier_and_formatting": {
+    "difficulty": 1
+  },
+  "js_testing_and_quality_quality_automation_lint_staged_and_pre_commit_hooks": {
+    "difficulty": 2
+  },
+  "js_testing_and_quality_quality_automation_static_analysis_in_ci": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_node_core_node_runtime_and_repl": {
+    "difficulty": 1
+  },
+  "js_node_and_backend_js_node_core_commonjs_vs_esm_in_node": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_node_core_process_env_and_cli_args": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_filesystem_and_streams_fs_module_read_write_files": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_filesystem_and_streams_path_and_os_modules": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_filesystem_and_streams_buffers_and_binary_data": {
+    "difficulty": 3
+  },
+  "js_node_and_backend_js_filesystem_and_streams_streams_readable_writable_transform": {
+    "difficulty": 3
+  },
+  "js_node_and_backend_js_http_servers_and_apis_http_https_modules": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_http_servers_and_apis_express_or_fastify_basics": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_http_servers_and_apis_routing_and_middleware": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_http_servers_and_apis_json_body_parsing_and_validation": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_http_servers_and_apis_building_rest_apis": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_auth_and_data_sessions_and_cookies": {
+    "difficulty": 3
+  },
+  "js_node_and_backend_js_auth_and_data_jwt_and_token_based_auth": {
+    "difficulty": 3
+  },
+  "js_node_and_backend_js_auth_and_data_connecting_to_sql_databases": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_auth_and_data_connecting_to_nosql_databases": {
+    "difficulty": 2
+  },
+  "js_node_and_backend_js_auth_and_data_orm_and_query_builders_prisma_knex_typeorm": {
+    "difficulty": 3
+  },
+  "js_node_and_backend_js_cli_and_background_work_building_cli_tools_commander_yargs": {
+    "difficulty": 3
+  },
+  "js_node_and_backend_js_cli_and_background_work_job_queues_and_workers": {
+    "difficulty": 3
+  },
+  "js_node_and_backend_js_cli_and_background_work_scheduling_tasks_cron_like": {
+    "difficulty": 3
+  },
+  "js_frontend_frameworks_and_spa_architecture_react_core_jsx_and_components": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_react_core_props_and_composition": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_react_core_state_and_events": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_react_core_hooks_usestate_useeffect_useref": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_react_advanced_context_api": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_react_advanced_performance_memo_usecallback_usememo": {
+    "difficulty": 3
+  },
+  "js_frontend_frameworks_and_spa_architecture_react_advanced_custom_hooks": {
+    "difficulty": 3
+  },
+  "js_frontend_frameworks_and_spa_architecture_react_advanced_forms_controlled_uncontrolled": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_routing_and_data_client_side_routing_react_router_etc": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_routing_and_data_data_fetching_patterns": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_routing_and_data_error_boundaries_and_suspense_concepts": {
+    "difficulty": 3
+  },
+  "js_frontend_frameworks_and_spa_architecture_other_frameworks_vue_basics": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_other_frameworks_svelte_basics": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_other_frameworks_angular_overview": {
+    "difficulty": 2
+  },
+  "js_frontend_frameworks_and_spa_architecture_other_frameworks_meta_frameworks_next_nuxt_sveltekit": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_code_organization_feature_based_folder_structure": {
+    "difficulty": 2
+  },
+  "js_patterns_and_architecture_code_organization_modules_vs_layers": {
+    "difficulty": 2
+  },
+  "js_patterns_and_architecture_code_organization_boundaries_between_ui_domain_infra": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_classic_patterns_singleton_and_when_not_to_use": {
+    "difficulty": 2
+  },
+  "js_patterns_and_architecture_classic_patterns_factory_and_abstract_factory": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_classic_patterns_strategy_and_command": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_classic_patterns_observer_and_pub_sub": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_functional_style_map_filter_reduce_chains": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_functional_style_immutability_and_persistent_data_structures": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_functional_style_point_free_and_pipe_compose": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_architecture_and_ddd_clean_code_principles_in_js": {
+    "difficulty": 2
+  },
+  "js_patterns_and_architecture_architecture_and_ddd_ports_and_adapters_hexagonal_architecture": {
+    "difficulty": 3
+  },
+  "js_patterns_and_architecture_architecture_and_ddd_domain_driven_design_overview": {
+    "difficulty": 4
+  },
+  "js_patterns_and_architecture_architecture_and_ddd_error_handling_strategies_at_scale": {
+    "difficulty": 3
+  },
+  "js_performance_and_optimisation_measuring_performance_performance_api": {
+    "difficulty": 2
+  },
+  "js_performance_and_optimisation_measuring_performance_browser_devtools_performance_tab": {
+    "difficulty": 2
+  },
+  "js_performance_and_optimisation_measuring_performance_node_profiler_basics": {
+    "difficulty": 3
+  },
+  "js_performance_and_optimisation_algorithmic_thinking_big_o_intuition_for_js_code": {
+    "difficulty": 2
+  },
+  "js_performance_and_optimisation_algorithmic_thinking_common_data_structures_in_js": {
+    "difficulty": 2
+  },
+  "js_performance_and_optimisation_algorithmic_thinking_optimizing_hot_paths": {
+    "difficulty": 3
+  },
+  "js_performance_and_optimisation_runtime_optimisation_avoiding_blocking_main_thread": {
+    "difficulty": 2
+  },
+  "js_performance_and_optimisation_runtime_optimisation_debouncing_and_throttling": {
+    "difficulty": 2
+  },
+  "js_performance_and_optimisation_runtime_optimisation_web_workers_and_worker_threads": {
+    "difficulty": 3
+  },
+  "js_performance_and_optimisation_runtime_optimisation_memory_optimisation_and_leak_hunting": {
+    "difficulty": 3
+  },
+  "js_performance_and_optimisation_delivery_and_bundle_size_bundle_analysis": {
+    "difficulty": 3
+  },
+  "js_performance_and_optimisation_delivery_and_bundle_size_code_splitting_and_lazy_routes": {
+    "difficulty": 3
+  },
+  "js_performance_and_optimisation_delivery_and_bundle_size_caching_strategies_http_cache_local_cache": {
+    "difficulty": 3
+  },
+  "js_security_web_threat_model_attacker_mindset_basics": {
+    "difficulty": 2
+  },
+  "js_security_web_threat_model_input_validation_vs_sanitisation": {
+    "difficulty": 2
+  },
+  "js_security_web_threat_model_secure_defaults_thinking": {
+    "difficulty": 2
+  },
+  "js_security_browser_vulnerabilities_xss_reflected_stored_dom": {
+    "difficulty": 3
+  },
+  "js_security_browser_vulnerabilities_csrf_and_samesite_cookies": {
+    "difficulty": 3
+  },
+  "js_security_browser_vulnerabilities_clickjacking_and_frame_options": {
+    "difficulty": 3
+  },
+  "js_security_browser_vulnerabilities_content_security_policy_overview": {
+    "difficulty": 3
+  },
+  "js_security_auth_and_access_control_authentication_best_practices": {
+    "difficulty": 3
+  },
+  "js_security_auth_and_access_control_authorization_and_roles": {
+    "difficulty": 3
+  },
+  "js_security_auth_and_access_control_securely_handling_tokens_and_secrets": {
+    "difficulty": 3
+  },
+  "js_security_dependency_and_supply_chain_npm_audit_and_advisories": {
+    "difficulty": 2
+  },
+  "js_security_dependency_and_supply_chain_pinning_versions_and_lockfiles": {
+    "difficulty": 2
+  },
+  "js_security_dependency_and_supply_chain_reviewing_third_party_code_risks": {
+    "difficulty": 3
+  },
+  "js_tooling_and_workflow_devtools_master_elements_tab_and_live_editing": {
+    "difficulty": 2
+  },
+  "js_tooling_and_workflow_devtools_master_network_tab_and_api_debugging": {
+    "difficulty": 2
+  },
+  "js_tooling_and_workflow_devtools_master_sources_tab_and_breakpoints": {
+    "difficulty": 2
+  },
+  "js_tooling_and_workflow_devtools_master_performance_and_memory_tabs": {
+    "difficulty": 3
+  },
+  "js_tooling_and_workflow_local_workflow_npm_scripts_as_task_runner": {
+    "difficulty": 1
+  },
+  "js_tooling_and_workflow_local_workflow_nodemon_ts_node_and_reload_tools": {
+    "difficulty": 2
+  },
+  "js_tooling_and_workflow_local_workflow_debugging_in_vscode_node": {
+    "difficulty": 1
+  },
+  "js_tooling_and_workflow_automation_and_ci_basic_ci_pipeline_lint_test_build": {
+    "difficulty": 2
+  },
+  "js_tooling_and_workflow_automation_and_ci_docker_basics_for_js_apps": {
+    "difficulty": 2
+  },
+  "js_tooling_and_workflow_automation_and_ci_release_scripts_and_changelogs": {
+    "difficulty": 3
+  },
+  "js_typescript_and_typing_js_ts_basics_tsconfig_and_compiler_options": {
+    "difficulty": 2
+  },
+  "js_typescript_and_typing_js_ts_basics_basic_types_string_number_boolean": {
+    "difficulty": 2
+  },
+  "js_typescript_and_typing_js_ts_basics_interfaces_and_type_aliases": {
+    "difficulty": 2
+  },
+  "js_typescript_and_typing_js_ts_basics_enums_and_const_assertions": {
+    "difficulty": 2
+  },
+  "js_typescript_and_typing_js_composing_types_union_and_intersection_types": {
+    "difficulty": 2
+  },
+  "js_typescript_and_typing_js_composing_types_literal_types": {
+    "difficulty": 2
+  },
+  "js_typescript_and_typing_js_composing_types_narrowing_typeof_instanceof_in_guards": {
+    "difficulty": 2
+  },
+  "js_typescript_and_typing_js_composing_types_discriminated_unions": {
+    "difficulty": 3
+  },
+  "js_typescript_and_typing_js_generics_and_advanced_types_generics_basics": {
+    "difficulty": 3
+  },
+  "js_typescript_and_typing_js_generics_and_advanced_types_generic_functions_and_interfaces": {
+    "difficulty": 3
+  },
+  "js_typescript_and_typing_js_generics_and_advanced_types_mapped_types_and_utility_types": {
+    "difficulty": 3
+  },
+  "js_typescript_and_typing_js_generics_and_advanced_types_conditional_types_and_infer": {
+    "difficulty": 4
+  },
+  "js_typescript_and_typing_js_generics_and_advanced_types_type_level_programming_patterns": {
+    "difficulty": 4
+  },
+  "js_typescript_and_typing_js_typing_ecosystem_using_dts_and_definitelytyped": {
+    "difficulty": 3
+  },
+  "js_typescript_and_typing_js_typing_ecosystem_writing_declaration_files": {
+    "difficulty": 4
+  },
+  "js_typescript_and_typing_js_typing_ecosystem_migrating_js_projects_to_ts": {
+    "difficulty": 3
+  },
+  "js_js_internals_and_spec_level_ecmascript_spec_spec_structure_and_sections": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_ecmascript_spec_algorithm_notation": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_ecmascript_spec_following_a_feature_from_spec_to_engines": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_engine_internals_parsing_and_ast": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_engine_internals_bytecode_and_jit_optimizations": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_engine_internals_deoptimisation_and_hidden_classes": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_tooling_on_top_of_js_working_with_asts_acorn_babel_parser": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_tooling_on_top_of_js_writing_babel_plugins": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_tooling_on_top_of_js_writing_custom_eslint_rules": {
+    "difficulty": 4
+  },
+  "js_js_internals_and_spec_level_tooling_on_top_of_js_building_a_mini_bundler_or_transpiler": {
+    "difficulty": 4
+  },
+  "js_specialised_areas_pwa_and_offline_service_workers": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_pwa_and_offline_app_manifest_and_installability": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_pwa_and_offline_offline_first_and_sync_strategies": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_realtime_and_media_webrtc_basics": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_realtime_and_media_web_audio_api": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_realtime_and_media_web_notifications_and_push": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_graphics_and_3d_canvas_advanced": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_graphics_and_3d_webgl_basics": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_graphics_and_3d_threejs_for_3d_scenes": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_cross_platform_js_electron_desktop_apps": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_cross_platform_js_react_native_or_expo": {
+    "difficulty": 3
+  },
+  "js_specialised_areas_cross_platform_js_automation_and_scraping_puppeteer_playwright": {
+    "difficulty": 3
+  }
+}

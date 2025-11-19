@@ -1,46 +1,40 @@
-// src/plugins/searchPlugin.js
+// searchPlugin: text filter over endpoints
 
-let query = ""; // plugin-local, not in aspects (search is just a view)
+let query = "";
 
 export const searchPlugin = {
   id: "search",
   name: "Search",
 
-  onInit(ctx) {
-    // could restore last query from localStorage later
-  },
-
-  onSubjectLoaded(subject, ctx) {
-    // no-op for now
-  },
+  onInit(ctx) {},
+  onSubjectLoaded(subject, ctx) {},
 
   contributeControls(containerEl, ctx) {
-  const wrapper = document.createElement("div");
-  wrapper.className = "control-chip";
+    const wrapper = document.createElement("div");
+    wrapper.className = "control-chip";
 
-  const label = document.createElement("span");
-  label.textContent = "Search";
+    const label = document.createElement("span");
+    label.textContent = "Search";
 
-  const input = document.createElement("input");
-  input.type = "text";
-  input.placeholder = "endpoints…";
-  input.value = query;
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = "Search (Cmd/Ctrl + K)";
+    input.value = query;
 
-  input.addEventListener("input", () => {
-    query = input.value.trim().toLowerCase();
-    if (typeof ctx.requestRender === "function") {
-      ctx.requestRender();
-    }
-  });
+    input.addEventListener("input", () => {
+      query = input.value.trim().toLowerCase();
+      if (typeof ctx.requestRender === "function") {
+        ctx.requestRender();
+      }
+    });
 
-  wrapper.appendChild(label);
-  wrapper.appendChild(input);
-  containerEl.appendChild(wrapper);
-},
-
+    wrapper.appendChild(label);
+    wrapper.appendChild(input);
+    containerEl.appendChild(wrapper);
+  },
 
   decorateNode(rowEl, node, ctx) {
-    // later we can highlight matches here if we want
+    // could highlight matches here later
   },
 
   filterEndpoint(node, ctx) {

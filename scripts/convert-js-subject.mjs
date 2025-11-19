@@ -4,9 +4,6 @@ import path from "node:path";
 const rawPath = path.join("data", "subject_js.raw.json");
 const outPath = path.join("data", "subject_js.json");
 
-const rawText = fs.readFileSync(rawPath, "utf8");
-const rawArray = JSON.parse(rawText);
-
 // title -> snake_case segment
 function toSnake(title, isTopLevel = false) {
   let s = title;
@@ -17,7 +14,7 @@ function toSnake(title, isTopLevel = false) {
   return s.replace(/-/g, "_");
 }
 
-// prettier label for UI (optional)
+// prettier label for UI
 function prettifyLabel(title) {
   const noNum = title.replace(/^[0-9]+_/, "");
   return noNum
@@ -29,9 +26,11 @@ function prettifyLabel(title) {
 
 /**
  * Convert legacy nodes into new spec:
- * - kind: "group" or "endpoint"
- * - id: snake_case path prefixed with "js_"
- * - NO difficulty in tree
+ *  - kind: "group" or "endpoint"
+ *  - id: "js_" + snake_case_path
+ *  - title: original slug
+ *  - label: pretty for UI
+ *  - NO difficulty in tree
  */
 function convertNodes(nodes, pathParts = [], depth = 0) {
   return nodes.map((node) => {
@@ -47,13 +46,12 @@ function convertNodes(nodes, pathParts = [], depth = 0) {
       return {
         id,
         kind: "group",
-        title: node.title,          // keep slug-ish title
+        title: node.title,
         label: prettifyLabel(node.title),
         children: convertNodes(node.children, pathSegments, depth + 1)
       };
     }
 
-    // endpoint (leaf) – ignore node.difficulty completely
     const id = "js_" + pathSegments.join("_");
 
     return {
@@ -64,6 +62,9 @@ function convertNodes(nodes, pathParts = [], depth = 0) {
     };
   });
 }
+
+const rawText = fs.readFileSync(rawPath, "utf8");
+const rawArray = JSON.parse(rawText);
 
 const convertedRoot = convertNodes(rawArray);
 

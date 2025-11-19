@@ -1,9 +1,8 @@
-// src/plugins/themePlugin.js
+// themePlugin: switches Pip-Boy themes via data-theme on <body>
 
 const THEME_STORAGE_KEY = "js_knowledge_theme";
 
 const THEMES = [
-  { id: "neutral", label: "Neutral dark" },
   { id: "pipboy_green", label: "Pip-Boy Green" },
   { id: "pipboy_amber", label: "Pip-Boy Amber" },
   { id: "pipboy_blue", label: "Pip-Boy Blue" }
@@ -14,7 +13,7 @@ let currentTheme = loadTheme();
 function loadTheme() {
   try {
     const saved = localStorage.getItem(THEME_STORAGE_KEY);
-    if (!saved) return "pipboy_green"; // default
+    if (!saved) return "pipboy_green";
     return saved;
   } catch (_) {
     return "pipboy_green";
@@ -22,12 +21,7 @@ function loadTheme() {
 }
 
 function applyTheme(themeId) {
-  const body = document.body;
-  if (themeId === "neutral") {
-    body.removeAttribute("data-theme");
-  } else {
-    body.setAttribute("data-theme", themeId);
-  }
+  document.body.setAttribute("data-theme", themeId);
 }
 
 function saveTheme(themeId) {
@@ -44,9 +38,7 @@ export const themePlugin = {
     applyTheme(currentTheme);
   },
 
-  onSubjectLoaded(subject, ctx) {
-    // nothing special
-  },
+  onSubjectLoaded(subject, ctx) {},
 
   contributeControls(containerEl, ctx) {
     const wrapper = document.createElement("div");
@@ -61,9 +53,7 @@ export const themePlugin = {
       const opt = document.createElement("option");
       opt.value = theme.id;
       opt.textContent = theme.label;
-      if (theme.id === currentTheme) {
-        opt.selected = true;
-      }
+      if (theme.id === currentTheme) opt.selected = true;
       select.appendChild(opt);
     });
 
@@ -78,11 +68,10 @@ export const themePlugin = {
 
     wrapper.appendChild(label);
     wrapper.appendChild(select);
-
     containerEl.appendChild(wrapper);
   },
 
   decorateNode(rowEl, node, ctx) {
-    // themes operate via CSS variables; nothing per-node
+    // theme is global via CSS vars; nothing per-node
   }
 };

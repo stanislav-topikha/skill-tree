@@ -1,5 +1,3 @@
-// src/core/pluginHost.js
-
 export class PluginHost {
   constructor(ctx) {
     this.ctx = ctx;
@@ -42,7 +40,7 @@ export class PluginHost {
     }
   }
 
-  // AND all endpoint filters from every plugin
+  // AND-combine all endpoint filters
   isEndpointVisible(node) {
     let visible = true;
     for (const p of this.plugins) {

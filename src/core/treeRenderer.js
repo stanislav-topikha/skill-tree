@@ -1,5 +1,3 @@
-// src/core/treeRenderer.js
-
 export function renderTree(ctx, containerEl, pluginHost) {
   containerEl.innerHTML = "";
 
@@ -23,8 +21,20 @@ function renderNode(ctx, node, pluginHost) {
   const isGroup = ctx.isGroup(node);
   const isEndpoint = ctx.isEndpoint(node);
 
+  // endpoints: ask plugins if visible
   if (isEndpoint && pluginHost) {
     if (!pluginHost.isEndpointVisible(node)) return null;
+  }
+
+  let visibleChildLis = [];
+
+  if (isGroup && node.children && node.children.length > 0) {
+    visibleChildLis = node.children
+      .map((child) => renderNode(ctx, child, pluginHost))
+      .filter(Boolean);
+
+    // no visible children => hide this branch
+    if (visibleChildLis.length === 0) return null;
   }
 
   const li = document.createElement("li");
@@ -37,15 +47,14 @@ function renderNode(ctx, node, pluginHost) {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "toggle-btn";
+
     const expanded = ctx.expandedGroups.has(node.id);
     btn.textContent = expanded ? "▾" : "▸";
 
     btn.addEventListener("click", () => {
-      if (ctx.expandedGroups.has(node.id)) {
-        ctx.expandedGroups.delete(node.id);
-      } else {
-        ctx.expandedGroups.add(node.id);
-      }
+      const currentlyExpanded = ctx.expandedGroups.has(node.id);
+      ctx.setGroupExpanded(node.id, !currentlyExpanded);
+
       const container = li.closest("#tree-container");
       if (container) {
         renderTree(ctx, container, pluginHost);
@@ -56,7 +65,7 @@ function renderNode(ctx, node, pluginHost) {
   } else {
     const spacer = document.createElement("span");
     spacer.style.display = "inline-block";
-    spacer.style.width = "16px";
+    spacer.style.width = "var(--label-spacing)";
     row.appendChild(spacer);
   }
 
@@ -71,17 +80,11 @@ function renderNode(ctx, node, pluginHost) {
 
   li.appendChild(row);
 
-  if (isGroup && node.children && node.children.length > 0) {
+  if (isGroup && visibleChildLis.length > 0) {
     const expanded = ctx.expandedGroups.has(node.id);
     if (expanded) {
       const ul = document.createElement("ul");
-      node.children.forEach((child) => {
-        const childLi = renderNode(ctx, child, pluginHost);
-        if (childLi) ul.appendChild(childLi);
-      });
-
-      if (ul.children.length === 0) return null; // hide empty branch
-
+      visibleChildLis.forEach((childLi) => ul.appendChild(childLi));
       li.appendChild(ul);
     }
   }

@@ -1,22 +1,14 @@
-// src/plugins/difficultyPlugin.js
-
-// difficulty is stored as an aspect: { difficulty: 1|2|3|4 }
-// filter uses a set of active levels
+// difficultyPlugin: difficulty aspect + badges + level filter
 
 const LEVELS = [1, 2, 3, 4];
-let activeLevels = new Set(LEVELS); // all shown by default
+let activeLevels = new Set(LEVELS); // all visible by default
 
 export const difficultyPlugin = {
   id: "difficulty",
   name: "Difficulty",
 
-  onInit(ctx) {
-    // could migrate old data later if needed
-  },
-
-  onSubjectLoaded(subject, ctx) {
-    // nothing for now
-  },
+  onInit(ctx) {},
+  onSubjectLoaded(subject, ctx) {},
 
   contributeControls(containerEl, ctx) {
     const wrapper = document.createElement("div");
@@ -31,7 +23,6 @@ export const difficultyPlugin = {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.textContent = String(level);
-      btn.dataset.level = String(level);
 
       const updateStyle = () => {
         const on = activeLevels.has(level);
@@ -49,7 +40,7 @@ export const difficultyPlugin = {
 
       btn.addEventListener("click", () => {
         if (activeLevels.has(level)) {
-          // at least one level must stay on, don't allow empty set
+          // don't allow turning off all levels
           if (activeLevels.size === 1) return;
           activeLevels.delete(level);
         } else {
@@ -86,7 +77,6 @@ export const difficultyPlugin = {
       badge.title = `Difficulty ${level}`;
     }
 
-    // Clicking cycles difficulty: undefined → 1 → 2 → 3 → 4 → undefined
     badge.addEventListener("click", () => {
       const current = ctx.getAspect(node.id).difficulty;
       let next;
@@ -94,22 +84,19 @@ export const difficultyPlugin = {
       else next = current + 1;
 
       ctx.updateAspect(node.id, { difficulty: next });
-      // let badge reflect immediately without full rerender
+
       badge.textContent = String(next);
       badge.dataset.level = String(next);
       badge.title = `Difficulty ${next}`;
     });
 
-    // insert before completion checkbox (which is appended with margin-left:auto)
-    // so we append badge before other plugins that might push content
     rowEl.appendChild(badge);
   },
 
   filterEndpoint(node, ctx) {
-    // If level not set, don't filter it out
     const aspect = ctx.getAspect(node.id);
     const level = aspect.difficulty;
-    if (level == null) return true;
+    if (level == null) return true; // don't hide untagged
     return activeLevels.has(level);
   }
 };
