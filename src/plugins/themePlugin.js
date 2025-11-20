@@ -2,21 +2,40 @@
 
 const THEME_STORAGE_KEY = "js_knowledge_theme";
 
-const THEMES = [
-  { id: "pipboy_green", label: "Pip-Boy Green" },
-  { id: "pipboy_amber", label: "Pip-Boy Amber" },
-  { id: "pipboy_blue", label: "Pip-Boy Blue" }
+const THEME_GROUPS = [
+  {
+    label: "Fallout",
+    themes: [
+      { id: "pipboy_green", label: "Pip-Boy Green" },
+      { id: "pipboy_amber", label: "Pip-Boy Amber" },
+      { id: "pipboy_blue", label: "Pip-Boy Blue" }
+    ]
+  },
+  {
+    label: "Mission",
+    themes: [
+      { id: "mil_dot_sci", label: "Mission Stealth" },
+      { id: "mil_dot_desert", label: "Mission Dune" },
+      { id: "mil_nasa", label: "Mission Apollo" }
+    ]
+  },
+  {
+    label: "Myth",
+    themes: [{ id: "myth_diablo2", label: "Diablo II" }]
+  }
 ];
+
+const THEME_IDS = THEME_GROUPS.flatMap((g) => g.themes.map((t) => t.id));
 
 let currentTheme = loadTheme();
 
 function loadTheme() {
   try {
     const saved = localStorage.getItem(THEME_STORAGE_KEY);
-    if (!saved) return "pipboy_green";
-    return saved;
+    if (saved && THEME_IDS.includes(saved)) return saved;
+    return THEME_IDS[0] || "pipboy_green";
   } catch (_) {
-    return "pipboy_green";
+    return THEME_IDS[0] || "pipboy_green";
   }
 }
 
@@ -49,12 +68,19 @@ export const themePlugin = {
 
     const select = document.createElement("select");
 
-    THEMES.forEach((theme) => {
-      const opt = document.createElement("option");
-      opt.value = theme.id;
-      opt.textContent = theme.label;
-      if (theme.id === currentTheme) opt.selected = true;
-      select.appendChild(opt);
+    THEME_GROUPS.forEach((group) => {
+      const optGroup = document.createElement("optgroup");
+      optGroup.label = group.label;
+
+      group.themes.forEach((theme) => {
+        const opt = document.createElement("option");
+        opt.value = theme.id;
+        opt.textContent = theme.label;
+        if (theme.id === currentTheme) opt.selected = true;
+        optGroup.appendChild(opt);
+      });
+
+      select.appendChild(optGroup);
     });
 
     select.addEventListener("change", () => {

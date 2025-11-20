@@ -35,6 +35,7 @@
   --label-spacing: calc(16px * var(--ui-scale));
   --control-height: calc(18px * var(--ui-scale));
   --control-gap: calc(6px * var(--ui-scale));
+  --endpoint-hover: var(--glow);
 }
 
 /* === THEMES (Pip-Boy variants) === */
@@ -76,6 +77,220 @@ body[data-theme="pipboy_blue"] {
   --text-main: #89d0ff;
   --text-soft: #5ba2d0;
   --text-dim: #27435a;
+}
+
+/* Military dot-grid sci-fi */
+body[data-theme="mil_dot_sci"] {
+  --bg: #050608;
+  --screen: #0c0f13;
+  --border: #2d3a45;
+  --scanline: rgba(0, 0, 0, 0.35);
+  --glow: #6bff8e;
+  --glow-soft: rgba(107, 255, 142, 0.2);
+  --text-main: #9bf7b8;
+  --text-soft: #6ccf94;
+  --text-dim: #335040;
+  --endpoint-hover: #6bff8e;
+}
+
+body[data-theme="mil_dot_sci"] .app-shell {
+  background:
+    radial-gradient(rgba(107, 255, 142, 0.08) 1px, transparent 0) 0 0 / 14px 14px,
+    radial-gradient(rgba(107, 255, 142, 0.06) 1px, transparent 0) 6px 5px / 18px 18px,
+    radial-gradient(circle at 20% 20%, #0f141a, #090c10 45%, #050608);
+  border-image: repeating-linear-gradient(
+      45deg,
+      var(--border),
+      var(--border) 6px,
+      transparent 6px,
+      transparent 10px
+    )
+    10;
+}
+
+body[data-theme="mil_dot_sci"] #tree-container {
+  background:
+    radial-gradient(rgba(107, 255, 142, 0.07) 1px, transparent 0) 0 0 / 12px 12px,
+    radial-gradient(rgba(107, 255, 142, 0.04) 1px, transparent 0) 5px 4px / 18px 18px,
+    rgba(0, 0, 0, 0.6);
+  border-color: var(--border);
+  animation: dot-sway-sci 18s ease-in-out infinite;
+}
+
+body[data-theme="mil_dot_sci"] .control-chip,
+body[data-theme="mil_dot_sci"] .control-chip.pop-menu .menu-panel,
+body[data-theme="mil_dot_sci"] .note-section,
+body[data-theme="mil_dot_sci"] .task-section,
+body[data-theme="mil_dot_sci"] .theory-section,
+body[data-theme="mil_dot_sci"] .note-popover {
+  background:
+    radial-gradient(rgba(107, 255, 142, 0.06) 1px, transparent 0) 0 0 / 12px 12px,
+    radial-gradient(rgba(107, 255, 142, 0.04) 1px, transparent 0) 6px 5px / 18px 18px,
+    #050608;
+  border-color: var(--border);
+  animation: dot-sway-sci 16s ease-in-out infinite;
+}
+
+body[data-theme="mil_dot_sci"] .difficulty-badge,
+body[data-theme="mil_dot_sci"] .status-pill,
+body[data-theme="mil_dot_sci"] .filter-pill,
+body[data-theme="mil_dot_sci"] .toggle-btn {
+  border-color: var(--border);
+}
+
+/* Mil-Dot Desert (lighter spin-off) */
+body[data-theme="mil_dot_desert"] {
+  --bg: #f7f1e5;
+  --screen: #f0e7d5;
+  --border: #c1aa7c;
+  --scanline: rgba(0, 0, 0, 0.08);
+  --glow: #c77b1a;
+  --glow-soft: rgba(199, 123, 26, 0.18);
+  --text-main: #3b2e1b;
+  --text-soft: #6a5330;
+  --text-dim: #9f8761;
+  --endpoint-hover: #c77b1a;
+}
+
+body[data-theme="mil_dot_desert"] .app-shell {
+  background:
+    radial-gradient(rgba(60, 40, 10, 0.06) 1px, transparent 0) 0 0 / 14px 14px,
+    radial-gradient(rgba(60, 40, 10, 0.04) 1px, transparent 0) 6px 5px / 20px 20px,
+    radial-gradient(circle at 20% 20%, #fff7e7, #eee0c5 45%, #f7f1e5);
+  border-image: repeating-linear-gradient(
+      45deg,
+      var(--border),
+      var(--border) 6px,
+      transparent 6px,
+      transparent 10px
+    )
+    10;
+}
+
+body[data-theme="mil_dot_desert"] #tree-container {
+  background:
+    radial-gradient(rgba(60, 40, 10, 0.07) 1px, transparent 0) 0 0 / 12px 12px,
+    radial-gradient(rgba(60, 40, 10, 0.05) 1px, transparent 0) 5px 4px / 18px 18px,
+    rgba(255, 255, 255, 0.6);
+  border-color: var(--border);
+  animation: dot-sway-desert 20s ease-in-out infinite;
+}
+
+body[data-theme="mil_dot_desert"] .control-chip,
+body[data-theme="mil_dot_desert"] .control-chip.pop-menu .menu-panel,
+body[data-theme="mil_dot_desert"] .note-section,
+body[data-theme="mil_dot_desert"] .task-section,
+body[data-theme="mil_dot_desert"] .theory-section,
+body[data-theme="mil_dot_desert"] .note-popover {
+  background:
+    radial-gradient(rgba(60, 40, 10, 0.05) 1px, transparent 0) 0 0 / 12px 12px,
+    radial-gradient(rgba(60, 40, 10, 0.04) 1px, transparent 0) 6px 5px / 18px 18px,
+    #f3ead7;
+  border-color: var(--border);
+  animation: dot-sway-desert 18s ease-in-out infinite;
+}
+
+body[data-theme="mil_dot_desert"] .difficulty-badge,
+body[data-theme="mil_dot_desert"] .status-pill,
+body[data-theme="mil_dot_desert"] .filter-pill,
+body[data-theme="mil_dot_desert"] .toggle-btn {
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="mil_dot_desert"] .status-pill[data-status="todo"] {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--border);
+}
+
+body[data-theme="mil_dot_desert"] .status-pill[data-status="in-progress"] {
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--glow) 50%, #fff 50%) 55%,
+    rgba(255, 255, 255, 0.9) 55%
+  );
+  border-color: color-mix(in srgb, var(--glow) 60%, var(--border) 40%);
+  box-shadow: 0 0 4px color-mix(in srgb, var(--glow) 40%, #fff 60%);
+}
+
+body[data-theme="mil_dot_desert"] .status-pill[data-status="done"] {
+  background: color-mix(in srgb, var(--glow) 60%, #fff 40%);
+  border-color: color-mix(in srgb, var(--glow) 60%, var(--border) 40%);
+  box-shadow: 0 0 4px color-mix(in srgb, var(--glow) 50%, #fff 50%);
+}
+
+/* Light overrides for desert theme controls */
+body[data-theme="mil_dot_desert"] input,
+body[data-theme="mil_dot_desert"] textarea,
+body[data-theme="mil_dot_desert"] button {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+body[data-theme="mil_dot_desert"] .control-chip {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: var(--text-main);
+}
+
+body[data-theme="mil_dot_desert"] .control-chip button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--text-main);
+}
+
+body[data-theme="mil_dot_desert"] .control-chip.pop-menu .menu-panel {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body[data-theme="mil_dot_desert"] .note-list,
+body[data-theme="mil_dot_desert"] .task-list {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: var(--border);
+}
+
+body[data-theme="mil_dot_desert"] .note-input,
+body[data-theme="mil_dot_desert"] .task-input {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+body[data-theme="mil_dot_desert"] .note-btn,
+body[data-theme="mil_dot_desert"] .task-add,
+body[data-theme="mil_dot_desert"] .task-delete {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-main);
+}
+
+body[data-theme="mil_dot_desert"] .session-history,
+body[data-theme="mil_dot_desert"] .session-history-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--border);
+  color: var(--text-main);
+}
+
+@keyframes dot-sway-sci {
+  0% {
+    background-position: 0 0, 0 0, center;
+  }
+  50% {
+    background-position: 16px 10px, -12px 8px, center;
+  }
+  100% {
+    background-position: 0 0, 0 0, center;
+  }
+}
+
+@keyframes dot-sway-desert {
+  0% {
+    background-position: 0 0, 0 0, center;
+  }
+  50% {
+    background-position: 12px 8px, -10px 6px, center;
+  }
+  100% {
+    background-position: 0 0, 0 0, center;
+  }
 }
 
 /* ============================
@@ -298,7 +513,7 @@ textarea:focus-visible,
   outline: 1px dashed var(--glow);
   outline-offset: 2px;
   box-shadow: none;
-  background: rgba(10, 40, 10, 0.5);
+  background: transparent;
 }
 
 .note-btn {
@@ -743,6 +958,321 @@ textarea:focus-visible,
   gap: calc(6px * var(--ui-scale));
 }
 
+.status-filter-row {
+  flex-wrap: wrap;
+  gap: calc(6px * var(--ui-scale));
+}
+
+.filter-pill {
+  border: 1px solid var(--border);
+  background: #000;
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: var(--font-mini);
+  padding: 0 calc(6px * var(--ui-scale));
+  height: var(--control-height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.filter-pill[data-active="true"] {
+  border-color: var(--glow);
+  color: var(--glow);
+  background: var(--glow-soft);
+}
+
+.filter-pill[data-status="done"] {
+  border-color: var(--glow);
+}
+
+.filter-pill[data-status="in-progress"] {
+  border-color: #ffea80;
+}
+
+/* Desert theme light control overrides */
+body[data-theme="mil_dot_desert"] .filter-pill,
+body[data-theme="mil_dot_desert"] .status-pill,
+body[data-theme="mil_dot_desert"] .toggle-btn,
+body[data-theme="mil_dot_desert"] .session-history,
+body[data-theme="mil_dot_desert"] .session-history-item,
+body[data-theme="mil_dot_desert"] .session-history-empty {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+/* Mil NASA (light, clean with NASA-inspired palette) */
+body[data-theme="mil_nasa"] {
+  --bg: #f5f7fa;
+  --screen: #e8edf3;
+  --border: #b5c7d9;
+  --scanline: rgba(0, 0, 0, 0.05);
+  --glow: #0a6bff;
+  --glow-soft: rgba(10, 107, 255, 0.15);
+  --text-main: #1b2735;
+  --text-soft: #43536a;
+  --text-dim: #8ca0b6;
+  --endpoint-hover: #0a6bff;
+}
+
+/* Myth – Diablo II */
+body[data-theme="myth_diablo2"] {
+  --bg: #070607;
+  --screen: #0f0c0d;
+  --border: #3c2a1d;
+  --scanline: rgba(0, 0, 0, 0.45);
+  --glow: #d6b16b;
+  --glow-soft: rgba(214, 177, 107, 0.25);
+  --text-main: #d3c4a1;
+  --text-soft: #a89069;
+  --text-dim: #5e4933;
+  --endpoint-hover: #d6b16b;
+}
+
+body[data-theme="myth_diablo2"] .app-shell {
+  background:
+    linear-gradient(145deg, #1c1613 0%, #0f0c0d 45%, #070607 100%),
+    linear-gradient(90deg, rgba(214, 177, 107, 0.06), transparent 30%, transparent 70%, rgba(214, 177, 107, 0.06));
+  border: 2px solid var(--border);
+  box-shadow:
+    inset 0 0 0 1px rgba(214, 177, 107, 0.2),
+    0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+body[data-theme="myth_diablo2"] #tree-container {
+  background:
+    linear-gradient(180deg, rgba(214, 177, 107, 0.04), transparent 35%, transparent 65%, rgba(214, 177, 107, 0.04)),
+    linear-gradient(180deg, #141010 0%, #0a0808 100%);
+  border-color: var(--border);
+}
+
+body[data-theme="myth_diablo2"] .control-chip,
+body[data-theme="myth_diablo2"] .control-chip.pop-menu .menu-panel,
+body[data-theme="myth_diablo2"] .note-section,
+body[data-theme="myth_diablo2"] .task-section,
+body[data-theme="myth_diablo2"] .theory-section,
+body[data-theme="myth_diablo2"] .note-popover {
+  background:
+    linear-gradient(180deg, rgba(214, 177, 107, 0.05), transparent 40%, transparent 60%, rgba(214, 177, 107, 0.05)),
+    linear-gradient(180deg, #181211, #0f0b0b);
+  border-color: var(--border);
+  color: var(--text-main);
+}
+
+body[data-theme="myth_diablo2"] .difficulty-badge,
+body[data-theme="myth_diablo2"] .status-pill,
+body[data-theme="myth_diablo2"] .filter-pill,
+body[data-theme="myth_diablo2"] .toggle-btn {
+  border-color: var(--border);
+  background: linear-gradient(180deg, #1f1814, #130f0d);
+  color: var(--text-main);
+  box-shadow: inset 0 0 0 1px rgba(214, 177, 107, 0.15);
+}
+
+body[data-theme="myth_diablo2"] input,
+body[data-theme="myth_diablo2"] textarea,
+body[data-theme="myth_diablo2"] button {
+  background-color: rgba(25, 18, 16, 0.9);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+body[data-theme="myth_diablo2"] .control-chip {
+  background-color: rgba(25, 18, 16, 0.9);
+  color: var(--text-main);
+}
+
+body[data-theme="myth_diablo2"] .control-chip button {
+  background-color: linear-gradient(180deg, #251b16, #18120f);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+body[data-theme="myth_diablo2"] .control-chip.pop-menu .menu-panel {
+  background-color: rgba(18, 13, 15, 0.96);
+}
+
+body[data-theme="myth_diablo2"] .note-list,
+body[data-theme="myth_diablo2"] .task-list {
+  background-color: rgba(18, 13, 15, 0.9);
+  border-color: var(--border);
+}
+
+body[data-theme="myth_diablo2"] .note-input,
+body[data-theme="myth_diablo2"] .task-input {
+  background-color: rgba(25, 18, 16, 0.9);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+body[data-theme="myth_diablo2"] .note-btn,
+body[data-theme="myth_diablo2"] .task-add,
+body[data-theme="myth_diablo2"] .task-delete {
+  background-color: linear-gradient(180deg, #251b16, #18120f);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+body[data-theme="myth_diablo2"] .session-history,
+body[data-theme="myth_diablo2"] .session-history-item,
+body[data-theme="myth_diablo2"] .session-history-empty {
+  background: rgba(18, 13, 15, 0.94);
+  border-color: var(--border);
+  color: var(--text-main);
+}
+
+body[data-theme="myth_diablo2"] #tree-container {
+  scrollbar-color: var(--border) rgba(0, 0, 0, 0.6);
+}
+
+body[data-theme="myth_diablo2"] #tree-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+body[data-theme="myth_diablo2"] #tree-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+body[data-theme="myth_diablo2"] #tree-container::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--border) 75%, var(--glow) 25%);
+}
+body[data-theme="mil_nasa"] .app-shell {
+  background:
+    radial-gradient(rgba(10, 107, 255, 0.06) 1px, transparent 0) 0 0 / 16px 16px,
+    radial-gradient(rgba(10, 107, 255, 0.04) 1px, transparent 0) 7px 6px / 22px 22px,
+    radial-gradient(circle at 20% 20%, #fdfefe, #e8edf3 45%, #f5f7fa);
+  border-image: repeating-linear-gradient(
+      45deg,
+      var(--border),
+      var(--border) 6px,
+      transparent 6px,
+      transparent 10px
+    )
+    10;
+}
+
+body[data-theme="mil_nasa"] #tree-container {
+  background:
+    radial-gradient(rgba(10, 107, 255, 0.08) 1px, transparent 0) 0 0 / 14px 14px,
+    radial-gradient(rgba(10, 107, 255, 0.05) 1px, transparent 0) 6px 5px / 20px 20px,
+    rgba(255, 255, 255, 0.75);
+  border-color: var(--border);
+  animation: dot-sway-sci 22s ease-in-out infinite;
+}
+
+body[data-theme="mil_nasa"] .control-chip,
+body[data-theme="mil_nasa"] .control-chip.pop-menu .menu-panel,
+body[data-theme="mil_nasa"] .note-section,
+body[data-theme="mil_nasa"] .task-section,
+body[data-theme="mil_nasa"] .theory-section,
+body[data-theme="mil_nasa"] .note-popover {
+  background:
+    radial-gradient(rgba(10, 107, 255, 0.05) 1px, transparent 0) 0 0 / 14px 14px,
+    radial-gradient(rgba(10, 107, 255, 0.03) 1px, transparent 0) 6px 5px / 20px 20px,
+    #f5f7fa;
+  border-color: var(--border);
+  animation: dot-sway-sci 20s ease-in-out infinite;
+  color: var(--text-main);
+}
+
+body[data-theme="mil_nasa"] .difficulty-badge,
+body[data-theme="mil_nasa"] .status-pill,
+body[data-theme="mil_nasa"] .filter-pill,
+body[data-theme="mil_nasa"] .toggle-btn {
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="mil_nasa"] .status-pill[data-status="todo"] {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--border);
+}
+
+body[data-theme="mil_nasa"] .status-pill[data-status="in-progress"] {
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--glow) 55%, #fff 45%) 55%,
+    rgba(255, 255, 255, 0.9) 55%
+  );
+  border-color: color-mix(in srgb, var(--glow) 50%, var(--border) 50%);
+  box-shadow: 0 0 4px color-mix(in srgb, var(--glow) 40%, #fff 60%);
+}
+
+body[data-theme="mil_nasa"] .status-pill[data-status="done"] {
+  background: color-mix(in srgb, var(--glow) 65%, #fff 35%);
+  border-color: color-mix(in srgb, var(--glow) 50%, var(--border) 50%);
+  box-shadow: 0 0 4px color-mix(in srgb, var(--glow) 45%, #fff 55%);
+}
+
+body[data-theme="mil_nasa"] input,
+body[data-theme="mil_nasa"] textarea,
+body[data-theme="mil_nasa"] button {
+  background-color: rgba(255, 255, 255, 0.88);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+body[data-theme="mil_nasa"] .control-chip {
+  background-color: rgba(255, 255, 255, 0.82);
+  color: var(--text-main);
+}
+
+body[data-theme="mil_nasa"] .control-chip button {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+}
+
+body[data-theme="mil_nasa"] .control-chip.pop-menu .menu-panel {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body[data-theme="mil_nasa"] .note-list,
+body[data-theme="mil_nasa"] .task-list {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-color: var(--border);
+}
+
+body[data-theme="mil_nasa"] .note-input,
+body[data-theme="mil_nasa"] .task-input {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-main);
+  border-color: var(--border);
+}
+
+body[data-theme="mil_nasa"] .note-btn,
+body[data-theme="mil_nasa"] .task-add,
+body[data-theme="mil_nasa"] .task-delete {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-main);
+}
+
+body[data-theme="mil_nasa"] .session-history,
+body[data-theme="mil_nasa"] .session-history-item,
+body[data-theme="mil_nasa"] .session-history-empty {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--border);
+  color: var(--text-main);
+}
+
+body[data-theme="mil_nasa"] #tree-container {
+  scrollbar-color: var(--border) rgba(255, 255, 255, 0.8);
+}
+
+body[data-theme="mil_nasa"] #tree-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="mil_nasa"] #tree-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body[data-theme="mil_nasa"] #tree-container::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--border) 80%, #fff 20%);
+}
 /* ============================
    MAIN / TREE CONTAINER
    ============================ */
@@ -787,6 +1317,24 @@ main {
 
 #tree-container::-webkit-scrollbar-thumb:hover {
   background: rgba(65, 255, 65, 0.3);
+}
+
+/* Desert theme scrollbar override */
+body[data-theme="mil_dot_desert"] #tree-container {
+  scrollbar-color: var(--border) rgba(255, 255, 255, 0.7);
+}
+
+body[data-theme="mil_dot_desert"] #tree-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body[data-theme="mil_dot_desert"] #tree-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="mil_dot_desert"] #tree-container::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--border) 80%, #fff 20%);
 }
 
 /* ============================
@@ -836,6 +1384,7 @@ main {
 .node-row .node-label {
   order: 1;
   flex: 1;
+  padding: 2px 4px;
 }
 
 .node-row .status-pill {
@@ -853,10 +1402,39 @@ main {
   margin-left: var(--control-gap);
 }
 
+.endpoint-row {
+  position: relative;
+  border: 1px dashed transparent;
+  transition: background 0.08s ease, border-color 0.08s ease;
+}
+
+.endpoint-row:hover,
+.endpoint-row:focus-visible {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--endpoint-hover) 40%, transparent) 0%,
+    color-mix(in srgb, var(--endpoint-hover) 55%, transparent) 50%,
+    color-mix(in srgb, var(--endpoint-hover) 40%, transparent) 100%
+  );
+  border-color: color-mix(in srgb, var(--endpoint-hover) 70%, var(--border) 30%);
+}
+
+
 .node-row:focus {
   outline: 1px dashed var(--glow);
   outline-offset: 2px;
   background: rgba(10, 40, 10, 0.6);
+}
+
+/* Light theme focus overrides */
+body[data-theme="mil_dot_desert"] .node-row:focus,
+body[data-theme="mil_dot_desert"] .node-row:focus-visible {
+  background: rgba(199, 123, 26, 0.12);
+}
+
+body[data-theme="mil_nasa"] .node-row:focus,
+body[data-theme="mil_nasa"] .node-row:focus-visible {
+  background: rgba(10, 107, 255, 0.12);
 }
 
 /* Expand / collapse buttons */
@@ -898,7 +1476,7 @@ main {
 }
 
 .node-label:hover {
-  background: rgba(10, 40, 10, 0.6);
+  background: transparent;
 }
 
 /* ============================
@@ -1044,6 +1622,20 @@ main {
   text-decoration-thickness: 1px;
 }
 
+/* Status label colors per theme */
+body[data-theme="mil_dot_desert"] .node-row[data-status="in-progress"] .node-label {
+  color: #c77b1a;
+}
+
+body[data-theme="mil_nasa"] .node-row[data-status="in-progress"] .node-label {
+  color: #0a6bff;
+}
+
+body[data-theme="mil_dot_desert"] .node-row[data-status="done"] .node-label,
+body[data-theme="mil_nasa"] .node-row[data-status="done"] .node-label {
+  color: color-mix(in srgb, var(--text-soft) 80%, #000 20%);
+}
+
 /* ============================
    DIFFICULTY BADGES
    ============================ */
@@ -1116,4 +1708,57 @@ main {
   box-shadow:
     0 0 6px rgba(255, 234, 128, 0.7),
     0 0 16px rgba(255, 234, 128, 0.35);
+}
+
+/* Light theme difficulty contrast */
+body[data-theme="mil_dot_desert"] .difficulty-badge[data-level="1"] {
+  border-color: #b09062;
+  color: #6a5330;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="mil_dot_desert"] .difficulty-badge[data-level="2"] {
+  border-color: #c77b1a;
+  color: #c77b1a;
+  background: rgba(255, 248, 230, 0.95);
+}
+
+body[data-theme="mil_dot_desert"] .difficulty-badge[data-level="3"] {
+  border-color: #b05514;
+  color: #b05514;
+  background: rgba(255, 238, 210, 0.95);
+  box-shadow: 0 0 6px rgba(176, 85, 20, 0.35);
+}
+
+body[data-theme="mil_dot_desert"] .difficulty-badge[data-level="4"] {
+  border-color: #8c3810;
+  color: #8c3810;
+  background: rgba(255, 228, 195, 0.95);
+  box-shadow: 0 0 8px rgba(140, 56, 16, 0.45);
+}
+
+body[data-theme="mil_nasa"] .difficulty-badge[data-level="1"] {
+  border-color: #8ca0b6;
+  color: #43536a;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+body[data-theme="mil_nasa"] .difficulty-badge[data-level="2"] {
+  border-color: #0a6bff;
+  color: #0a6bff;
+  background: rgba(230, 241, 255, 0.95);
+}
+
+body[data-theme="mil_nasa"] .difficulty-badge[data-level="3"] {
+  border-color: #0a4fb8;
+  color: #0a4fb8;
+  background: rgba(214, 232, 255, 0.95);
+  box-shadow: 0 0 6px rgba(10, 79, 184, 0.35);
+}
+
+body[data-theme="mil_nasa"] .difficulty-badge[data-level="4"] {
+  border-color: #e85f2f;
+  color: #e85f2f;
+  background: rgba(255, 236, 226, 0.95);
+  box-shadow: 0 0 8px rgba(232, 95, 47, 0.45);
 }

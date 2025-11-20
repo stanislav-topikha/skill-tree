@@ -69,6 +69,7 @@ export const viewFilterPlugin = {
     wrapper.className = "control-chip stacked";
 
     this._statusBoxes = [];
+    this._statusButtons = [];
 
     // Hide completed
     const hideRow = document.createElement("div");
@@ -93,35 +94,61 @@ export const viewFilterPlugin = {
     wrapper.appendChild(hideRow);
     this._hideBox = hideCheckbox;
 
-    // Status filters
+    // Status filters (buttons for friendliness)
+    const statusRow = document.createElement("div");
+    statusRow.className = "control-row status-filter-row";
+    const statusLabel = document.createElement("span");
+    statusLabel.textContent = "Status:";
+    statusRow.appendChild(statusLabel);
+
+    const statusNames = {
+      todo: "Queued",
+      "in-progress": "In progress",
+      done: "Done"
+    };
+
+    const refreshButtons = () => {
+      this._statusButtons.forEach((btn) => {
+        const active = visibleStatuses.has(btn.dataset.status);
+        btn.dataset.active = active ? "true" : "false";
+      });
+    };
+
     ALL_STATUSES.forEach((status) => {
-      const row = document.createElement("div");
-      row.className = "control-row";
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "filter-pill";
+      btn.dataset.status = status;
+      btn.textContent = statusNames[status] || status;
+      btn.dataset.active = visibleStatuses.has(status) ? "true" : "false";
 
-      const box = document.createElement("input");
-      box.type = "checkbox";
-      box.checked = visibleStatuses.has(status);
-
-      box.addEventListener("change", () => {
-        if (!box.checked && visibleStatuses.size === 1) {
-          box.checked = true;
-          return;
-        }
-        if (box.checked) visibleStatuses.add(status);
-        else visibleStatuses.delete(status);
+      btn.addEventListener("click", () => {
+        const active = visibleStatuses.has(status);
+        if (active && visibleStatuses.size === 1) return;
+        if (active) visibleStatuses.delete(status);
+        else visibleStatuses.add(status);
         saveState();
+        refreshButtons();
         if (typeof ctx.requestRender === "function") ctx.requestRender();
       });
 
-      const lbl = document.createElement("label");
-      lbl.textContent = status.replace("-", " ");
-      lbl.style.textTransform = "capitalize";
-
-      row.appendChild(box);
-      row.appendChild(lbl);
-      wrapper.appendChild(row);
-      this._statusBoxes.push(box);
+      this._statusButtons.push(btn);
+      statusRow.appendChild(btn);
     });
+
+    const allBtn = document.createElement("button");
+    allBtn.type = "button";
+    allBtn.className = "filter-pill";
+    allBtn.textContent = "All";
+    allBtn.addEventListener("click", () => {
+      visibleStatuses = new Set(ALL_STATUSES);
+      saveState();
+      refreshButtons();
+      if (typeof ctx.requestRender === "function") ctx.requestRender();
+    });
+    statusRow.appendChild(allBtn);
+
+    wrapper.appendChild(statusRow);
 
     // separator
     const sep = document.createElement("span");
