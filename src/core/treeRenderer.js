@@ -42,6 +42,9 @@ function renderNode(ctx, node, pluginHost) {
 
   const row = document.createElement("div");
   row.className = "node-row";
+  row.classList.add(node.kind);
+  if (isEndpoint) row.classList.add("endpoint-row");
+  if (isGroup) row.classList.add("group-row");
   row.tabIndex = 0;
   row.dataset.nodeId = node.id;
   row.dataset.kind = node.kind;

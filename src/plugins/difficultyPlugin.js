@@ -102,6 +102,9 @@ export const difficultyPlugin = {
 
     const badge = document.createElement("span");
     badge.className = "difficulty-badge";
+    badge.style.marginLeft = "auto";
+    badge.tabIndex = 0;
+    badge.role = "button";
 
     if (level == null) {
       badge.textContent = "?";
@@ -112,7 +115,7 @@ export const difficultyPlugin = {
       badge.title = `Difficulty ${level}`;
     }
 
-    badge.addEventListener("click", () => {
+    const cycle = () => {
       const current = ctx.getAspect(node.id).difficulty;
       let next;
       if (current == null || current === 4) next = 1;
@@ -123,6 +126,14 @@ export const difficultyPlugin = {
       badge.textContent = String(next);
       badge.dataset.level = String(next);
       badge.title = `Difficulty ${next}`;
+    };
+
+    badge.addEventListener("click", cycle);
+    badge.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        e.preventDefault();
+        cycle();
+      }
     });
 
     rowEl.appendChild(badge);

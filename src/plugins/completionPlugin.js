@@ -1,15 +1,10 @@
 // completionPlugin: manages status per endpoint (todo / in-progress / done)
 
 const STATUS_ORDER = ["todo", "in-progress", "done"];
-const STATUS_LABELS = {
-  todo: "TODO",
-  "in-progress": "…",
-  done: "DONE"
-};
 const STATUS_TITLES = {
-  todo: "Mark as in-progress",
-  "in-progress": "Mark as done",
-  done: "Reset to TODO"
+  todo: "Set to in-progress",
+  "in-progress": "Set to done",
+  done: "Reset to queued"
 };
 
 function normalizeStatus(aspect = {}) {
@@ -41,14 +36,13 @@ export const completionPlugin = {
     pill.type = "button";
     pill.className = "status-pill";
     pill.dataset.status = currentStatus;
-    pill.textContent = STATUS_LABELS[currentStatus];
     pill.title = STATUS_TITLES[currentStatus];
-    pill.style.marginLeft = "auto";
+    pill.setAttribute("aria-label", STATUS_TITLES[currentStatus]);
 
     const applyStatus = (nextStatus) => {
       pill.dataset.status = nextStatus;
-      pill.textContent = STATUS_LABELS[nextStatus];
       pill.title = STATUS_TITLES[nextStatus];
+      pill.setAttribute("aria-label", STATUS_TITLES[nextStatus]);
       rowEl.dataset.status = nextStatus;
     };
 

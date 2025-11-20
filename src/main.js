@@ -141,21 +141,37 @@ const setRenderHooks = () => {
 
   // Menus for grouped controls
   const uiMenu = createPopupMenu("UI");
-  const filterMenu = createPopupMenu("Filter");
-  const viewMenu = createPopupMenu("View");
+  const filterMenu = createPopupMenu("View/Filter");
   const timeMenu = createPopupMenu("Sessions");
 
   pluginControls.appendChild(uiMenu.wrapper);
   pluginControls.appendChild(filterMenu.wrapper);
-  pluginControls.appendChild(viewMenu.wrapper);
   pluginControls.appendChild(timeMenu.wrapper);
 
   // Grouped controls inside menus
   themePlugin.contributeControls(uiMenu.panel, ctx);
   uiScalePlugin.contributeControls(uiMenu.panel, ctx);
-  searchPlugin.contributeControls(filterMenu.panel, ctx);
-  difficultyPlugin.contributeControls(filterMenu.panel, ctx);
-  viewFilterPlugin.contributeControls(viewMenu.panel, ctx);
+
+  const filterSection = document.createElement("div");
+  filterSection.className = "menu-section";
+  const filterTitle = document.createElement("div");
+  filterTitle.className = "menu-section-title";
+  filterTitle.textContent = "Filters";
+  filterSection.appendChild(filterTitle);
+  searchPlugin.contributeControls(filterSection, ctx);
+  difficultyPlugin.contributeControls(filterSection, ctx);
+
+  const viewSection = document.createElement("div");
+  viewSection.className = "menu-section";
+  const viewTitle = document.createElement("div");
+  viewTitle.className = "menu-section-title";
+  viewTitle.textContent = "View";
+  viewSection.appendChild(viewTitle);
+  viewFilterPlugin.contributeControls(viewSection, ctx);
+
+  filterMenu.panel.appendChild(filterSection);
+  filterMenu.panel.appendChild(viewSection);
+
   timerPlugin.contributeControls(timeMenu.panel, ctx);
 
   // Clear filters button inside Filter menu
@@ -206,6 +222,49 @@ const setRenderHooks = () => {
       target.isContentEditable
     ) {
       return;
+    }
+
+    const rowForControls = target.closest(".node-row");
+    const isEndpointRow =
+      rowForControls && rowForControls.dataset.kind === "endpoint";
+
+    // Arrow key navigation within endpoint row controls
+    if (
+      isEndpointRow &&
+      (e.key === "ArrowRight" || e.key === "ArrowLeft") &&
+      rowForControls.contains(target)
+    ) {
+      const focusables = Array.from(
+        rowForControls.querySelectorAll(
+          'button, [role="button"], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter(
+        (el) =>
+          !el.disabled &&
+          el.tabIndex !== -1 &&
+          el.offsetParent !== null &&
+          rowForControls.contains(el)
+      );
+
+      if (focusables.length > 0) {
+        const currentIdx =
+          target === rowForControls ? -1 : focusables.indexOf(target);
+        if (currentIdx !== -1 || target === rowForControls) {
+          e.preventDefault();
+          const delta = e.key === "ArrowRight" ? 1 : -1;
+          const nextIdx = currentIdx + delta;
+
+          if (nextIdx >= 0 && nextIdx < focusables.length) {
+            focusables[nextIdx].focus();
+            return;
+          }
+
+          if (nextIdx < 0) {
+            rowForControls.focus();
+            return;
+          }
+        }
+      }
     }
 
     const isRow = target.classList && target.classList.contains("node-row");
